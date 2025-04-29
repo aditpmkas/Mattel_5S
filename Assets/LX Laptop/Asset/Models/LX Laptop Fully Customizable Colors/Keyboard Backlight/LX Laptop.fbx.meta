@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: ded8399a3ed7dbe449ee9359bb1ffae9
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Bezel
+    second: {fileID: 2100000, guid: b9e34790cd6a6c7459dbddb4a78234b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop DVD Button
+    second: {fileID: 2100000, guid: 97f4d6c203274174ab77853942a50cc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop DVD Darker Metal
+    second: {fileID: 2100000, guid: 4c77342a1bebcd24285cc7da8afc8478, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop DVD Lens
+    second: {fileID: 2100000, guid: 35b3103fe89fafd4fb8b2538ec90d2ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop DVD Metal
+    second: {fileID: 2100000, guid: b33866f3865b7b342a7ef1e2a276fd40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Display
+    second: {fileID: 2100000, guid: e971ae85a8e6af340bcc28a6f866874e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Gold Plating
+    second: {fileID: 2100000, guid: b4dce97cf996dec4c95fa8a50dd8413f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Hinges
+    second: {fileID: 2100000, guid: 73617e169261a984287e99165004a45b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Keyboard
+    second: {fileID: 2100000, guid: da6317e24086fd24b8fc594a396fc298, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Keyboard Backlight_Side
+    second: {fileID: 2100000, guid: 2a1991e3c8990384396131e6a82f2658, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Keyboard Deck
+    second: {fileID: 2100000, guid: f656062c73fe0e4499e544b50b24d093, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Keyboard Text
+    second: {fileID: 2100000, guid: 74d7ffe7d34a9f24aa05acf909e3b45e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Logo
+    second: {fileID: 2100000, guid: 0a88752957343b44fa0452f76c379a76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Main Color
+    second: {fileID: 2100000, guid: 69882f868f9446a4f9364c61a910729d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Matte Black
+    second: {fileID: 2100000, guid: 5b34004a610964943a7f5d940e39e984, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Port Shielding
+    second: {fileID: 2100000, guid: fbbcfd7e9a495ff409fd57e84fed8720, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Power Button
+    second: {fileID: 2100000, guid: 1eee89e87c818ab42b97319220925bc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Rubber Feet
+    second: {fileID: 2100000, guid: 582ed7293d2845b41a0fbfe20134ec36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Touchpad
+    second: {fileID: 2100000, guid: ff565dec772037f4c8d9338e0b563489, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Touchpad Buttons
+    second: {fileID: 2100000, guid: c07976ad49642c342a212f36c58df4d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop USB-A Contact Base
+    second: {fileID: 2100000, guid: 194d8632fa958fc4296fdf59d8dc8156, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LX Laptop Webcam
+    second: {fileID: 2100000, guid: dc14e430b3466144a87926c0260dede5, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Keyboard Text Logo
+    second: {fileID: 2800000, guid: d04f8063619ccf24488f36b925fe36dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Logo Place Holder
+    second: {fileID: 2800000, guid: ccbc61bc102c82f43837192f6fde6e6d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Webcam
+    second: {fileID: 2800000, guid: ec2712794699c3846b0f76122242d306, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
