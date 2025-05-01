@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BigTool
+  - SmallTool
+  - BigScrew
+  - SmallScrew
+  - Nut
+  - BreakDisc
+  - BreakDiscTarget
+  - BreakDiscBolt
+  - Screwdriver
+  - ScrewdriverScrew
   layers:
   - Default
   - TransparentFX
@@ -13,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - PostProcessing
   - 
   - 
   - 
