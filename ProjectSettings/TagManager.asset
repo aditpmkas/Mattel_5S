@@ -14,6 +14,10 @@ TagManager:
   - BreakDiscBolt
   - Screwdriver
   - ScrewdriverScrew
+  - Glass
+  - Sort
+  - Unsort
+  - TrashCan
   layers:
   - Default
   - TransparentFX

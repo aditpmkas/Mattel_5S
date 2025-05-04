@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/ImmersiveVRMechanicTools/Scenes/XRToolkitDemoScene.unity
     guid: 1ceedeb05c1428c44941d7bbd93c9832
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 69dcf0dd8cb99004ebbb604a8d0b9df1,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 0d1d19a9a36f0ed45bdbdf91058e0771,
       type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0acd408d613541645bf8d27c9ed5ad44,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e8ac4c44aab675241a1165fad9aca2fc,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: dc480c6c6326f9d49a10076d967563f0,
       type: 2}
