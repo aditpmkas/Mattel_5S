@@ -4695,7 +4695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 195990, guid: daf57af8293b0d94abc7d17cb2432e6d, type: 3}
       propertyPath: m_TagString
-      value: Unsort
+      value: Sort
       objectReference: {fileID: 0}
     - target: {fileID: 448974, guid: daf57af8293b0d94abc7d17cb2432e6d, type: 3}
       propertyPath: m_RootOrder
@@ -4740,15 +4740,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 195990, guid: daf57af8293b0d94abc7d17cb2432e6d,
         type: 3}
       insertIndex: 3
+      addedObject: {fileID: 1771503934}
+    - targetCorrespondingSourceObject: {fileID: 195990, guid: daf57af8293b0d94abc7d17cb2432e6d,
+        type: 3}
+      insertIndex: 4
       addedObject: {fileID: 1771503929}
     - targetCorrespondingSourceObject: {fileID: 195990, guid: daf57af8293b0d94abc7d17cb2432e6d,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1771503928}
-    - targetCorrespondingSourceObject: {fileID: 195990, guid: daf57af8293b0d94abc7d17cb2432e6d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1771503934}
   m_SourcePrefab: {fileID: 100100000, guid: daf57af8293b0d94abc7d17cb2432e6d, type: 3}
 --- !u!1001 &1685791050
 PrefabInstance:
