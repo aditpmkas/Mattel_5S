@@ -18,6 +18,7 @@ TagManager:
   - Sort
   - Unsort
   - TrashCan
+  - DirtyFloor
   layers:
   - Default
   - TransparentFX
