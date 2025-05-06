@@ -19,6 +19,10 @@ TagManager:
   - Unsort
   - TrashCan
   - DirtyFloor
+  - BookA
+  - BookB
+  - BookC
+  - BookD
   layers:
   - Default
   - TransparentFX
