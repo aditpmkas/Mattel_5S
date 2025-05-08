@@ -1,19 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MopCleaner : MonoBehaviour
 {
-    //[SerializeField] private AudioClip cleanSound;
-    //private AudioSource audioSource;
-
-    private void Start()
-    {
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DirtyFloor"))
         {
-            Destroy(other.gameObject); // Hilangkan kotoran
+            ShineTutorial.Instance.DirtCleaned(); // Beri tahu bahwa 1 kotoran dibersihkan
+            Destroy(other.gameObject); // Hapus objek kotoran
+            Debug.Log("Pel membersihkan: " + other.name);
         }
     }
 }
