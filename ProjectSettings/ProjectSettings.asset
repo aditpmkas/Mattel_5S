@@ -775,8 +775,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Mattel_5S
-  metroPackageVersion: 
+  metroPackageName: Mattel5S
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -784,7 +784,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Mattel_5S
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Mattel_5S
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
