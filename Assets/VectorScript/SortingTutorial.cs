@@ -1,38 +1,33 @@
 using System.Linq;
 using UnityEngine;
 
-public class SortingChecker : MonoBehaviour
+public class SortingTutorial : MonoBehaviour
 {
-    public GameObject table; // tempat objek Sort & Unsort
+    public GameObject table_; // tempat objek Sort & Unsort
     public int requiredCorrectSorts = 4;
     private int currentCorrectSorts = 0;
 
     private void Update()
     {
-        if (table == null)
-        {
-            Debug.LogWarning("SortingChecker: 'table' belum di-assign di Inspector.");
-            return;
-        }
-
         // Cek jika tidak ada lagi object dengan tag "Sort" di meja
-        bool noSortsLeft = !table.GetComponentsInChildren<Transform>()
+        bool noSortsLeft = !table_.GetComponentsInChildren<Transform>()
                                  .Any(child => child.CompareTag("Sort"));
 
-        // Trigger task selesai
+        // Debug log jumlah correct sort dan apakah ada Sort yang tersisa
+        Debug.Log($"[SortingTutorial] CurrentCorrectSorts: {currentCorrectSorts}/{requiredCorrectSorts}, NoSortsLeft: {noSortsLeft}");
+
+        // Trigger jika tugas selesai
         if (noSortsLeft && currentCorrectSorts >= requiredCorrectSorts)
         {
-            Debug.Log("Sorting task selesai!");
-
-            // Tandai task selesai (jika kamu pakai TaskManager)
-            TaskManager.Instance?.MarkTaskComplete(TaskType.Sorting);
-
-            Destroy(this); // Tidak perlu Update terus
+            Debug.Log("[SortingTutorial] Sorting task completed!");
+            TaskManager.Instance.CompleteTask(TaskType.Sorting);
+            Destroy(this); // Hapus komponen supaya tidak dicek terus
         }
     }
 
     public void IncrementCorrectSort()
     {
         currentCorrectSorts++;
+        Debug.Log($"[SortingTutorial] Correct Sort Added! New Total: {currentCorrectSorts}");
     }
 }
