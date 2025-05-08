@@ -6,39 +6,49 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;               // Reference to the Text UI to display time
-    public float timeRemaining = 60f;    // Starting time in seconds
+    public float targetTime = 600f;      // The time to reach (10 minutes here)
+    private float timeElapsed = 0f;      // How much time has passed
     private bool timerRunning = false;   // Is the timer active?
 
     void Update()
     {
-        // Only count down if the timer is running
         if (timerRunning)
         {
-            if (timeRemaining > 0)
+            if (timeElapsed < targetTime)
             {
-                timeRemaining -= Time.deltaTime;
+                timeElapsed += Time.deltaTime;
                 UpdateTimerDisplay();
             }
             else
             {
-                timeRemaining = 0;
+                timeElapsed = targetTime;
                 timerRunning = false;
-                Debug.Log("Time's up!");
+                UpdateTimerDisplay(); // Make sure it shows final time exactly
+                Debug.Log("Target time reached!");
             }
         }
     }
 
-    // Call this method to start the timer
     public void StartTimer()
     {
         timerRunning = true;
-        Debug.Log("Timer started!");
+        Debug.Log("Count-up timer started!");
     }
 
-    // Updates the timer text on screen
     void UpdateTimerDisplay()
     {
-        timerText.text = Mathf.CeilToInt(timeRemaining).ToString();
+        // Convert timeElapsed to minutes and seconds
+        int minutes = Mathf.FloorToInt(timeElapsed / 60);
+        int seconds = Mathf.FloorToInt(timeElapsed % 60);
+
+        // Update the text in MM:SS format
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void StopTimer()
+    {
+        timerRunning = false;
+        Debug.Log("Timer stopped!");
     }
 
 }
