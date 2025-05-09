@@ -12,15 +12,18 @@ public class ShelfManager : MonoBehaviour
         shelves = FindObjectsOfType<BookShelfTutorial>();
     }
 
-    public void CheckAllShelvesComplete()
+   public void CheckAllShelvesComplete()
+{
+    foreach (var shelf in shelves)
     {
-        foreach (var shelf in shelves)
+        if (!shelf.IsComplete())
         {
-            if (!shelf.IsComplete())
-                return;
+            Debug.Log("[ShelfManager] Masih ada rak yang belum selesai!");
+            return;
         }
-
-        Debug.Log("Semua rak selesai diisi!");
-        TaskManager.Instance.CompleteTask(TaskType.SetInOrder);
     }
+
+    Debug.Log("[ShelfManager] Semua rak selesai diisi!");
+    TaskManager.Instance.CompleteTask(TaskType.SetInOrder);
+ }
 }

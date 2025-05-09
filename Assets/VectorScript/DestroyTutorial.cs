@@ -10,7 +10,7 @@ public class DestroyTurorial : MonoBehaviour
         if (other.CompareTag("Sort"))
         {
             Destroy(other.gameObject);
-            FindObjectOfType<SortingChecker>()?.IncrementCorrectSort();
+            FindObjectOfType<SortingTutorial>()?.IncrementCorrectSort();
         }
         else if (other.CompareTag("Unsort"))
         {

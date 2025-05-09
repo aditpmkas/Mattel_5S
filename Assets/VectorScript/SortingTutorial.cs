@@ -13,7 +13,7 @@ public class SortingTutorial : MonoBehaviour
         bool noSortsLeft = !table_.GetComponentsInChildren<Transform>()
                                  .Any(child => child.CompareTag("Sort"));
 
-        // Debug log jumlah correct sort dan apakah ada Sort yang tersisa
+        // Gunakan string interpolasi (pakai $)
         Debug.Log($"[SortingTutorial] CurrentCorrectSorts: {currentCorrectSorts}/{requiredCorrectSorts}, NoSortsLeft: {noSortsLeft}");
 
         // Trigger jika tugas selesai

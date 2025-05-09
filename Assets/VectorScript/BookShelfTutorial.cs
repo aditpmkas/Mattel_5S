@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BookShelfTutorial : MonoBehaviour
@@ -10,7 +8,7 @@ public class BookShelfTutorial : MonoBehaviour
     public bool isBookC;
     public bool isBookD;
 
-    public int requiredCount = 2; // jumlah buku yang harus benar untuk rak ini
+    public int requiredCount = 2; // Jumlah buku yang harus masuk dengan benar
     private int currentCount = 0;
     private bool isComplete = false;
 
@@ -19,27 +17,28 @@ public class BookShelfTutorial : MonoBehaviour
         if (isComplete) return;
 
         string tag = other.gameObject.tag;
+        Debug.Log($"[BookShelfTutorial] Buku masuk dengan tag: {tag}");
 
         if (IsCorrectBook(tag))
         {
             currentCount++;
-            Debug.Log("Buku benar dimasukkan ke rak: " + tag);
+            Debug.Log($"[BookShelfTutorial] Buku cocok! Total sekarang: {currentCount}/{requiredCount}");
 
-            other.transform.SetParent(this.transform); // Snap buku ke rak
-            other.GetComponent<Rigidbody>().isKinematic = true; // opsional: biar gak jatuh
-            other.GetComponent<Collider>().enabled = false; // opsional: tidak bisa diambil lagi
+            other.transform.SetParent(this.transform); // Snap ke rak
+            other.GetComponent<Rigidbody>().isKinematic = true;
+            other.GetComponent<Collider>().enabled = false;
 
             if (currentCount >= requiredCount)
             {
                 isComplete = true;
-                Debug.Log("Rak ini sudah penuh dengan buku yang benar!");
+                Debug.Log($"[BookShelfTutorial] RAK SELESAI! ({tag}), Total: {currentCount}");
 
-                BookShelfManager.Instance.CheckAllShelvesComplete();
+                ShelfManager.Instance.CheckAllShelvesComplete();
             }
         }
         else
         {
-            Debug.Log("Buku salah! Tidak cocok dengan rak ini.");
+            Debug.Log($"[BookShelfTutorial] Buku SALAH ({tag}), tidak cocok dengan rak ini!");
         }
     }
 
