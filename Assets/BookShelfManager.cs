@@ -1,30 +1,68 @@
-using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class BookShelfManager : MonoBehaviour
 {
     public static BookShelfManager Instance;
 
-    private BookShelf[] allShelves;
+    private int correctBooksPlaced = 0;
+    private int totalRequiredBooks = 0;
+
+    [Header("UI")]
+    public TextMeshProUGUI objectiveText;
 
     private void Awake()
     {
         Instance = this;
-        allShelves = FindObjectsOfType<BookShelf>();  // Menemukan semua rak buku
-    }
 
-    // Fungsi untuk memeriksa apakah semua rak buku sudah penuh
-    public void CheckAllShelvesComplete()
-    {
+        // Hitung total buku dari semua rak (versi BookShelf)
+        BookShelf[] allShelves = FindObjectsOfType<BookShelf>();
         foreach (BookShelf shelf in allShelves)
         {
-            if (!shelf.IsComplete())
-            {
-                return; // Jika ada rak yang belum lengkap, hentikan pemeriksaan
-            }
+            totalRequiredBooks += shelf.requiredCount;
         }
 
-        Debug.Log(" Semua rak sudah benar!");
-        GamePhaseManager.Instance.SetPhase(GamePhaseManager.Phase.Shine); // Lanjut ke fase berikutnya
+        UpdateObjectiveText();
+    }
+
+    public void ReportCorrectBookPlaced()
+    {
+        correctBooksPlaced++;
+        UpdateObjectiveText();
+
+        if (correctBooksPlaced >= totalRequiredBooks)
+        {
+            Debug.Log("Semua buku sudah ditempatkan dengan benar!");
+            GamePhaseManager.Instance.SetPhase(GamePhaseManager.Phase.Shine);
+        }
+    }
+
+    public void ReportCorrectBookRemoved()
+    {
+        correctBooksPlaced--;
+        if (correctBooksPlaced < 0) correctBooksPlaced = 0;
+        UpdateObjectiveText();
+    }
+
+    private void UpdateObjectiveText()
+    {
+        if (objectiveText != null)
+        {
+            objectiveText.text = $"Objective: {correctBooksPlaced}/{totalRequiredBooks}";
+        }
+    }
+
+    // Tambahan untuk mendukung BookShelfTutorial.cs milik temanmu
+    public void CheckAllShelvesComplete()
+    {
+        BookShelfTutorial[] shelves = FindObjectsOfType<BookShelfTutorial>();
+        foreach (BookShelfTutorial shelf in shelves)
+        {
+            if (!shelf.IsComplete())
+                return; // Masih ada rak yang belum penuh
+        }
+
+        Debug.Log("Semua rak (BookShelfTutorial) sudah lengkap!");
+        GamePhaseManager.Instance.SetPhase(GamePhaseManager.Phase.Shine);
     }
 }

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class BookShelf : MonoBehaviour
@@ -9,7 +8,7 @@ public class BookShelf : MonoBehaviour
     public bool isBookC;
     public bool isBookD;
 
-    public int requiredCount = 2; // jumlah buku yang harus benar untuk lemari ini
+    public int requiredCount = 2; // Jumlah buku yang harus benar untuk lemari ini
     private int currentCount = 0;
 
     private void OnTriggerEnter(Collider other)
@@ -18,20 +17,15 @@ public class BookShelf : MonoBehaviour
 
         string tag = other.gameObject.tag;
 
-        // Memeriksa apakah buku cocok dengan rak ini berdasarkan ceklis
+        // Cek apakah buku cocok berdasarkan checklist
         if (IsCorrectBook(tag))
         {
             currentCount++;
             Debug.Log("Correct book placed: " + tag);
-            other.transform.SetParent(this.transform); // snap ke rak
 
-            if (currentCount >= requiredCount)
-            {
-                Debug.Log("Lemari ini sudah penuh dengan buku yang benar!");
+            other.transform.SetParent(this.transform); // Snap ke rak
 
-                // Cek semua rak
-                BookShelfManager.Instance.CheckAllShelvesComplete();
-            }
+            BookShelfManager.Instance.ReportCorrectBookPlaced();
         }
         else
         {
@@ -39,17 +33,27 @@ public class BookShelf : MonoBehaviour
         }
     }
 
-    // Fungsi untuk memeriksa apakah buku sesuai dengan rak berdasarkan tag dan ceklis
+    private void OnTriggerExit(Collider other)
+    {
+        if (!GamePhaseManager.Instance.IsPhase(GamePhaseManager.Phase.SetInOrder)) return;
+
+        string tag = other.gameObject.tag;
+
+        if (IsCorrectBook(tag))
+        {
+            currentCount--;
+            if (currentCount < 0) currentCount = 0;
+
+            Debug.Log("Correct book removed: " + tag);
+            BookShelfManager.Instance.ReportCorrectBookRemoved();
+        }
+    }
+
     private bool IsCorrectBook(string tag)
     {
         return (isBookA && tag == "BookA") ||
                (isBookB && tag == "BookB") ||
                (isBookC && tag == "BookC") ||
                (isBookD && tag == "BookD");
-    }
-
-    public bool IsComplete()
-    {
-        return currentCount >= requiredCount;
     }
 }
