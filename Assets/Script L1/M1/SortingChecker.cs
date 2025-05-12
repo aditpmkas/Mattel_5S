@@ -38,7 +38,7 @@ public class SortingChecker : MonoBehaviour
     {
         if (objectiveText != null)
         {
-            objectiveText.text = $"Objective: {currentCorrectSorts}/{requiredCorrectSorts}";
+            objectiveText.text = $"Sorting: {currentCorrectSorts}/{requiredCorrectSorts}";
         }
     }
 }

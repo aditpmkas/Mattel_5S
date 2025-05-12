@@ -48,7 +48,7 @@ public class BookShelfManager : MonoBehaviour
     {
         if (objectiveText != null)
         {
-            objectiveText.text = $"Objective: {correctBooksPlaced}/{totalRequiredBooks}";
+            objectiveText.text = $"Set In Order: {correctBooksPlaced}/{totalRequiredBooks}";
         }
     }
 
