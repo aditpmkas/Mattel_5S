@@ -10,6 +10,7 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public bool setInOrderDone = false;
     public bool shineDone = false;
     public string finalTime = "";
+    public int maxPossibleScore = 1500;
 
     public int totalScore = 0;
 

@@ -5,21 +5,61 @@ using UnityEngine.UI;
 
 public class ResultSceneUILevel2 : MonoBehaviour
 {
-    public Text totalScoreText;
-    public Text finalTimeText;  // Drag your Timer Text UI here in Inspector
+    //public Text totalScoreText;
+    public Text finalTimeText;
+    public Text finalPercentageText; // Drag your percentage Text UI here in Inspector
+    public Text finalGradeText; // Drag your grade Text UI here in Inspector
 
     void Start()
     {
         if (ProgressManagerLevel2.Instance != null)
         {
-            totalScoreText.text = "Points: " + ProgressManagerLevel2.Instance.totalScore.ToString();
-            finalTimeText.text = "Time: " + ProgressManagerLevel2.Instance.finalTime;
+            //totalScoreText.text = "Total Score: " + ProgressManagerLevel2.Instance.totalScore.ToString();
+            finalTimeText.text = "Waktu: " + ProgressManagerLevel2.Instance.finalTime;
+
+            // Calculate percentage
+            float percentage = ((float)ProgressManagerLevel2.Instance.totalScore / ProgressManagerLevel2.Instance.maxPossibleScore) * 100f;
+            percentage = Mathf.Clamp(percentage, 0, 100); // Ensure it stays between 0 and 100
+
+            finalPercentageText.text = "Skor: " + percentage.ToString("F0") + "%";
+
+            // Calculate grade
+            string grade = CalculateGrade(ProgressManagerLevel2.Instance.finalTime, percentage);
+            finalGradeText.text = grade;
         }
         else
         {
-            totalScoreText.text = "Points: 0";
-            finalTimeText.text = "Time: 00:00";
+            //totalScoreText.text = "Total Score: 0";
+            finalTimeText.text = "Waktu: 00:00";
+            finalPercentageText.text = "Skor: 0%";
+            finalGradeText.text = "F";
             Debug.LogWarning("ProgressManagerLevel2 not found!");
         }
     }
+
+    // Calculate grade based on time and percentage
+    string CalculateGrade(string timeString, float percentage)
+    {
+        // Parse MM:SS string into minutes
+        string[] parts = timeString.Split(':');
+        int minutes = int.Parse(parts[0]);
+        int seconds = int.Parse(parts[1]);
+        float totalMinutes = minutes + (seconds / 60f);
+
+        // Grading logic (adjusted for 1.5 minutes)
+        if (totalMinutes <= 1.5f && percentage >= 90f)
+            return "A";
+        else if (totalMinutes <= 2f && percentage >= 80f)
+            return "B";
+        else if (totalMinutes <= 5f && percentage >= 70f)
+            return "C";
+        else if (totalMinutes <= 7f && percentage >= 60f)
+            return "D";
+        else if (totalMinutes <= 10f && percentage >= 50f)
+            return "E";
+        else
+            return "F";
+    }
+
+
 }
