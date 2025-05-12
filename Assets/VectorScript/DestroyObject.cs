@@ -5,24 +5,29 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour
 {
 
-    public int sortScore = 0;
+    int score = 0;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!GamePhaseManager.Instance.IsPhase(GamePhaseManager.Phase.Sorting)) return;
+
         if (other.gameObject.tag == "Sort")
         {
-            sortScore += 100;
+            score++;
             Destroy(other.gameObject);
             Debug.Log("GameObject " + other.gameObject.name + " destroyed.");
-            Debug.Log("Your score is: " + sortScore);
+            Debug.Log("Your score is: " + score);
+
+            // Tambahkan jumlah correct sort
+            FindObjectOfType<SortingChecker>().IncrementCorrectSort();
         }
 
         if (other.gameObject.tag == "Unsort")
         {
-            sortScore -= 50;
+            score--;
             Destroy(other.gameObject);
             Debug.Log("GameObject " + other.gameObject.name + " destroyed.");
-            Debug.Log("Your score is: " + sortScore);
+            Debug.Log("Your score is: " + score);
         }
     }
 
