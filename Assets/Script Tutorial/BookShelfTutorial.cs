@@ -1,46 +1,46 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BookShelfTutorial : MonoBehaviour
 {
-    [Header("Checklist jenis buku yang diterima oleh lemari ini")]
     public bool isBookA;
     public bool isBookB;
     public bool isBookC;
     public bool isBookD;
 
-    public int requiredCount = 2; // Jumlah buku yang harus masuk dengan benar
+    public int requiredCount = 2;
     private int currentCount = 0;
     private bool isComplete = false;
 
+    private HashSet<GameObject> countedBooks = new HashSet<GameObject>();
+
     private void OnTriggerEnter(Collider other)
     {
+        // Urutan bebas—tidak pakai check Sorting
         if (isComplete) return;
 
         string tag = other.gameObject.tag;
-        Debug.Log($"[BookShelfTutorial] Buku masuk dengan tag: {tag}");
-
-        if (IsCorrectBook(tag))
+        if (IsCorrectBook(tag) && !countedBooks.Contains(other.gameObject))
         {
+            countedBooks.Add(other.gameObject);
             currentCount++;
-            Debug.Log($"[BookShelfTutorial] Buku cocok! Total sekarang: {currentCount}/{requiredCount}");
 
-            other.transform.SetParent(this.transform); // Snap ke rak
+            Debug.Log($"[BookShelfTutorial] Buku masuk: {tag} ({currentCount}/{requiredCount})");
+
+            other.transform.SetParent(transform);
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.GetComponent<Collider>().enabled = false;
 
             if (currentCount >= requiredCount)
             {
                 isComplete = true;
-                Debug.Log($"[BookShelfTutorial] RAK SELESAI! ({tag}), Total: {currentCount}");
-
-                ShelfManager.Instance.CheckAllShelvesComplete();
+                Debug.Log($"[BookShelfTutorial] Rak {name} selesai!");
+                TaskManager.Instance.CompleteTask(TaskType.SetInOrder);
             }
-        }
-        else
-        {
-            Debug.Log($"[BookShelfTutorial] Buku SALAH ({tag}), tidak cocok dengan rak ini!");
+            ShelfManager.Instance.NotifyBookPlaced();
         }
     }
+
 
     private bool IsCorrectBook(string tag)
     {
@@ -50,8 +50,6 @@ public class BookShelfTutorial : MonoBehaviour
                (isBookD && tag == "BookD");
     }
 
-    public bool IsComplete()
-    {
-        return isComplete;
-    }
+    public bool IsComplete() => isComplete;
+    public int GetCurrentCount() => currentCount;
 }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,44 +7,54 @@ public enum TaskType { Sorting, SetInOrder, Shine }
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance;
+
+    [Header("Completion Notification Canvas")]
+    public GameObject completionNotificationCanvas;
+
     private HashSet<TaskType> completedTasks = new HashSet<TaskType>();
     public UnityEvent onAllTasksCompleted;
-    public TutorialUI tutorialUI;
-
     private void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
+
     private void Start()
     {
-        tutorialUI.UpdateUI("Sorting", "Buang barang tidak diperlukan ke tempat sampah.");
+        if (completionNotificationCanvas != null)
+            completionNotificationCanvas.SetActive(false);
     }
 
+    /// <summary>
+    /// Mark a task as complete. When all tasks are done, show final notification.
+    /// </summary>
     public void CompleteTask(TaskType task)
     {
-        switch (task)
-        {
-            case TaskType.Sorting:
-                tutorialUI.UpdateUI("Set in Order", "Letakkan buku pada rak yang sesuai.");
-                break;
-            case TaskType.SetInOrder:
-                tutorialUI.UpdateUI("Shine", "Gunakan pel untuk membersihkan lantai kotor.");
-                break;
-            case TaskType.Shine:
-                tutorialUI.UpdateUI("Selesai!", "Semua tugas selesai. Terima kasih!");
-                break;
-        }
+        if (completedTasks.Contains(task))
+            return;
 
-        if (!completedTasks.Contains(task))
-        {
-            completedTasks.Add(task);
-            Debug.Log("Task completed: {task}");
+        completedTasks.Add(task);
+        Debug.Log($"Task completed: {task}");
 
-            if (completedTasks.Count >= 3)
-                onAllTasksCompleted?.Invoke();
+        if (completedTasks.Count >= System.Enum.GetValues(typeof(TaskType)).Length)
+        {
+            ShowCompletionNotification();
+            onAllTasksCompleted?.Invoke();
         }
     }
 
+    private void ShowCompletionNotification()
+    {
+        if (completionNotificationCanvas != null)
+            completionNotificationCanvas.SetActive(true);
+        Debug.Log("Tutorial completed! Showing completion notification.");
+    }
+
+    /// <summary>
+    /// Check if a particular task has been done
+    /// </summary>
     public bool IsTaskDone(TaskType task)
     {
         return completedTasks.Contains(task);
