@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public Text timerText;               // Reference to the Text UI to display time
+    public TMP_Text timerText;               // Reference to the Text UI to display time
     public float targetTime = 600f;      // The time to reach (10 minutes here)
     private float timeElapsed = 0f;      // How much time has passed
     private bool timerRunning = false;   // Is the timer active?

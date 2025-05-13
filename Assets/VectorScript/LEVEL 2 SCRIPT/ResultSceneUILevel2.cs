@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ResultSceneUILevel2 : MonoBehaviour
 {
     //public Text totalScoreText;
-    public Text finalTimeText;
-    public Text finalPercentageText; // Drag your percentage Text UI here in Inspector
-    public Text finalGradeText; // Drag your grade Text UI here in Inspector
+    public TMP_Text finalTimeText;
+    public TMP_Text finalPercentageText; // Drag your percentage Text UI here in Inspector
+    public TMP_Text finalGradeText; // Drag your grade Text UI here in Inspector
 
     void Start()
     {
