@@ -23,6 +23,7 @@ TagManager:
   - BookB
   - BookC
   - BookD
+  - WallStain
   layers:
   - Default
   - TransparentFX
