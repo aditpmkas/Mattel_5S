@@ -10,22 +10,32 @@ public class PuddleCleanLevel2 : MonoBehaviour
     {
         if (other.gameObject.tag == "DirtyFloor")
         {
-            bool sortingDone = ProgressManagerLevel2.Instance.sortingDone;
-            bool setInOrderDone = ProgressManagerLevel2.Instance.setInOrderDone;
+            // Get puddle health
+            PuddleHealthLevel2 puddleHealth = other.GetComponent<PuddleHealthLevel2>();
 
-            int scoreToAdd = (sortingDone && setInOrderDone) ? 100 : 100 - 25;
-
-            shineScore += scoreToAdd;
-            ProgressManagerLevel2.Instance.AddScore(scoreToAdd);
-
-            ProgressManagerLevel2.Instance.cleanedPuddlesCount++;
-            if (ProgressManagerLevel2.Instance.cleanedPuddlesCount >= ProgressManagerLevel2.Instance.totalPuddlesCount)
+            if (puddleHealth != null)
             {
-                ProgressManagerLevel2.Instance.shineDone = true;
-                Debug.Log("Shine task complete!");
-            }
+                puddleHealth.AddSwipe();
 
-            Destroy(other.gameObject);
+                // Only score when puddle destroyed
+                if (puddleHealth.IsDestroyed())
+                {
+                    bool sortingDone = ProgressManagerLevel2.Instance.sortingDone;
+                    bool setInOrderDone = ProgressManagerLevel2.Instance.setInOrderDone;
+
+                    int scoreToAdd = (sortingDone && setInOrderDone) ? 100 : 100 - 25;
+
+                    shineScore += scoreToAdd;
+                    ProgressManagerLevel2.Instance.AddScore(scoreToAdd);
+
+                    ProgressManagerLevel2.Instance.cleanedPuddlesCount++;
+                    if (ProgressManagerLevel2.Instance.cleanedPuddlesCount >= ProgressManagerLevel2.Instance.totalPuddlesCount)
+                    {
+                        ProgressManagerLevel2.Instance.shineDone = true;
+                        Debug.Log("Shine task complete!");
+                    }
+                }
+            }
         }
     }
 }
