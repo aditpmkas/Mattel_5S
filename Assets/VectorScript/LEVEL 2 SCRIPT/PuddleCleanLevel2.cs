@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuddleCleanLevel2 : MonoBehaviour
 {
     public int shineScore = 0;
+    public AudioSource wipingSFX;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,12 @@ public class PuddleCleanLevel2 : MonoBehaviour
             if (puddleHealth != null)
             {
                 puddleHealth.AddSwipe();
+
+                //Play mop swipe sfx here
+                if (wipingSFX != null)
+                {
+                    wipingSFX.Play();
+                }
 
                 // Only score when puddle destroyed
                 if (puddleHealth.IsDestroyed())
