@@ -4518,7 +4518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2484dde5b41d304387f8bcd4a7f7168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSwipes: 5
+  maxSwipes: 10
 --- !u!1 &83363843
 GameObject:
   m_ObjectHideFlags: 0
@@ -111243,6 +111243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shineChecker: {fileID: 1982727263}
+  hitDirtyFloorSound: {fileID: 8300000, guid: 5f4ca0698bce0bc40b52feae76f79d11, type: 3}
+  audioSource: {fileID: 503165836}
 --- !u!1 &1985440609
 GameObject:
   m_ObjectHideFlags: 0
@@ -120538,7 +120540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2484dde5b41d304387f8bcd4a7f7168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSwipes: 10
+  maxSwipes: 12
 --- !u!1 &2055620213
 GameObject:
   m_ObjectHideFlags: 0
