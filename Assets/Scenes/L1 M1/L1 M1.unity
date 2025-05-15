@@ -2202,8 +2202,8 @@ Transform:
   m_GameObject: {fileID: 41518914}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00090839464, y: 0.71368295, z: 0.0016814773, w: -0.70046633}
-  m_LocalPosition: {x: 7.352, y: 0.042, z: 34.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.3539, y: 0.087, z: 34.424}
+  m_LocalScale: {x: 1.5745, y: 1.5745, z: 1.5745}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1761108889}
@@ -14305,8 +14305,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.0276687, y: 1, z: 1.3750997}
-  m_Center: {x: -0.0754307, y: 0, z: 0.18755}
+  m_Size: {x: 3.0276687, y: 0.62143445, z: 1.3750997}
+  m_Center: {x: -0.0754307, y: 0.18928234, z: 0.18755}
 --- !u!114 &317565880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33012,8 +33012,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7069485, y: 1, z: 1.5831848}
-  m_Center: {x: -0.14014848, y: 0, z: -0.000007180403}
+  m_Size: {x: 1.9061313, y: 1, z: 2.2756777}
+  m_Center: {x: -0.23973997, y: 0, z: -0.34625342}
 --- !u!1001 &646335415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46303,8 +46303,8 @@ Transform:
   m_GameObject: {fileID: 904604165}
   serializedVersion: 2
   m_LocalRotation: {x: 0.001681482, y: -0.70046425, z: -0.0009083905, w: -0.7136849}
-  m_LocalPosition: {x: 3.631, y: 0.404, z: 36.159}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.6294, y: 0.404, z: 36.159}
+  m_LocalScale: {x: 1.5038, y: 1.5038, z: 1.5038}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1511514243}
@@ -61733,8 +61733,8 @@ Transform:
   m_GameObject: {fileID: 1204357121}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00090839464, y: 0.71368295, z: 0.0016814773, w: -0.70046633}
-  m_LocalPosition: {x: 7.347, y: 0.663, z: 35.624}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.3492, y: 0.596, z: 35.519}
+  m_LocalScale: {x: 1.6673201, y: 1.6673201, z: 1.6673201}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2066385354}
@@ -107512,8 +107512,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.069443464, y: 0.429507, z: 0.23425014}
-  m_Center: {x: 0.008491778, y: 0.23930642, z: -0.014609895}
+  m_Size: {x: 0.069443464, y: 0.383527, z: 0.22900465}
+  m_Center: {x: 0.008491777, y: 0.21631196, z: 0.0015866475}
 --- !u!114 &1932377002
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -452,7 +452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103382685}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -461,15 +461,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -487,7 +487,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -512,10 +512,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &103382688
@@ -1060,7 +1062,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190287496}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -1069,7 +1071,7 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
+  GrabMechanic: 0
   GrabSpeed: 15
   RemoteGrabbable: 0
   RemoteGrabMechanic: 0
@@ -1077,11 +1079,11 @@ MonoBehaviour:
   CanDropMidGrab: 0
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
-  BreakDistance: 0
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
-  SnapHandModel: 1
+  SnapHandModel: 0
   CanBeDropped: 1
   CanBeSnappedToSnapZone: 1
   ForceDisableKinematicOnDrop: 0
@@ -1120,10 +1122,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &190287499
@@ -1966,8 +1970,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.0276687, y: 1, z: 1.3750997}
-  m_Center: {x: -0.0754307, y: 0, z: 0.18755}
+  m_Size: {x: 3.0276687, y: 0.62957436, z: 1.3750997}
+  m_Center: {x: -0.0754307, y: 0.18521263, z: 0.18755}
 --- !u!114 &317565880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,7 +1979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317565877}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -1984,15 +1988,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -2010,7 +2014,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -2035,10 +2039,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &317565883
@@ -3674,7 +3680,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593342010}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -3683,15 +3689,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -3709,7 +3715,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -3734,10 +3740,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &593342012
@@ -3816,7 +3824,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596715022}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -3825,15 +3833,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -3851,7 +3859,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -3876,10 +3884,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &596715024
@@ -4498,8 +4508,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7069485, y: 1, z: 1.5831848}
-  m_Center: {x: -0.14014848, y: 0, z: -0.000007180403}
+  m_Size: {x: 2.0931404, y: 1, z: 2.3281367}
+  m_Center: {x: -0.20676178, y: 0, z: -0.37248364}
 --- !u!114 &645341718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4526,7 +4536,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650126450}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -4535,15 +4545,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -4561,7 +4571,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -4586,10 +4596,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &650126452
@@ -4897,7 +4909,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668017838}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -4906,15 +4918,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -4932,7 +4944,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -4957,10 +4969,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &668017840
@@ -5605,7 +5619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785048831}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -5614,15 +5628,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -5640,7 +5654,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -5665,10 +5679,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &785048833
@@ -6711,7 +6727,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916117266}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -6720,19 +6736,19 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
+  GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
-  BreakDistance: 0
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
-  SnapHandModel: 1
+  SnapHandModel: 0
   CanBeDropped: 1
   CanBeSnappedToSnapZone: 1
   ForceDisableKinematicOnDrop: 0
@@ -6771,10 +6787,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &916117269
@@ -8748,7 +8766,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241984646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -8757,15 +8775,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -8783,7 +8801,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -8808,10 +8826,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1241984648
@@ -9604,7 +9624,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441810965}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -9613,15 +9633,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -9639,7 +9659,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -9664,10 +9684,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1441810968
@@ -10793,7 +10815,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616903266}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -10802,15 +10824,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -10828,7 +10850,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -10853,10 +10875,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1616903268
@@ -11339,7 +11363,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661576890}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -11348,15 +11372,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -11374,7 +11398,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -11399,10 +11423,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1661576893
@@ -13032,7 +13058,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932376995}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -13041,7 +13067,7 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
+  GrabMechanic: 0
   GrabSpeed: 15
   RemoteGrabbable: 0
   RemoteGrabMechanic: 0
@@ -13049,11 +13075,11 @@ MonoBehaviour:
   CanDropMidGrab: 0
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
-  BreakDistance: 0
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
-  SnapHandModel: 1
+  SnapHandModel: 0
   CanBeDropped: 1
   CanBeSnappedToSnapZone: 1
   ForceDisableKinematicOnDrop: 0
@@ -13092,10 +13118,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 716148359}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &1932376998
@@ -13117,8 +13145,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.069443464, y: 0.429507, z: 0.23425014}
-  m_Center: {x: 0.008491778, y: 0.23930642, z: -0.014609895}
+  m_Size: {x: 0.069443464, y: 0.38757774, z: 0.21689253}
+  m_Center: {x: 0.008491778, y: 0.2220368, z: -0.01098197}
 --- !u!114 &1932377003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13586,7 +13614,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017164489}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -13595,15 +13623,15 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 4
-  RemoteGrabbable: 1
+  GrabMechanic: 0
+  GrabSpeed: 15
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 1
+  RemoteGrabDistance: 2
   CanDropMidGrab: 0
-  ThrowForceMultiplier: 1
-  ThrowForceMultiplierAngular: 1
-  BreakDistance: 1.5
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 1
   HideHandGraphics: 0
   ParentToHands: 0
   ParentHandModel: 1
@@ -13621,7 +13649,7 @@ MonoBehaviour:
   TwoHandedPostionLerpAmount: 0.5
   TwoHandedRotation: 1
   TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
+  TwoHandedDropBehavior: 1
   TwoHandedLookVector: 0
   SecondHandLookSpeed: 40
   SecondaryGrabbable: {fileID: 0}
@@ -13646,10 +13674,12 @@ MonoBehaviour:
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
+  GrabPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 141440640}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2017164491
