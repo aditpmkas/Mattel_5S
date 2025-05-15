@@ -16,7 +16,6 @@ public class BookShelfTutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Urutan bebas—tidak pakai check Sorting
         if (isComplete) return;
 
         string tag = other.gameObject.tag;
@@ -35,12 +34,12 @@ public class BookShelfTutorial : MonoBehaviour
             {
                 isComplete = true;
                 Debug.Log($"[BookShelfTutorial] Rak {name} selesai!");
-                TaskManager.Instance.CompleteTask(TaskType.SetInOrder);
             }
+
+            // Lapor ke ShelfManager, yang akan cek semua rak
             ShelfManager.Instance.NotifyBookPlaced();
         }
     }
-
 
     private bool IsCorrectBook(string tag)
     {
