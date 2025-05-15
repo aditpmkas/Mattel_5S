@@ -10,6 +10,7 @@ public class ResultSceneUILevel2 : MonoBehaviour
     public TMP_Text finalTimeText;
     public TMP_Text finalPercentageText; // Drag your percentage Text UI here in Inspector
     public TMP_Text finalGradeText; // Drag your grade Text UI here in Inspector
+    public TMP_Text gradeDescriptionText; // New TMP_Text for description
 
     void Start()
     {
@@ -27,6 +28,9 @@ public class ResultSceneUILevel2 : MonoBehaviour
             // Calculate grade
             string grade = CalculateGrade(ProgressManagerLevel2.Instance.finalTime, percentage);
             finalGradeText.text = grade;
+
+            // Set description in Bahasa Indonesia based on grade
+            gradeDescriptionText.text = GetDescriptionForGrade(grade);
         }
         else
         {
@@ -34,6 +38,7 @@ public class ResultSceneUILevel2 : MonoBehaviour
             finalTimeText.text = "Waktu: 00:00";
             finalPercentageText.text = "Skor: 0%";
             finalGradeText.text = "F";
+            gradeDescriptionText.text = "Tidak Lulus";
             Debug.LogWarning("ProgressManagerLevel2 not found!");
         }
     }
@@ -62,5 +67,18 @@ public class ResultSceneUILevel2 : MonoBehaviour
             return "F";
     }
 
+    string GetDescriptionForGrade(string grade)
+    {
+        switch (grade)
+        {
+            case "A": return "Sangat Baik";
+            case "B": return "Baik Sekali";
+            case "C": return "Cukup";
+            case "D": return "Kurang";
+            case "E": return "Sangat Kurang";
+            case "F": return "Tidak Lulus";
+            default: return "-";
+        }
+    }
 
 }
