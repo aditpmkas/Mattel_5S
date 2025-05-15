@@ -19,10 +19,10 @@ public class TutorialCompleteUI : MonoBehaviour
         btnMainMenu.onClick.AddListener(GoToMainMenu);
         btnLevel1Map1.onClick.AddListener(GoToLevel1Map1);
         btnLevel2Map1.onClick.AddListener(GoToLevel2Map1);
-        btnLevel1Map2.onClick.AddListener(GoToLevel1Map2);
-        btnLevel2Map2.onClick.AddListener(GoToLevel2Map2); 
+        //btnLevel1Map2.onClick.AddListener(GoToLevel1Map2);
+        //btnLevel2Map2.onClick.AddListener(GoToLevel2Map2); 
         btnTutorialMap1.onClick.AddListener(GoToTutorialMap1); 
-        btnTutorialMap2.onClick.AddListener(GoToTutorialMap2); 
+        //btnTutorialMap2.onClick.AddListener(GoToTutorialMap2); 
 }
 
     private void OnDestroy()
@@ -31,10 +31,10 @@ public class TutorialCompleteUI : MonoBehaviour
         btnMainMenu.onClick.RemoveListener(GoToMainMenu);
         btnLevel1Map1.onClick.RemoveListener(GoToLevel1Map1);
         btnLevel2Map1.onClick.RemoveListener(GoToLevel2Map1);
-        btnLevel1Map2.onClick.RemoveListener(GoToLevel1Map2);
-        btnLevel2Map2.onClick.RemoveListener(GoToLevel2Map2);
+        //btnLevel1Map2.onClick.RemoveListener(GoToLevel1Map2);
+        //btnLevel2Map2.onClick.RemoveListener(GoToLevel2Map2);
         btnTutorialMap1.onClick.RemoveListener(GoToTutorialMap1);
-        btnTutorialMap2.onClick.RemoveListener(GoToTutorialMap2);
+        //btnTutorialMap2.onClick.RemoveListener(GoToTutorialMap2);
     }
 
     public void GoToMainMenu()

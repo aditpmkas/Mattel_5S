@@ -31,4 +31,8 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("T M2");
     }
-} 
+    public void ExitGame()
+    {
+        Application.Quit(); // Keluar dari game jika di build
+    }
+}
