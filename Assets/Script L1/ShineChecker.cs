@@ -3,44 +3,42 @@ using TMPro;
 
 public class ShineChecker : MonoBehaviour
 {
-    [Header("Shine Objective")]
-    public int requiredShineCount = 3;
-    private int currentShineCount = 0;
+    public TextMeshProUGUI shineCountText;
+    public GameObject successPanel;
 
-    [Header("UI")]
-    public TextMeshProUGUI objectiveText;
+    private int totalDirt;
+    private int cleanedDirt = 0;
 
     private void Start()
     {
-        UpdateObjectiveText(); // Tampilkan Shine : 0/3 saat awal
+        // 1) Reset UI
+        if (successPanel != null) successPanel.SetActive(false);
+
+        // 2) Hitung total noda
+        totalDirt = GameObject.FindGameObjectsWithTag("DirtyFloor").Length;
+        Debug.Log($"[ShineChecker] Jumlah noda: {totalDirt}");
     }
 
-    /// <summary>
-    /// Dipanggil ketika pel mengenai objek DirtyFloor
-    /// </summary>
     public void RegisterShineHit()
     {
-        currentShineCount++;
-        Debug.Log("RegisterShineHit dipanggil! Count sekarang: " + currentShineCount);
+        cleanedDirt++;
+        Debug.Log($"[ShineChecker] Noda dibersihkan: {cleanedDirt}/{totalDirt}");
 
-        if (currentShineCount >= requiredShineCount)
+        UpdateShineUIText();
+
+        if (cleanedDirt >= totalDirt)
         {
-            Debug.Log("Shine Objective Complete!");
-            // Tambahkan logic tambahan di sini jika dibutuhkan
+            Debug.Log("[ShineChecker] Semua noda dibersihkan!");
+            if (successPanel != null)
+                successPanel.SetActive(true);
         }
-
-        UpdateObjectiveText();
     }
 
-    private void UpdateObjectiveText()
+    private void UpdateShineUIText()
     {
-        if (objectiveText != null)
-        {
-            objectiveText.text = $"Shine : {currentShineCount}/{requiredShineCount}";
-        }
+        if (shineCountText != null)
+            shineCountText.text = $"Shine : {cleanedDirt}/{totalDirt}";
         else
-        {
-            Debug.LogWarning("Objective Text belum di-assign!");
-        }
+            Debug.LogWarning("[ShineChecker] shineCountText belum di-assign!");
     }
 }

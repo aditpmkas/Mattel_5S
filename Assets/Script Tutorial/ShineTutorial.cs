@@ -9,7 +9,11 @@ public class ShineTutorial : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        // Singleton sederhana
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
 
     private void Start()
@@ -21,7 +25,7 @@ public class ShineTutorial : MonoBehaviour
     public void DirtCleaned()
     {
         cleanedDirt++;
-        Debug.Log("Noda dibersihkan: " + cleanedDirt + "/" + totalDirt);
+        Debug.Log($"Noda dibersihkan: {cleanedDirt}/{totalDirt}");
 
         if (cleanedDirt >= totalDirt)
         {

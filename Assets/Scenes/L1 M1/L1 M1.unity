@@ -3555,7 +3555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Shine : '
+  m_text: 'Shine : 0/3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25571,7 +25571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.99928117
+      value: 0.9992812
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalScale.y
@@ -25579,31 +25579,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.010807753
+      value: -0.010738522
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9947132
+      value: -1.1985781
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00070237275
+      value: 0.0010951475
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99998695
+      value: 0.9999869
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -2.3283064e-10
+      value: -3.4924594e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 5.820766e-11
+      value: 1.1641531e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.005120588
+      value: 0.005120595
       objectReference: {fileID: 0}
     - target: {fileID: 1030991085, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -47615,8 +47615,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.029486228, y: 0.5975302, z: 0.035200343}
-  m_Center: {x: -0.0073439577, y: 0.19626826, z: 0.001513973}
+  m_Size: {x: 0.029486375, y: 0.45785046, z: 0.035200343}
+  m_Center: {x: -0.007344055, y: 0.05213549, z: 0.0015139729}
 --- !u!54 &923824369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47662,7 +47662,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 1
   CanDropMidGrab: 0
@@ -47670,7 +47670,7 @@ MonoBehaviour:
   ThrowForceMultiplierAngular: 1
   BreakDistance: 0
   HideHandGraphics: 0
-  ParentToHands: 0
+  ParentToHands: 1
   ParentHandModel: 1
   SnapHandModel: 0
   CanBeDropped: 1
@@ -47728,7 +47728,7 @@ Transform:
   m_GameObject: {fileID: 923824367}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0013275818, y: -0.0006816517, z: -0.07755338, w: 0.99698716}
-  m_LocalPosition: {x: 7.282, y: 3.569, z: 0.309}
+  m_LocalPosition: {x: 7.304, y: 3.71, z: 0.309}
   m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -110803,8 +110803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25a470cd61bad54bb9ffed54d182be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredShineCount: 3
-  objectiveText: {fileID: 54344393}
+  shineCountText: {fileID: 54344393}
+  successPanel: {fileID: 1412826845}
 --- !u!114 &1982727264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110941,8 +110941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf887bca92fd6d42b2c4e8982effd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  successPanel: {fileID: 1412826845}
-  shineChecker: {fileID: 0}
+  shineChecker: {fileID: 1982727263}
 --- !u!1 &1985440609
 GameObject:
   m_ObjectHideFlags: 0
