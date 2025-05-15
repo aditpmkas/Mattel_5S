@@ -47811,7 +47811,7 @@ MonoBehaviour:
   SnapHandModel: 0
   CanBeDropped: 1
   CanBeSnappedToSnapZone: 1
-  ForceDisableKinematicOnDrop: 0
+  ForceDisableKinematicOnDrop: 1
   InstantMovement: 0
   MakeChildCollidersGrabbable: 0
   handPoseType: 0
