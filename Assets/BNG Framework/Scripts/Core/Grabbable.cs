@@ -491,6 +491,13 @@ namespace BNG {
         }
         protected bool didParentHands = false;
 
+        [Header("Audio")]
+        [Tooltip("Audio yang akan dimainkan saat object di-grab.")]
+        public AudioClip GrabAudioClip;
+        
+        [Tooltip("AudioSource yang digunakan untuk memainkan audio. Jika kosong, akan otomatis dibuat.")]
+        public AudioSource GrabAudioSource;
+
         protected void Awake() {
             col = GetComponent<Collider>();
 
@@ -533,6 +540,16 @@ namespace BNG {
                         gc.ParentGrabbable = this;
                     }
                 }
+            }
+
+            // Inisialisasi AudioSource jika belum ada
+            if (GrabAudioSource == null && GrabAudioClip != null) {
+                GrabAudioSource = GetComponent<AudioSource>();
+                if (GrabAudioSource == null) {
+                    GrabAudioSource = gameObject.AddComponent<AudioSource>();
+                }
+                GrabAudioSource.playOnAwake = false;
+                GrabAudioSource.spatialBlend = 1f;
             }
         }
 
@@ -1653,6 +1670,20 @@ namespace BNG {
                 }
 
                 SubscribeToMoveEvents();
+
+                // Mainkan audio jika di-assign
+                if (GrabAudioClip != null) {
+                    if (GrabAudioSource == null) {
+                        GrabAudioSource = GetComponent<AudioSource>();
+                        if (GrabAudioSource == null) {
+                            GrabAudioSource = gameObject.AddComponent<AudioSource>();
+                        }
+                        GrabAudioSource.playOnAwake = false;
+                        GrabAudioSource.spatialBlend = 1f;
+                    }
+                    GrabAudioSource.clip = GrabAudioClip;
+                    GrabAudioSource.Play();
+                }
             }
             else if (isSecondaryGrab) {
                 // Set where the item will move to on the grabber

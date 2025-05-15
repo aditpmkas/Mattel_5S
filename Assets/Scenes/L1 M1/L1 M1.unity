@@ -2319,6 +2319,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &41518919
@@ -5084,6 +5086,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &103382688
@@ -5647,6 +5651,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &122453381
@@ -8214,6 +8220,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &190287499
@@ -10406,6 +10414,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &243531721
@@ -14368,6 +14378,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &317565882
@@ -15330,6 +15342,8 @@ MonoBehaviour:
   GrabPoints:
   - {fileID: 1689131141}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &337711720
@@ -15681,6 +15695,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &338753998
@@ -17171,6 +17187,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &371894028
@@ -17687,6 +17705,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &379118696
@@ -18342,6 +18362,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!1 &385242444
@@ -19095,6 +19117,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &404056036
@@ -20402,6 +20426,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &422418026
@@ -21025,6 +21051,8 @@ MonoBehaviour:
   GrabPoints:
   - {fileID: 1623514326}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &425550856
@@ -29866,6 +29894,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &593342012
@@ -30034,6 +30064,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &596715024
@@ -32489,6 +32521,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &642388345
@@ -33080,6 +33114,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &650126452
@@ -34506,6 +34542,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &664430540
@@ -34695,6 +34733,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &668017840
@@ -36055,6 +36095,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!1 &689112672
@@ -41163,6 +41205,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &785048833
@@ -44654,6 +44698,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!1 &867019284
@@ -46238,6 +46284,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &904604170
@@ -46935,6 +46983,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &916117269
@@ -47211,6 +47261,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &921317457
@@ -47663,6 +47715,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!4 &923824371
@@ -47963,6 +48017,8 @@ MonoBehaviour:
   GrabPoints:
   - {fileID: 379582819}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &926801688
@@ -49522,6 +49578,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &959347270
@@ -50227,6 +50285,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &974064665
@@ -52278,6 +52338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871499900991950826, guid: 2a0c9adeb1b50e344acb742002b9022a,
+        type: 3}
+      propertyPath: ParentRigid
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2871499900991950831, guid: 2a0c9adeb1b50e344acb742002b9022a,
         type: 3}
@@ -56386,6 +56451,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!135 &1095101240
@@ -58906,6 +58973,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &1146634582
@@ -61640,6 +61709,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1204357126
@@ -61936,6 +62007,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!33 &1206750901
@@ -63787,6 +63860,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1241984648
@@ -65494,6 +65569,134 @@ Transform:
   m_Children: []
   m_Father: {fileID: 515577806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1290814868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290814870}
+  - component: {fileID: 1290814869}
+  m_Layer: 0
+  m_Name: Buku Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1290814869
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290814868}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1290814870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290814868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.497173, y: -21.798664, z: 0.44659403}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1291172611
 GameObject:
   m_ObjectHideFlags: 0
@@ -66331,6 +66534,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1303455443
@@ -66783,6 +66988,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &1311838273
@@ -71433,6 +71640,8 @@ MonoBehaviour:
   GrabPoints:
   - {fileID: 408990296}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1406181979
@@ -73382,6 +73591,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1435078983
@@ -73938,6 +74149,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1441810968
@@ -81080,6 +81293,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1616903268
@@ -89081,6 +89296,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1661576893
@@ -90353,6 +90570,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!1 &1689131140
@@ -90684,6 +90903,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!64 &1690145259
@@ -92266,6 +92487,134 @@ Transform:
   - {fileID: 1460473004}
   m_Father: {fileID: 1612371258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1725993293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725993295}
+  - component: {fileID: 1725993296}
+  m_Layer: 0
+  m_Name: Grab Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725993295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725993293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.844536, y: -12.52214, z: 28.959465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1725993296
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725993293}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1726382425
 GameObject:
   m_ObjectHideFlags: 0
@@ -93447,6 +93796,8 @@ MonoBehaviour:
   GrabPoints:
   - {fileID: 927264158}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1746294603
@@ -94226,6 +94577,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!23 &1752588597
@@ -94657,6 +95010,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &1756370219
@@ -102346,6 +102701,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &1817678392
@@ -106222,6 +106579,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!136 &1923492133
@@ -106808,6 +107167,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 1725993296}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &1932376998
@@ -107615,6 +107976,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &1938195756
@@ -110121,6 +110484,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!144 &1975389421
@@ -117007,6 +117372,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
+  GrabAudioSource: {fileID: 1290814869}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2017164491
@@ -118567,6 +118934,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2037198839
@@ -120583,6 +120952,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2062447764
@@ -122554,6 +122925,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &2083506375
@@ -125196,31 +125569,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.43339396
+      value: -0.43335867
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.8830004
+      value: -5.883033
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.438766
+      value: 45.43856
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.60876083
+      value: 0.607564
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000031844158
+      value: 0.0019402298
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.79335386
+      value: -0.794267
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000036387894
+      value: -0.0014805724
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -125228,11 +125601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -105
+      value: -105.173
       objectReference: {fileID: 0}
     - target: {fileID: 1030993983, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 1030993985, guid: abc00000000011369855973561480627, type: 3}
       propertyPath: m_Enabled
@@ -129644,6 +130017,8 @@ MonoBehaviour:
   - {fileID: 5076800553624857363}
   - {fileID: 5463530125553483316}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &3319413210869215274
@@ -130771,6 +131146,8 @@ MonoBehaviour:
   - {fileID: 6978229133994821268}
   - {fileID: 5102114835931330105}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!82 &6024261394667629735
@@ -133093,3 +133470,5 @@ SceneRoots:
   - {fileID: 2060508748}
   - {fileID: 1472763353}
   - {fileID: 646335415}
+  - {fileID: 1725993295}
+  - {fileID: 1290814870}
