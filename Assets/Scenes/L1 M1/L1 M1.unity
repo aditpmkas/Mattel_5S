@@ -4388,6 +4388,7 @@ GameObject:
   - component: {fileID: 80948621}
   - component: {fileID: 80948620}
   - component: {fileID: 80948619}
+  - component: {fileID: 80948624}
   m_Layer: 0
   m_Name: Quad (1)
   m_TagString: DirtyFloor
@@ -4503,6 +4504,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846624470}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &80948624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80948618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2484dde5b41d304387f8bcd4a7f7168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSwipes: 5
 --- !u!1 &83363843
 GameObject:
   m_ObjectHideFlags: 0
@@ -29799,7 +29813,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -29967,7 +29981,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -33013,7 +33027,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -34628,7 +34642,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -41096,7 +41110,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -61243,6 +61257,7 @@ GameObject:
   - component: {fileID: 1201121777}
   - component: {fileID: 1201121776}
   - component: {fileID: 1201121775}
+  - component: {fileID: 1201121780}
   m_Layer: 0
   m_Name: Quad (2)
   m_TagString: DirtyFloor
@@ -61358,6 +61373,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846624470}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1201121780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201121774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2484dde5b41d304387f8bcd4a7f7168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSwipes: 10
 --- !u!1001 &1203066399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63706,7 +63734,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -80999,7 +81027,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -110548,8 +110576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf887bca92fd6d42b2c4e8982effd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredCleanCount: 3
-  requiredSwipeDistance: 0.5
   successPanel: {fileID: 1412826845}
   shineChecker: {fileID: 0}
 --- !u!1 &1985440609
@@ -116928,7 +116954,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -119689,6 +119715,7 @@ GameObject:
   - component: {fileID: 2054241217}
   - component: {fileID: 2054241216}
   - component: {fileID: 2054241215}
+  - component: {fileID: 2054241220}
   m_Layer: 0
   m_Name: Quad
   m_TagString: DirtyFloor
@@ -119804,6 +119831,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846624470}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2054241220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054241214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2484dde5b41d304387f8bcd4a7f7168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSwipes: 10
 --- !u!1 &2055620213
 GameObject:
   m_ObjectHideFlags: 0
@@ -128899,6 +128939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074074610480678380, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6130294578286966575, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
