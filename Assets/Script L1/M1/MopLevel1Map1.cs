@@ -8,7 +8,7 @@ public class MopLevel1Map1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DirtyFloor"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("DirtyFloor") || other.CompareTag("DirtyFloor"))
         {
             PuddleHealthVR puddleHealth = other.GetComponent<PuddleHealthVR>();
             if (puddleHealth != null)

@@ -9,7 +9,7 @@ public class PuddleCleanLevel2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "DirtyFloor")
+        if (other.gameObject.layer == LayerMask.NameToLayer("DirtyFloor") || other.CompareTag("DirtyFloor"))
         {
             // Get puddle health
             PuddleHealthLevel2 puddleHealth = other.GetComponent<PuddleHealthLevel2>();

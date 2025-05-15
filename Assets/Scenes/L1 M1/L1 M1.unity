@@ -25746,8 +25746,12 @@ PrefabInstance:
       value: -2.867
       objectReference: {fileID: 0}
     - target: {fileID: 1030991087, guid: abc00000000004584538391540814175, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030991087, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25757,10 +25761,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1984836210}
-    - targetCorrespondingSourceObject: {fileID: 1030991084, guid: abc00000000004584538391540814175,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1984836217}
     - targetCorrespondingSourceObject: {fileID: 1030991084, guid: abc00000000004584538391540814175,
         type: 3}
       insertIndex: -1
@@ -47747,7 +47747,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -47776,7 +47776,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -111224,27 +111224,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.07115507, y: 0.03766656, z: 0.41994917}
   m_Center: {x: 0.007854223, y: 0.018034339, z: -0.00101614}
---- !u!65 &1984836217
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984836207}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07115507, y: 0.03766656, z: 0.4199492}
-  m_Center: {x: 0.007854223, y: 0.01803434, z: -0.00101614}
 --- !u!4 &1984836220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030991085, guid: abc00000000004584538391540814175,

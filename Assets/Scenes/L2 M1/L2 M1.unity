@@ -514,6 +514,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &103382688
@@ -992,6 +994,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &190287499
@@ -1905,6 +1909,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &317565883
@@ -2072,27 +2078,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 469567834}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &377079699
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377079697}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07115507, y: 0.03766656, z: 0.4199492}
-  m_Center: {x: 0.007854223, y: 0.01803434, z: -0.00101614}
 --- !u!65 &377079701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2127,6 +2112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shineScore: 0
+  wipingSFX: {fileID: 0}
 --- !u!1 &383573192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 176480, guid: 123ebab60f53bd540b0ae678171dcba2,
@@ -2280,7 +2266,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2309,7 +2295,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2339,12 +2325,12 @@ MonoBehaviour:
   ThrowForceMultiplierAngular: 1
   BreakDistance: 0
   HideHandGraphics: 0
-  ParentToHands: 0
+  ParentToHands: 1
   ParentHandModel: 1
   SnapHandModel: 0
   CanBeDropped: 1
   CanBeSnappedToSnapZone: 1
-  ForceDisableKinematicOnDrop: 0
+  ForceDisableKinematicOnDrop: 1
   InstantMovement: 0
   MakeChildCollidersGrabbable: 0
   handPoseType: 0
@@ -2384,6 +2370,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!4 &417702186
@@ -3147,8 +3135,12 @@ PrefabInstance:
       value: -2.867
       objectReference: {fileID: 0}
     - target: {fileID: 1030991087, guid: abc00000000004584538391540814175, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030991087, guid: abc00000000004584538391540814175, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3158,10 +3150,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 377079701}
-    - targetCorrespondingSourceObject: {fileID: 1030991084, guid: abc00000000004584538391540814175,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 377079699}
     - targetCorrespondingSourceObject: {fileID: 1030991084, guid: abc00000000004584538391540814175,
         type: 3}
       insertIndex: -1
@@ -3620,6 +3608,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &593342012
@@ -3760,6 +3750,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &596715024
@@ -4468,6 +4460,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &650126452
@@ -4837,6 +4831,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &668017840
@@ -5415,6 +5411,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &785048833
@@ -6519,6 +6517,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &916117269
@@ -8412,6 +8412,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1241984648
@@ -9266,6 +9268,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1441810968
@@ -10325,6 +10329,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1616903268
@@ -10869,6 +10875,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1661576893
@@ -12432,6 +12440,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &1932376998
@@ -12984,6 +12994,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2017164491
@@ -13505,6 +13517,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2062447764

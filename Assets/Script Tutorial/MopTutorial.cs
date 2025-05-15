@@ -4,7 +4,7 @@ public class MopTutorial : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "DirtyFloor")
+        if (other.gameObject.layer == LayerMask.NameToLayer("DirtyFloor") || other.CompareTag("DirtyFloor"))
         {
             PuddleHealthT puddleHealth = other.GetComponent<PuddleHealthT>();
 
