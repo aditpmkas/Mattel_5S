@@ -21,14 +21,14 @@ public class SceneTransition : MonoBehaviour
     }
     public void GoToLevel2Map2()
     {
-        SceneManager.LoadScene("L2 M1");
+        SceneManager.LoadScene("L2 M2");
     }
     public void GoToLevel1Map2()
     {
-        SceneManager.LoadScene("L1 M1");
+        SceneManager.LoadScene("L1 M2");
     }
     public void GoToTutorialMap2()
     {
-        SceneManager.LoadScene("T M1");
+        SceneManager.LoadScene("T M2");
     }
 } 
