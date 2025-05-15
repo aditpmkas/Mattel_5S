@@ -10,13 +10,22 @@ public class PuddleCleanLevel2 : MonoBehaviour
     {
         if (other.gameObject.tag == "DirtyFloor")
         {
-            int scoreToAdd = (!ProgressManagerLevel2.Instance.sortingDone) ? 100 - 25 : 100;
+            bool sortingDone = ProgressManagerLevel2.Instance.sortingDone;
+            bool setInOrderDone = ProgressManagerLevel2.Instance.setInOrderDone;
+
+            int scoreToAdd = (sortingDone && setInOrderDone) ? 100 : 100 - 25;
 
             shineScore += scoreToAdd;
             ProgressManagerLevel2.Instance.AddScore(scoreToAdd);
+
+            ProgressManagerLevel2.Instance.cleanedPuddlesCount++;
+            if (ProgressManagerLevel2.Instance.cleanedPuddlesCount >= ProgressManagerLevel2.Instance.totalPuddlesCount)
+            {
+                ProgressManagerLevel2.Instance.shineDone = true;
+                Debug.Log("Shine task complete!");
+            }
+
             Destroy(other.gameObject);
-            Debug.Log("GameObject " + other.gameObject.name + " destroyed.");
-            Debug.Log("Your score is: " + shineScore);
         }
     }
 }

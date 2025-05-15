@@ -12,12 +12,14 @@ public class TrashSortingLevel2 : MonoBehaviour
         {
             sortScore += 100;
             ProgressManagerLevel2.Instance.AddScore(100);
-            Destroy(other.gameObject);
-            Debug.Log("GameObject " + other.gameObject.name + " destroyed.");
-            Debug.Log("Your score is: " + sortScore);
+            ProgressManagerLevel2.Instance.sortedTrashCount++;
+            if (ProgressManagerLevel2.Instance.sortedTrashCount >= ProgressManagerLevel2.Instance.totalTrashCount)
+            {
+                ProgressManagerLevel2.Instance.sortingDone = true;
+                Debug.Log("Sorting task complete!");
+            }
 
-            // Mark Sorting as done
-            ProgressManagerLevel2.Instance.sortingDone = true;
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Unsort")

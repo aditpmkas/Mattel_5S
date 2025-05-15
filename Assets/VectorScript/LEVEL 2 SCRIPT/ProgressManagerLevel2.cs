@@ -6,20 +6,29 @@ public class ProgressManagerLevel2 : MonoBehaviour
 {
     public static ProgressManagerLevel2 Instance;
 
+    public int totalTrashCount = 4;
+    public int sortedTrashCount = 0;
+
+    public int totalBooksCount = 8;
+    public int sortedBooksCount = 0;
+
+    public int totalPuddlesCount = 3;
+    public int cleanedPuddlesCount = 0;
+
     public bool sortingDone = false;
     public bool setInOrderDone = false;
     public bool shineDone = false;
-    public string finalTime = "";
-    public int maxPossibleScore = 1500;
 
     public int totalScore = 0;
+    public int maxPossibleScore = 1500;
+    public string finalTime = "";
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // <--- This line makes it persist across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -27,14 +36,12 @@ public class ProgressManagerLevel2 : MonoBehaviour
         }
     }
 
-    // Call this from other scripts to add to total score
     public void AddScore(int score)
     {
         totalScore += score;
         Debug.Log("Total Score: " + totalScore);
     }
 
-    // Call this to subtract from total score
     public void SubtractScore(int score)
     {
         totalScore -= score;
