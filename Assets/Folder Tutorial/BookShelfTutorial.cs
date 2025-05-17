@@ -27,7 +27,6 @@ public class BookShelfTutorial : MonoBehaviour
             Debug.Log($"[BookShelfTutorial] Buku masuk: {tag} ({currentCount}/{requiredCount})");
 
             other.transform.SetParent(transform);
-            other.GetComponent<Rigidbody>().isKinematic = true;
             other.GetComponent<Collider>().enabled = false;
 
             if (currentCount >= requiredCount)

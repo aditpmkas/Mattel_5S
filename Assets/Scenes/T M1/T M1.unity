@@ -8715,6 +8715,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2305322, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -8757,7 +8765,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.7, z: 0.3}
+  m_Size: {x: 0.3, y: 0.7, z: 0.29}
   m_Center: {x: -0.2, y: 0.35, z: 0.1523865}
 --- !u!114 &212883111
 MonoBehaviour:
@@ -24067,6 +24075,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2305322, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -24109,7 +24125,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.7, z: 0.29322702}
+  m_Size: {x: 0.3, y: 0.7, z: 0.29}
   m_Center: {x: -0.20000002, y: 0.34999996, z: 0.15238652}
 --- !u!114 &476516742
 MonoBehaviour:
@@ -73947,6 +73963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnMessage: Mop returned!
+  completeDelay: 2
 --- !u!65 &1408685715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79231,6 +79248,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2305322, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -79273,7 +79298,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.7, z: 0.3}
+  m_Size: {x: 0.3, y: 0.7, z: 0.29}
   m_Center: {x: -0.2, y: 0.35, z: 0.1523865}
 --- !u!114 &1502752109
 MonoBehaviour:
@@ -125292,6 +125317,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2305322, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6443264, guid: ac4f3edb6ec45f04aaf6456ceb7db24b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -125334,7 +125367,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.7, z: 0.3}
+  m_Size: {x: 0.3, y: 0.7, z: 0.29}
   m_Center: {x: -0.2, y: 0.35, z: 0.1523865}
 --- !u!114 &2081905305
 MonoBehaviour:
