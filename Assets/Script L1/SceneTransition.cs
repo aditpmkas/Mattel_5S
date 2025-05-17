@@ -33,6 +33,6 @@ public class SceneTransition : MonoBehaviour
     }
     public void ExitGame()
     {
-        Application.Quit(); // Keluar dari game jika di build
+        Application.Quit(); 
     }
 }
