@@ -15,6 +15,8 @@ public class SnappableObject : MonoBehaviour
     private CollisionDetectionMode originalCollisionMode;
     private bool isInSnapRange = false;
     private bool wasBeingHeld = false;
+    public SnapPoint initialSnapPoint;
+
 
     void Start()
     {
@@ -37,6 +39,28 @@ public class SnappableObject : MonoBehaviour
         {
             wasKinematic = rb.isKinematic;
             originalCollisionMode = rb.collisionDetectionMode;
+        }
+
+        if (initialSnapPoint != null && !initialSnapPoint.isOccupied)
+        {
+            // tandai state internal
+            currentSnapPoint = initialSnapPoint;
+            isSnapped = true;
+
+            // reservasi di snap point
+            initialSnapPoint.SnapObject(transform);
+
+            // langsung set transform & parent
+            transform.position = initialSnapPoint.transform.position;
+            transform.rotation = initialSnapPoint.transform.rotation;
+            transform.SetParent(initialSnapPoint.transform);
+
+            // jika punya rigidbody, kinematic agar tidak jatuh
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            }
         }
     }
 

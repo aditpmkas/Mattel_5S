@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using BNG;
 
 public enum TaskType { Sorting, SetInOrder, Shine }
 
@@ -12,8 +13,13 @@ public class TaskManager : MonoBehaviour
     [Header("Completion Notification Canvas")]
     public GameObject completionNotificationCanvas;
 
+    public GameObject sortingCanvas;
+    public GameObject setInOrderCanvas;
+    public GameObject shineCanvas;
+
     private HashSet<TaskType> completedTasks = new HashSet<TaskType>();
     public UnityEvent onAllTasksCompleted;
+
     private void Awake()
     {
         if (Instance == null)
@@ -42,15 +48,23 @@ public class TaskManager : MonoBehaviour
         if (completedTasks.Count >= System.Enum.GetValues(typeof(TaskType)).Length)
         {
             ShowCompletionNotification();
-            onAllTasksCompleted?.Invoke();
+            onAllTasksCompleted.Invoke();
         }
     }
 
     private void ShowCompletionNotification()
     {
+        var ui = FindObjectOfType<TutorialUIController>();
+        if (ui != null) ui.DisableGrabbable();
+
         if (completionNotificationCanvas != null)
             completionNotificationCanvas.SetActive(true);
+
         Debug.Log("Tutorial completed! Showing completion notification.");
+
+        Destroy(sortingCanvas);
+        Destroy(setInOrderCanvas);
+        Destroy(shineCanvas);
     }
 
     /// <summary>
@@ -61,21 +75,21 @@ public class TaskManager : MonoBehaviour
         return completedTasks.Contains(task);
     }
 
-     /// <summary>
+    /// <summary>
     /// Force‐mark all tasks as complete and fire the completion event.
     /// </summary>
     public void CompleteAllTasks()
     {
         // If you don’t care about duplicate events, you can just
         // call CompleteTask on every enum value:
-        foreach (TaskType t in System.Enum.GetValues(typeof(TaskType)).Cast<TaskType>())
-            CompleteTask(t);
-        
+        //foreach (TaskType t in System.Enum.GetValues(typeof(TaskType)).Cast<TaskType>())
+        //CompleteTask(t);
+
         // In case you want to skip the logging/duplicate-check in CompleteTask,
         // you could instead do:
-        // completedTasks = new HashSet<TaskType>(
-        //     System.Enum.GetValues(typeof(TaskType)).Cast<TaskType>());
-        // ShowCompletionNotification();
-        // onAllTasksCompleted?.Invoke();
+        completedTasks = new HashSet<TaskType>(
+        System.Enum.GetValues(typeof(TaskType)).Cast<TaskType>());
+        ShowCompletionNotification();
+        onAllTasksCompleted.Invoke();
     }
 }
