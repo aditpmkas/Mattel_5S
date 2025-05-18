@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class GamePhaseManager : MonoBehaviour
 {
@@ -11,18 +12,22 @@ public class GamePhaseManager : MonoBehaviour
 
     public static GamePhaseManager Instance;
 
-    private Phase currentPhase;
+    [SerializeField] private TextMeshProUGUI phaseText;
+
+    public Phase currentPhase;
 
     private void Awake()
     {
         Instance = this;
-        currentPhase = Phase.Sorting;  // Default phase, bisa disesuaikan
+        currentPhase = Phase.Sorting;  // Default phase
+        UpdatePhaseText();
     }
 
     public void SetPhase(Phase phase)
     {
         currentPhase = phase;
         Debug.Log("Fase berubah menjadi: " + currentPhase);
+        UpdatePhaseText();
     }
 
     public bool IsPhase(Phase phase)
@@ -33,5 +38,13 @@ public class GamePhaseManager : MonoBehaviour
     public Phase GetCurrentPhase()
     {
         return currentPhase;
+    }
+
+    private void UpdatePhaseText()
+    {
+        if (phaseText != null)
+        {
+            phaseText.text = "Current Phase: " + currentPhase.ToString();
+        }
     }
 }

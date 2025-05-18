@@ -17,30 +17,31 @@ public class GameManagerL1M2 : MonoBehaviour
     public GamePhase currentPhase = GamePhase.Sorting;
     public TMP_Text phaseText;
 
-    [Header("Snap Order UI")]
-    public int totalSnapPointsToCheck = 6;
-    private int snapCorrectCount = 0;
-    public TMP_Text setInOrderText;
-
     [Header("Sorting UI")]
     public int totalSortTargets = 3;
     private int sortDestroyedCount = 0;
     public TMP_Text sortingText;
 
+    [Header("Set In Order UI")]
+    public int totalSnapPointsToCheck = 6;
+    private int snapCorrectCount = 0;
+    public TMP_Text setInOrderText;
+
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
 
     private void Start()
     {
-        UpdateSortingUI();
-        UpdateSnapUI();
-        UpdatePhaseText();
-
-        UpdateGrabbableScripts();  // Set awal sesuai fase
+        UpdateAllUI();
+        UpdateGrabbableScripts(); // Aktifkan sesuai fase awal
     }
+
+    // ======================= Sorting =======================
 
     public void IncrementSortDestroyed()
     {
@@ -56,6 +57,14 @@ public class GameManagerL1M2 : MonoBehaviour
         }
     }
 
+    private void UpdateSortingUI()
+    {
+        if (sortingText != null)
+            sortingText.text = $"Sorting : {sortDestroyedCount}/{totalSortTargets}";
+    }
+
+    // =================== Set In Order ======================
+
     public void CheckAllSnapPoints()
     {
         if (currentPhase != GamePhase.SetInOrder) return;
@@ -66,9 +75,7 @@ public class GameManagerL1M2 : MonoBehaviour
         foreach (var point in snapPoints)
         {
             if (point.isOccupied && point.snappedObject == point.correctObject)
-            {
                 correctCount++;
-            }
         }
 
         snapCorrectCount = correctCount;
@@ -81,32 +88,23 @@ public class GameManagerL1M2 : MonoBehaviour
         }
     }
 
-    public void RegisterShineHit()
-    {
-        if (currentPhase != GamePhase.Shine) return;
-
-        Debug.Log("[GameManager] Shine hit registered");
-
-        // Bisa tambahkan logic lanjutannya di sini jika perlu
-    }
-
-    private void UpdateSortingUI()
-    {
-        if (sortingText != null)
-            sortingText.text = $"Sorting : {sortDestroyedCount}/{totalSortTargets}";
-    }
-
     private void UpdateSnapUI()
     {
         if (setInOrderText != null)
             setInOrderText.text = $"Set In Order : {snapCorrectCount}/{totalSnapPointsToCheck}";
     }
 
-    private void UpdatePhaseText()
+    // ======================== Shine ========================
+
+    public void RegisterShineHit()
     {
-        if (phaseText != null)
-            phaseText.text = $"Phase: {currentPhase}";
+        if (currentPhase != GamePhase.Shine) return;
+
+        Debug.Log("[GameManager] Shine hit registered");
+        // Tambahkan logika shine jika diperlukan
     }
+
+    // =================== Phase Management ===================
 
     private void AdvancePhase()
     {
@@ -123,52 +121,66 @@ public class GameManagerL1M2 : MonoBehaviour
                 break;
         }
 
-        UpdatePhaseText();
-        UpdateGrabbableScripts(); // Update status grabbable tiap pindah fase
+        UpdateAllUI();
+        UpdateGrabbableScripts();
     }
+
+    private void UpdateAllUI()
+    {
+        UpdateSortingUI();
+        UpdateSnapUI();
+        UpdatePhaseText();
+    }
+
+    private void UpdatePhaseText()
+    {
+        if (phaseText != null)
+            phaseText.text = $"Phase: {FormatPhaseName(currentPhase)}";
+    }
+
+    private string FormatPhaseName(GamePhase phase)
+    {
+        switch (phase)
+        {
+            case GamePhase.Sorting: return "Sorting";
+            case GamePhase.SetInOrder: return "Set In Order";
+            case GamePhase.Shine: return "Shine";
+            default: return phase.ToString();
+        }
+    }
+
+    // ================= Grabbable Control ==================
 
     private void UpdateGrabbableScripts()
     {
-        // Matikan semua Grabbable dulu
         var allGrabbables = FindObjectsOfType<Grabbable>();
-        foreach (var g in allGrabbables)
-        {
-            g.enabled = false;
-        }
 
-        // Aktifkan Grabbable yang sesuai fase
+        // Matikan semua
+        foreach (var g in allGrabbables)
+            g.enabled = false;
+
+        // Nyalakan yang sesuai tag fase
         switch (currentPhase)
         {
             case GamePhase.Sorting:
-                // Aktifkan Grabbable untuk sorting items (misal, tag "Sort")
-                EnableGrabbableByTag("Sort");
+                EnableGrabbablesWithTag("Sort");
                 break;
-
             case GamePhase.SetInOrder:
-                // Aktifkan Grabbable untuk snap order objects (misal, tag "SnapObject")
-                EnableGrabbableByTag("SnapObject");
+                EnableGrabbablesWithTag("SnapObject");
                 break;
-
             case GamePhase.Shine:
-                // Aktifkan Grabbable untuk noda bersih (misal, tag "DirtyFloor")
-                EnableGrabbableByTag("DirtyFloor");
+                EnableGrabbablesWithTag("DirtyFloor");
                 break;
         }
     }
 
-    private void EnableGrabbableByTag(string tag)
+    private void EnableGrabbablesWithTag(string tag)
     {
         var allGrabbables = FindObjectsOfType<Grabbable>();
+
         foreach (var g in allGrabbables)
         {
-            if (g.gameObject.CompareTag(tag))
-            {
-                g.enabled = true;
-            }
-            else
-            {
-                g.enabled = false;
-            }
+            g.enabled = g.gameObject.CompareTag(tag);
         }
     }
 }
