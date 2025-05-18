@@ -11,20 +11,28 @@ public class ShineChecker : MonoBehaviour
 
     private void Start()
     {
-        // 1) Reset UI
         if (successPanel != null) successPanel.SetActive(false);
 
-        // 2) Hitung total noda
+        // Hitung noda saat fase Shine mulai
         totalDirt = GameObject.FindGameObjectsWithTag("DirtyFloor").Length;
         Debug.Log($"[ShineChecker] Jumlah noda: {totalDirt}");
+
+        UpdateShineUIText();
     }
 
     public void RegisterShineHit()
     {
+        // Cek apakah game sedang di fase Shine
+        if (GameManagerL1M2.Instance.currentPhase != GameManagerL1M2.GamePhase.Shine)
+            return;
+
         cleanedDirt++;
         Debug.Log($"[ShineChecker] Noda dibersihkan: {cleanedDirt}/{totalDirt}");
 
         UpdateShineUIText();
+
+        // Update juga ke GameManager untuk pengelolaan fase
+        GameManagerL1M2.Instance.RegisterShineHit();
 
         if (cleanedDirt >= totalDirt)
         {

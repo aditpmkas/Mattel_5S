@@ -3,7 +3,7 @@ using UnityEngine;
 public class PuddleHealthVR : MonoBehaviour
 {
     [Header("Swipe Settings")]
-    public int maxSwipes = 3;
+    public int maxSwipes = 5;
 
     private int currentSwipes = 0;
 

@@ -38,7 +38,7 @@ public class SnapPointLevel1 : MonoBehaviour
             if (objectToSnap == correctObject)
             {
                 Debug.Log("Object benar dan berhasil snap.");
-                GameManagerLevel1.Instance.CheckAllSnapPoints();
+                GameManagerL1M2.Instance.CheckAllSnapPoints();
             }
             else
             {
@@ -55,5 +55,13 @@ public class SnapPointLevel1 : MonoBehaviour
         }
         snappedObject = null;
         isOccupied = false;
+    }
+    private void Update()
+    {
+        // Cek fase, hanya cek snap saat fase SetInOrder aktif
+        if (GameManagerL1M2.Instance.currentPhase == GameManagerL1M2.GamePhase.SetInOrder)
+        {
+            GameManagerL1M2.Instance.CheckAllSnapPoints();
+        }
     }
 }

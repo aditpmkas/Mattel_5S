@@ -128877,6 +128877,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6728727643101440195, guid: e39f4b35a6db18348b41eb0262520e69,
         type: 3}
+    - target: {fileID: 1401384465721441411, guid: f36f23d9eb361b84c8e3ec3a25b28bd9,
+        type: 3}
+      propertyPath: PhysicsRaycasterEventMask.m_Bits
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 1401384465721441535, guid: f36f23d9eb361b84c8e3ec3a25b28bd9,
         type: 3}
       propertyPath: m_Name
@@ -133928,7 +133933,6 @@ SceneRoots:
   - {fileID: 452772471}
   - {fileID: 846624470}
   - {fileID: 923824371}
-  - {fileID: 1982727261}
   - {fileID: 246208577}
   - {fileID: 1326960906}
   - {fileID: 1318966596}
@@ -133945,3 +133949,4 @@ SceneRoots:
   - {fileID: 1612123117}
   - {fileID: 503165837}
   - {fileID: 620667336}
+  - {fileID: 1982727261}
