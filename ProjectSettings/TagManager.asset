@@ -24,6 +24,18 @@ TagManager:
   - BookC
   - BookD
   - WallStain
+  - Tang
+  - Linggis Medium
+  - Linggis Kecil
+  - Kunci Ring
+  - Kunci Tools Medium
+  - Kunci Tools Kecil
+  - Obeng Besar
+  - Obeng Medium
+  - Obeng Kecil
+  - Kunci Inggris Besar
+  - Kunci Inggris Medium
+  - Kunci Besar Kecil
   layers:
   - Default
   - TransparentFX

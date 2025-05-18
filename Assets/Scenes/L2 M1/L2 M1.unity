@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 1020096708}
-  sceneToLoad: Result
+  sceneToLoad: Result Map 1
 --- !u!114 &245461233
 MonoBehaviour:
   m_ObjectHideFlags: 0
