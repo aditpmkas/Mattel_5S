@@ -4,20 +4,18 @@ using UnityEngine.Events;
 using System.Linq;
 using BNG;
 
-public enum TaskType { Sorting, SetInOrder, Shine }
+public enum TaskType2 { Sorting, SetInOrder, Shine }
 
-public class TaskManager : MonoBehaviour
+public class TaskManagerM2 : MonoBehaviour
 {
-    public static TaskManager Instance;
+    public static TaskManagerM2 Instance;
 
     [Header("Completion Notification Canvas")]
     public GameObject completionNotificationCanvas;
 
-    public GameObject sortingCanvas;
-    public GameObject setInOrderCanvas;
-    public GameObject shineCanvas;
+    public GameObject sortingCanvas, setInOrderCanvas, shineCanvas;
 
-    private HashSet<TaskType> completedTasks = new HashSet<TaskType>();
+    private HashSet<TaskType2> completedTasks = new HashSet<TaskType2>();
     public UnityEvent onAllTasksCompleted;
 
     private void Awake()
@@ -37,15 +35,15 @@ public class TaskManager : MonoBehaviour
     /// <summary>
     /// Mark a task as complete. When all tasks are done, show final notification.
     /// </summary>
-    public void CompleteTask(TaskType task)
+    public void CompleteTask(TaskType2 task)
     {
         if (completedTasks.Contains(task))
             return;
 
-        completedTasks.Add(task);
+         completedTasks.Add(task);
         Debug.Log($"Task completed: {task}");
 
-        if (completedTasks.Count >= System.Enum.GetValues(typeof(TaskType)).Length)
+        if (completedTasks.Count >= System.Enum.GetValues(typeof(TaskType2)).Length)
         {
             ShowCompletionNotification();
             onAllTasksCompleted.Invoke();
@@ -70,7 +68,7 @@ public class TaskManager : MonoBehaviour
     /// <summary>
     /// Check if a particular task has been done
     /// </summary>
-    public bool IsTaskDone(TaskType task)
+    public bool IsTaskDone(TaskType2 task)
     {
         return completedTasks.Contains(task);
     }
@@ -80,9 +78,14 @@ public class TaskManager : MonoBehaviour
     /// </summary>
     public void CompleteAllTasks()
     {
-        completedTasks = new HashSet<TaskType>(
-        System.Enum.GetValues(typeof(TaskType)).Cast<TaskType>());
+        completedTasks = new HashSet<TaskType2>(
+        System.Enum.GetValues(typeof(TaskType2)).Cast<TaskType2>());
         ShowCompletionNotification();
         onAllTasksCompleted.Invoke();
+    }
+    public void ResetTask(TaskType2 task)
+    {
+        if (completedTasks.Remove(task))
+            Debug.Log($"Task reset: {task}");
     }
 }

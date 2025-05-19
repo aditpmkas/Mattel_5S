@@ -10,8 +10,6 @@ public class TutorialCompleteUI : MonoBehaviour
     public Button btnLevel2Map1;
     public Button btnLevel1Map2;
     public Button btnLevel2Map2;
-    public Button btnTutorialMap1;
-    public Button btnTutorialMap2;
 
     private void Awake()
     {
@@ -19,11 +17,9 @@ public class TutorialCompleteUI : MonoBehaviour
         btnMainMenu.onClick.AddListener(GoToMainMenu);
         btnLevel1Map1.onClick.AddListener(GoToLevel1Map1);
         btnLevel2Map1.onClick.AddListener(GoToLevel2Map1);
-        //btnLevel1Map2.onClick.AddListener(GoToLevel1Map2);
-        //btnLevel2Map2.onClick.AddListener(GoToLevel2Map2); 
-        btnTutorialMap1.onClick.AddListener(GoToTutorialMap1); 
-        //btnTutorialMap2.onClick.AddListener(GoToTutorialMap2); 
-}
+        btnLevel1Map2.onClick.AddListener(GoToLevel1Map2);
+        btnLevel2Map2.onClick.AddListener(GoToLevel2Map2);
+    }
 
     private void OnDestroy()
     {
@@ -31,10 +27,8 @@ public class TutorialCompleteUI : MonoBehaviour
         btnMainMenu.onClick.RemoveListener(GoToMainMenu);
         btnLevel1Map1.onClick.RemoveListener(GoToLevel1Map1);
         btnLevel2Map1.onClick.RemoveListener(GoToLevel2Map1);
-        //btnLevel1Map2.onClick.RemoveListener(GoToLevel1Map2);
-        //btnLevel2Map2.onClick.RemoveListener(GoToLevel2Map2);
-        btnTutorialMap1.onClick.RemoveListener(GoToTutorialMap1);
-        //btnTutorialMap2.onClick.RemoveListener(GoToTutorialMap2);
+        btnLevel1Map2.onClick.RemoveListener(GoToLevel1Map2);
+        btnLevel2Map2.onClick.RemoveListener(GoToLevel2Map2);
     }
 
     public void GoToMainMenu()
@@ -58,13 +52,5 @@ public class TutorialCompleteUI : MonoBehaviour
     public void GoToLevel2Map2()
     {
         SceneManager.LoadScene("L2 M2");
-    }
-    public void GoToTutorialMap1()
-    {
-        SceneManager.LoadScene("T M1");
-    }
-    public void GoToTutorialMap2()
-    {
-        SceneManager.LoadScene("T M2");
     }
 }

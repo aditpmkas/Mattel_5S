@@ -60,6 +60,11 @@ public class TutorialUIController : MonoBehaviour
         TaskManager.Instance.CompleteAllTasks();
         confirmSkipPanel.SetActive(false);     
     }
+    public void OnConfirmSkipYesMap2()
+    {
+        TaskManagerM2.Instance.CompleteAllTasks();
+        confirmSkipPanel.SetActive(false);
+    }
 
     public void OnConfirmSkipNo()
     {

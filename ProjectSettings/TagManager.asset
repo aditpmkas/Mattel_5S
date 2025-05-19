@@ -36,6 +36,7 @@ TagManager:
   - Kunci Inggris Besar
   - Kunci Inggris Medium
   - Kunci Besar Kecil
+  - Tools
   layers:
   - Default
   - TransparentFX

@@ -65,3 +65,4 @@ public class SnapPointLevel1 : MonoBehaviour
         }
     }
 }
+    
