@@ -20,22 +20,36 @@ public class ShelfManager : MonoBehaviour
 
     private void CheckAllShelvesComplete()
     {
-        // Hanya ambil rak yang benar-benar butuh buku (requiredCount > 0)
+        // Ambil rak yang butuh buku
         var activeShelves = FindObjectsOfType<BookShelfTutorial>()
-                              .Where(s => s.requiredCount > 0)
-                              .ToList();
+                             .Where(s => s.requiredCount > 0)
+                             .ToList();
 
-        // Jika semua rak aktif sudah complete, beri tahu TaskManager sekali
-        if (activeShelves.All(s => s.IsComplete()))
+        bool allComplete = activeShelves.All(s => s.IsComplete());
+        var tm = TaskManager.Instance;
+
+        if (allComplete)
         {
-            Debug.Log("[ShelfManager] Semua rak lengkap, complete SetInOrder");
-            TaskManager.Instance.CompleteTask(TaskType.SetInOrder);
+            // Jika belum pernah complete, tandai complete
+            if (!tm.IsTaskDone(TaskType.SetInOrder))
+            {
+                Debug.Log("[ShelfManager] Semua rak lengkap, complete SetInOrder");
+                tm.CompleteTask(TaskType.SetInOrder);
+            }
         }
         else
         {
+            // Jika sebelumnya sudah complete tapi sekarang ada yang belum
+            if (tm.IsTaskDone(TaskType.SetInOrder))
+            {
+                Debug.Log("[ShelfManager] Rak kembali belum lengkap, reset SetInOrder");
+                tm.ResetTask(TaskType.SetInOrder);
+            }
+
             // (opsional) debug rak mana yang belum
             foreach (var s in activeShelves.Where(s => !s.IsComplete()))
                 Debug.Log($"[ShelfManager] Rak belum selesai: {s.gameObject.name}");
         }
     }
+
 }

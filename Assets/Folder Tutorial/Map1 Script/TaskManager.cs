@@ -13,12 +13,12 @@ public class TaskManager : MonoBehaviour
     [Header("Completion Notification Canvas")]
     public GameObject completionNotificationCanvas;
 
-    public GameObject sortingCanvas;
-    public GameObject setInOrderCanvas;
-    public GameObject shineCanvas;
+    public GameObject sortingCanvas, setInOrderCanvas, shineCanvas;
 
     private HashSet<TaskType> completedTasks = new HashSet<TaskType>();
     public UnityEvent onAllTasksCompleted;
+
+    public PauseMenuController pauseMenuController;
 
     private void Awake()
     {
@@ -65,6 +65,11 @@ public class TaskManager : MonoBehaviour
         Destroy(sortingCanvas);
         Destroy(setInOrderCanvas);
         Destroy(shineCanvas);
+
+        if (pauseMenuController != null)
+        {
+            pauseMenuController.DisablePauseMenu();
+        }
     }
 
     /// <summary>
@@ -84,5 +89,11 @@ public class TaskManager : MonoBehaviour
         System.Enum.GetValues(typeof(TaskType)).Cast<TaskType>());
         ShowCompletionNotification();
         onAllTasksCompleted.Invoke();
+    }
+
+    public void ResetTask(TaskType task)
+    {
+        if (completedTasks.Remove(task))
+            Debug.Log($"Task reset: {task}");
     }
 }

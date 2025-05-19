@@ -35,8 +35,6 @@ public class SnapPointTutorial : MonoBehaviour
         }
     }
 
-
-
     public void SnapObject(Transform objectToSnap)
     {
         bool isCorrect = objectToSnap.name == correctObject.name;

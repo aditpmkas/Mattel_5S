@@ -26,12 +26,11 @@ public class SetInOrderM2 : MonoBehaviour
     public void CheckAllSnapPointsTutorial()
     {
         var snapPoints = FindObjectsOfType<SnapPointTutorial>();
-        // hitung yang benar tersnap
         int correct = snapPoints.Count(sp => sp.IsCorrectlySnapped);
 
         Debug.Log($"[SetInOrder] Progress: {correct}/{totalTools}");
 
-        // selesai?
+        // --- Semua ter-snap dan belum pernah complete → complete sekarang ---
         if (correct == totalTools && !isCompleted)
         {
             isCompleted = true;
@@ -39,12 +38,13 @@ public class SetInOrderM2 : MonoBehaviour
             TaskManagerM2.Instance.CompleteTask(TaskType2.SetInOrder);
             onAllToolsSnapped.Invoke();
         }
-        // jika turun dari completed, reset
+        // --- Kalau pernah complete, tapi count sekarang turun di bawah totalTools → reset task ---
         else if (correct < totalTools && isCompleted)
         {
             isCompleted = false;
             Debug.Log("[SetInOrder] Snapped count dropped! Resetting task.");
-            //TaskManagerM2.Instance.ResetTask(TaskType.SetInOrder);
+            TaskManagerM2.Instance.ResetTask(TaskType2.SetInOrder);
         }
     }
+
 }
