@@ -15,6 +15,8 @@ public class SnappableObjectLevel1 : MonoBehaviour
     private CollisionDetectionMode originalCollisionMode;
     private bool wasBeingHeld = false;
     public SnapPointLevel1 initialSnapPoint;
+    private float snapCooldown = 0.2f; // Cooldown to prevent rapid snap/release
+    private float lastSnapTime = 0f;
 
     void Start()
     {
@@ -57,26 +59,38 @@ public class SnappableObjectLevel1 : MonoBehaviour
 
     void Update()
     {
-        if (wasBeingHeld && !grabbable.BeingHeld && isSnapped)
+        if (wasBeingHeld && !grabbable.BeingHeld && isSnapped && currentSnapPoint != null)
         {
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-                transform.SetParent(currentSnapPoint.transform);
-            }
+            // When released, lock to snap point
+            rb.isKinematic = true;
+            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            transform.SetParent(currentSnapPoint.transform);
+            transform.position = currentSnapPoint.transform.position;
+            transform.rotation = currentSnapPoint.transform.rotation;
         }
 
         wasBeingHeld = grabbable.BeingHeld;
 
         if (grabbable.BeingHeld)
         {
-            CheckForSnapPoints();
+            // Only check for new snap points if not snapped or moved far enough
+            if (isSnapped && currentSnapPoint != null)
+            {
+                float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
+                if (distanceToSnapPoint > currentSnapPoint.snapRadius)
+                {
+                    ReleaseFromSnap();
+                }
+            }
+            else
+            {
+                CheckForSnapPoints();
+            }
         }
         else if (isSnapped && currentSnapPoint != null)
         {
+            // Smoothly move to snap point if slightly off
             float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
-
             if (distanceToSnapPoint > snapThreshold)
             {
                 transform.position = Vector3.Lerp(transform.position, currentSnapPoint.transform.position, Time.deltaTime * currentSnapPoint.snapSpeed);
@@ -92,6 +106,10 @@ public class SnappableObjectLevel1 : MonoBehaviour
 
     void CheckForSnapPoints()
     {
+        // Skip if on cooldown
+        if (Time.time < lastSnapTime + snapCooldown)
+            return;
+
         SnapPointLevel1[] snapPoints = FindObjectsOfType<SnapPointLevel1>();
         SnapPointLevel1 closestSnapPoint = null;
         float closestDistance = float.MaxValue;
@@ -114,15 +132,12 @@ public class SnappableObjectLevel1 : MonoBehaviour
             currentSnapPoint = closestSnapPoint;
             isSnapped = true;
             currentSnapPoint.SnapObject(transform);
+            lastSnapTime = Time.time;
 
             if (currentSnapPoint.correctObject != transform)
             {
-                Debug.LogWarning("Object snapped to the wrong point.");
+                Debug.LogWarning($"Object {gameObject.name} snapped to the wrong point: {currentSnapPoint.gameObject.name}.");
             }
-        }
-        else if (closestSnapPoint == null && isSnapped)
-        {
-            ReleaseFromSnap();
         }
     }
 
@@ -140,6 +155,8 @@ public class SnappableObjectLevel1 : MonoBehaviour
                 rb.isKinematic = wasKinematic;
                 rb.collisionDetectionMode = originalCollisionMode;
             }
+
+            lastSnapTime = Time.time;
         }
     }
 
