@@ -18,8 +18,6 @@ public class TaskManagerM2 : MonoBehaviour
     private HashSet<TaskType2> completedTasks = new HashSet<TaskType2>();
     public UnityEvent onAllTasksCompleted;
 
-    public PauseMenuController pauseMenuController;
-
     private void Awake()
     {
         if (Instance == null)
@@ -65,11 +63,6 @@ public class TaskManagerM2 : MonoBehaviour
         Destroy(sortingCanvas);
         Destroy(setInOrderCanvas);
         Destroy(shineCanvas);
-
-        if (pauseMenuController != null)
-        {
-            pauseMenuController.DisablePauseMenu();
-        }
     }
 
     /// <summary>

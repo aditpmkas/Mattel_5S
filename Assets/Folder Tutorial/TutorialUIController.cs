@@ -8,10 +8,8 @@
         public GameObject welcomePanel;
         public GameObject confirmSkipPanel;
 
-        public GameObject PauseMenuPanel;
-        public GameObject ConfirmSkipPause;
-        public Transform cameraRig;
-        public float distanceFromHead = 1f;
+        public GameObject GameMenuPanel;
+        public GameObject ConfirmSkip;
 
         Grabbable[] allGrabbables;
 
@@ -22,15 +20,11 @@
 
         private void Start()
         {
-        if (cameraRig == null && Camera.main != null)
-            cameraRig = Camera.main.transform;
-
             DisableGrabbable();
             welcomePanel.SetActive(true);
             confirmSkipPanel.SetActive(false);
-        
-            PauseMenuPanel.SetActive(false);
-            ConfirmSkipPause.SetActive(false);
+            GameMenuPanel.SetActive(false);
+            ConfirmSkip.SetActive(false);
         }
 
         public void EnableGrabbable ()
@@ -41,6 +35,7 @@
             }
 
         }
+
         public void DisableGrabbable()
         {
             allGrabbables = allGrabbables
@@ -54,74 +49,44 @@
             }
 
         }
-        public void OnPauseOpened()
-        {
-            PauseMenuPanel.SetActive(true);
-            DisableGrabbable();   // nonaktifkan interaksi objek saat pause
-        }
-        public void OnPauseClosed()
-        {
-            PauseMenuPanel.SetActive(false);
-            ConfirmSkipPause.SetActive(false);
-            EnableGrabbable();
-        }
-        public void OnSkipPausePressed()
-        {
-            PauseMenuPanel.SetActive(false);
 
-            // Reposition ConfirmSkipPause di depan kepala
-            if (ConfirmSkipPause != null && cameraRig != null)
-            {
-                ConfirmSkipPause.transform.position = cameraRig.position + cameraRig.forward * distanceFromHead;
-                ConfirmSkipPause.transform.rotation = Quaternion.LookRotation(cameraRig.forward);
-            }
-
-            ConfirmSkipPause.SetActive(true);
+        public void OnSkipMenuPressed()
+        {
+            GameMenuPanel.SetActive(false);
+            ConfirmSkip.SetActive(true);
         }
 
-        public void OnConfirmSkipPauseYes()
+        public void OnConfirmSkipMenuYes()
         {
-            // Tandai semua task selesai
             TaskManager.Instance.CompleteAllTasks();
 
-            // Tutup panel konfirmasi dan panel pause
-            ConfirmSkipPause.SetActive(false);
-            PauseMenuPanel.SetActive(false);
+            ConfirmSkip.SetActive(false);
+            GameMenuPanel.SetActive(false);
 
-            // Pastikan interaksi kembali aktif
-            EnableGrabbable();
+            DisableGrabbable();
         }
-        public void OnConfirmSkipPauseYes2()
+
+        public void OnConfirmSkipMenuYes2()
         {
-            // Tandai semua task selesai
             TaskManagerM2.Instance.CompleteAllTasks();
 
-            // Tutup panel konfirmasi dan panel pause
-            ConfirmSkipPause.SetActive(false);
-            PauseMenuPanel.SetActive(false);
-
-            // Pastikan interaksi kembali aktif
-            EnableGrabbable();
+            ConfirmSkip.SetActive(false);
+            GameMenuPanel.SetActive(false);
+     
+            DisableGrabbable();
         }
 
-        public void OnConfirmSkipPauseNo()
+        public void OnConfirmSkipMenuNo()
         {
-            ConfirmSkipPause.SetActive(false);
-
-            // Reposition PauseMenuPanel kembali
-            if (PauseMenuPanel != null && cameraRig != null)
-            {
-                PauseMenuPanel.transform.position = cameraRig.position + cameraRig.forward * distanceFromHead;
-                PauseMenuPanel.transform.rotation = Quaternion.LookRotation(cameraRig.forward);
-            }
-
-            PauseMenuPanel.SetActive(true);
+            ConfirmSkip.SetActive(false);
+            GameMenuPanel.SetActive(true);
         }
 
-        public void OnClosePressed ()
+        public void OnClosePressed()
         {
             welcomePanel.SetActive(false);
             confirmSkipPanel.SetActive(false);
+            GameMenuPanel.SetActive(true);
             EnableGrabbable();
         }
 
