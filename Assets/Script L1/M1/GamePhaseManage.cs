@@ -44,7 +44,7 @@ public class GamePhaseManager : MonoBehaviour
     {
         if (phaseText != null)
         {
-            phaseText.text = "Current Phase: " + currentPhase.ToString();
+            phaseText.text = "Phase: " + currentPhase.ToString();
         }
     }
 }
