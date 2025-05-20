@@ -1422,6 +1422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   table: {fileID: 645341714}
   requiredCorrectSorts: 7
+  drawer: {fileID: 0}
   objectiveText: {fileID: 0}
 --- !u!4 &217359274
 Transform:

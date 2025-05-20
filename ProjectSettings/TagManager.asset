@@ -39,6 +39,9 @@ TagManager:
   - Tools
   - Drawer
   - SortBias
+  - SortBiasA
+  - SortBiasB
+  - SortBiasC
   layers:
   - Default
   - TransparentFX
