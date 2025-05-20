@@ -11,6 +11,13 @@ public class BiasSortingLevel2 : MonoBehaviour
             ProgressManagerLevel2.Instance.sortedBiasItemsCount++;
             Debug.Log("SortBias item sorted. Total: " + ProgressManagerLevel2.Instance.sortedBiasItemsCount);
         }
+
+        if (other.CompareTag("Sort"))
+        {
+            ProgressManagerLevel2.Instance.sortedTrashCount++;
+            ProgressManagerLevel2.Instance.AddScore(50);
+            Debug.Log("Unsort item sorted. +50 points awarded!");
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -19,6 +26,13 @@ public class BiasSortingLevel2 : MonoBehaviour
         {
             ProgressManagerLevel2.Instance.sortedBiasItemsCount--;
             Debug.Log("SortBias item removed. Total: " + ProgressManagerLevel2.Instance.sortedBiasItemsCount);
+        }
+
+        if (other.CompareTag("Sort"))
+        {
+            ProgressManagerLevel2.Instance.sortedTrashCount--;
+            ProgressManagerLevel2.Instance.SubtractScore(50);
+            Debug.Log("Unsort item removed. -50 points deducted!");
         }
     }
 }

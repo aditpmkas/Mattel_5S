@@ -33,18 +33,15 @@ public class BookSortingLevel2 : MonoBehaviour
         ProgressManagerLevel2.Instance.AddScore(earnedScore);
         bookScores[other] = earnedScore;
 
-        // Count this book if correctly placed
-        if (other.CompareTag(expectedBookTag))
-        {
-            ProgressManagerLevel2.Instance.sortedBooksCount++;
-            Debug.Log("Sorted Books: " + ProgressManagerLevel2.Instance.sortedBooksCount + " / " + ProgressManagerLevel2.Instance.totalBooksCount);
+        //  Always count placed books for Set In Order
+        ProgressManagerLevel2.Instance.sortedBooksCount++;
+        Debug.Log("Sorted Books: " + ProgressManagerLevel2.Instance.sortedBooksCount + " / " + ProgressManagerLevel2.Instance.totalBooksCount);
 
-            // Check if Set In Order task is complete
-            if (ProgressManagerLevel2.Instance.sortedBooksCount >= ProgressManagerLevel2.Instance.totalBooksCount)
-            {
-                ProgressManagerLevel2.Instance.setInOrderDone = true;
-                Debug.Log("Set In Order task complete!");
-            }
+        // Check if Set In Order task is complete
+        if (ProgressManagerLevel2.Instance.sortedBooksCount >= ProgressManagerLevel2.Instance.totalBooksCount)
+        {
+            ProgressManagerLevel2.Instance.setInOrderDone = true;
+            Debug.Log("Set In Order task complete!");
         }
 
         Debug.Log("Placed " + other.tag + " in " + gameObject.name + ". Score: " + currentScore);
@@ -59,12 +56,9 @@ public class BookSortingLevel2 : MonoBehaviour
             ProgressManagerLevel2.Instance.SubtractScore(deductedScore);
             Debug.Log("Removed " + other.tag + " from " + gameObject.name + ". Score: " + currentScore);
 
-            // If it was a correct book, decrement sortedBooksCount
-            if (other.CompareTag(expectedBookTag))
-            {
-                ProgressManagerLevel2.Instance.sortedBooksCount--;
-                Debug.Log("Sorted Books: " + ProgressManagerLevel2.Instance.sortedBooksCount + " / " + ProgressManagerLevel2.Instance.totalBooksCount);
-            }
+            //  Always decrement sortedBooksCount on removal
+            ProgressManagerLevel2.Instance.sortedBooksCount--;
+            Debug.Log("Sorted Books: " + ProgressManagerLevel2.Instance.sortedBooksCount + " / " + ProgressManagerLevel2.Instance.totalBooksCount);
 
             bookScores.Remove(other);
         }
