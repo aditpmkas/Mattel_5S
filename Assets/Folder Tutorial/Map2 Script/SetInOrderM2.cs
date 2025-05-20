@@ -1,18 +1,23 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System.Collections;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class SetInOrderM2 : MonoBehaviour
 {
     public static SetInOrderM2 Instance;
+
+    [Header("Delay Settings")]
+    [Tooltip("Delay in seconds before marking SetInOrder complete on Map2")]
+    public float setInOrderDelay = 1f;
+
     [Tooltip("Total jumlah tools yang harus disnap (misal 12)")]
     public int totalTools = 12;
-
-    [Tooltip("Event Unity yang dipanggil saat semua tool tersnap")]
     public UnityEvent onAllToolsSnapped;
 
-    // internal
+    // Internal state
     private bool isCompleted = false;
+    private Coroutine pendingCompletion;
 
     private void Awake()
     {
@@ -28,23 +33,53 @@ public class SetInOrderM2 : MonoBehaviour
         var snapPoints = FindObjectsOfType<SnapPointTutorial>();
         int correct = snapPoints.Count(sp => sp.IsCorrectlySnapped);
 
-        Debug.Log($"[SetInOrder] Progress: {correct}/{totalTools}");
+        Debug.Log($"[SetInOrderM2] Progress: {correct}/{totalTools}");
 
-        // --- Semua ter-snap dan belum pernah complete → complete sekarang ---
-        if (correct == totalTools && !isCompleted)
+        // Semua ter-snap
+        if (correct == totalTools)
         {
-            isCompleted = true;
-            Debug.Log("[SetInOrder] All snapped! Completing task.");
-            TaskManagerM2.Instance.CompleteTask(TaskType2.SetInOrder);
-            onAllToolsSnapped.Invoke();
+            // Jika belum complete dan belum ada pending, jadwalkan complete
+            if (!isCompleted && pendingCompletion == null)
+            {
+                Debug.Log($"[SetInOrderM2] Semua tools tersnap, akan complete dalam {setInOrderDelay} detik");
+                pendingCompletion = StartCoroutine(DelayedComplete());
+            }
         }
-        // --- Kalau pernah complete, tapi count sekarang turun di bawah totalTools → reset task ---
-        else if (correct < totalTools && isCompleted)
+        else
         {
-            isCompleted = false;
-            Debug.Log("[SetInOrder] Snapped count dropped! Resetting task.");
-            TaskManagerM2.Instance.ResetTask(TaskType2.SetInOrder);
+            // Batalkan pending jika ada
+            if (pendingCompletion != null)
+            {
+                Debug.Log("[SetInOrderM2] Pembatalan pending complete karena tools terlepas");
+                StopCoroutine(pendingCompletion);
+                pendingCompletion = null;
+            }
+
+            // Reset jika sudah sempat complete sebelumnya
+            if (isCompleted)
+            {
+                isCompleted = false;
+                Debug.Log("[SetInOrderM2] Snapped count turun, reset SetInOrder");
+                TaskManagerM2.Instance.ResetTask(TaskType2.SetInOrder);
+            }
         }
     }
 
+    private IEnumerator DelayedComplete()
+    {
+        yield return new WaitForSeconds(setInOrderDelay);
+
+        // Double-check sebelum complete
+        var snapPoints = FindObjectsOfType<SnapPointTutorial>();
+        int correct = snapPoints.Count(sp => sp.IsCorrectlySnapped);
+        if (correct == totalTools && !isCompleted)
+        {
+            isCompleted = true;
+            Debug.Log("[SetInOrderM2] Menandai SetInOrder complete setelah delay");
+            TaskManagerM2.Instance.CompleteTask(TaskType2.SetInOrder);
+            onAllToolsSnapped.Invoke();
+        }
+
+        pendingCompletion = null;
+    }
 }

@@ -23,12 +23,20 @@ public class TutorialCompleteUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Lepas listener untuk mencegah duplikat saat scene reload
-        btnMainMenu.onClick.RemoveListener(GoToMainMenu);
-        btnLevel1Map1.onClick.RemoveListener(GoToLevel1Map1);
-        btnLevel2Map1.onClick.RemoveListener(GoToLevel2Map1);
-        btnLevel1Map2.onClick.RemoveListener(GoToLevel1Map2);
-        btnLevel2Map2.onClick.RemoveListener(GoToLevel2Map2);
+        if (btnMainMenu != null)
+            btnMainMenu.onClick.RemoveListener(GoToMainMenu);
+
+        if (btnLevel1Map1 != null)
+            btnLevel1Map1.onClick.RemoveListener(GoToLevel1Map1);
+
+        if (btnLevel2Map1 != null)
+            btnLevel2Map1.onClick.RemoveListener(GoToLevel2Map1);
+
+        if (btnLevel1Map2 != null)
+            btnLevel1Map2.onClick.RemoveListener(GoToLevel1Map2);
+
+        if (btnLevel2Map2 != null)
+            btnLevel2Map2.onClick.RemoveListener(GoToLevel2Map2);
     }
 
     public void GoToMainMenu()

@@ -915,7 +915,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 1
   CanDropMidGrab: 0
@@ -1474,7 +1474,7 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
+  GrabMechanic: 0
   GrabSpeed: 15
   RemoteGrabbable: 0
   RemoteGrabMechanic: 0
@@ -2320,9 +2320,9 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
+  GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 1
   CanDropMidGrab: 0
@@ -3764,7 +3764,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -4999,7 +4999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapRadius: 0.5
+  snapRadius: 1
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
@@ -7456,6 +7456,8 @@ MonoBehaviour:
   sortingCanvas: {fileID: 996169668}
   setInOrderCanvas: {fileID: 1141057446}
   shineCanvas: {fileID: 1422917305}
+  GameMenu: {fileID: 214928826}
+  ConfirmSkip: {fileID: 847351367}
   onAllTasksCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -7808,6 +7810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62d45987e37e7d42ba532d0adf49843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setInOrderDelay: 3
 --- !u!1001 &826382536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7856,7 +7859,28 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6575532, guid: 7352290823b82b846867cd4849078339, type: 3}
+      propertyPath: m_Size.z
+      value: 0.99834085
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575532, guid: 7352290823b82b846867cd4849078339, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575532, guid: 7352290823b82b846867cd4849078339, type: 3}
+      propertyPath: m_Center.x
+      value: -0.000037372116
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575532, guid: 7352290823b82b846867cd4849078339, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5207468
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575532, guid: 7352290823b82b846867cd4849078339, type: 3}
+      propertyPath: m_Center.z
+      value: -0.06855267
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11420502, guid: 7352290823b82b846867cd4849078339, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9270,7 +9294,7 @@ MonoBehaviour:
   GrabButton: 2
   Grabtype: 2
   GrabPhysics: 4
-  GrabMechanic: 1
+  GrabMechanic: 0
   GrabSpeed: 15
   RemoteGrabbable: 0
   RemoteGrabMechanic: 0
@@ -11783,7 +11807,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -13522,15 +13546,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253852460}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.033096097, y: 0.9469191, z: -0.30251783, w: 0.10359502}
-  m_LocalPosition: {x: 9.169, y: 3.397, z: 3.3542125}
+  m_LocalRotation: {x: 0.042941727, y: 0.94303805, z: -0.30127802, w: 0.1344131}
+  m_LocalPosition: {x: 9.077894, y: 3.397, z: 3.5635676}
   m_LocalScale: {x: 2.6529, y: 2.6529, z: 2.6529}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1487284455}
   - {fileID: 2078606010}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 35.435, y: 167.513, z: 0}
+  m_LocalEulerAnglesHint: {x: 35.435, y: 163.776, z: 0}
 --- !u!1001 &1254383958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14271,7 +14295,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -15121,7 +15145,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -15858,7 +15882,7 @@ Transform:
   m_GameObject: {fileID: 1455034040}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.303, y: 0.12599993, z: 0.09899902}
+  m_LocalPosition: {x: -0.303, y: 0.1343, z: 0.127}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17141,7 +17165,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -17389,7 +17413,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -17895,7 +17919,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 1
   CanDropMidGrab: 0
@@ -19852,7 +19876,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 15
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -20094,7 +20118,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0
@@ -22443,7 +22467,7 @@ MonoBehaviour:
   GrabPhysics: 4
   GrabMechanic: 0
   GrabSpeed: 4
-  RemoteGrabbable: 1
+  RemoteGrabbable: 0
   RemoteGrabMechanic: 0
   RemoteGrabDistance: 2
   CanDropMidGrab: 0

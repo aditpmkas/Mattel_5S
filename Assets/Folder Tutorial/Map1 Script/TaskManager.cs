@@ -13,7 +13,7 @@ public class TaskManager : MonoBehaviour
     [Header("Completion Notification Canvas")]
     public GameObject completionNotificationCanvas;
 
-    public GameObject sortingCanvas, setInOrderCanvas, shineCanvas;
+    public GameObject sortingCanvas, setInOrderCanvas, shineCanvas, GameMenu, ConfirmSkip;
 
     private HashSet<TaskType> completedTasks = new HashSet<TaskType>();
     public UnityEvent onAllTasksCompleted;
@@ -63,6 +63,8 @@ public class TaskManager : MonoBehaviour
         Destroy(sortingCanvas);
         Destroy(setInOrderCanvas);
         Destroy(shineCanvas);
+        Destroy(GameMenu);
+        Destroy(ConfirmSkip);
     }
 
     /// <summary>
