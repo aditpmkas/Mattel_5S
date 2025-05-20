@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BookShelf : MonoBehaviour
@@ -8,8 +9,8 @@ public class BookShelf : MonoBehaviour
     public bool isBookC;
     public bool isBookD;
 
-    public int requiredCount = 2; // Jumlah buku yang harus benar untuk lemari ini
-    private int currentCount = 0;
+    public int requiredCount = 2;
+    private HashSet<GameObject> placedBooks = new HashSet<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,16 +18,18 @@ public class BookShelf : MonoBehaviour
 
         string tag = other.gameObject.tag;
 
-        // Cek apakah buku cocok berdasarkan checklist
         if (IsCorrectBook(tag))
         {
-            currentCount++;
-            Debug.Log("Correct book placed: " + tag);
+            if (!placedBooks.Contains(other.gameObject))
+            {
+                placedBooks.Add(other.gameObject);
+                BookShelfManager.Instance.ReportCorrectBookPlaced();
+                Debug.Log("Correct book placed: " + tag);
+            }
 
-            other.transform.SetParent(this.transform); // Snap ke rak
-
-            BookShelfManager.Instance.ReportCorrectBookPlaced();
+            other.transform.SetParent(this.transform);
         }
+
         else
         {
             Debug.Log("Salah lemari! Buku ini tidak cocok dengan rak ini.");
@@ -41,12 +44,14 @@ public class BookShelf : MonoBehaviour
 
         if (IsCorrectBook(tag))
         {
-            currentCount--;
-            if (currentCount < 0) currentCount = 0;
-
-            Debug.Log("Correct book removed: " + tag);
-            BookShelfManager.Instance.ReportCorrectBookRemoved();
+            if (placedBooks.Contains(other.gameObject))
+            {
+                placedBooks.Remove(other.gameObject);
+                BookShelfManager.Instance.ReportCorrectBookRemoved();
+                Debug.Log("Correct book removed: " + tag);
+            }
         }
+
     }
 
     private bool IsCorrectBook(string tag)
