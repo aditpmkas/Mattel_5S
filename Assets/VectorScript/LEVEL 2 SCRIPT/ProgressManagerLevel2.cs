@@ -18,6 +18,7 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public int totalBiasItemsCount = 3;
     public int sortedBiasItemsCount = 0;
 
+    public bool mopReturned = true;
     public bool sortingDone = false;
     public bool setInOrderDone = false;
     public bool shineDone = false;
