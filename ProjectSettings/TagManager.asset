@@ -42,6 +42,7 @@ TagManager:
   - SortBiasA
   - SortBiasB
   - SortBiasC
+  - Mop
   layers:
   - Default
   - TransparentFX

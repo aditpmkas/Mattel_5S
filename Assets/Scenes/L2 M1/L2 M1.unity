@@ -270,8 +270,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 27388408}
-  - component: {fileID: 27388410}
   - component: {fileID: 27388409}
+  - component: {fileID: 27388410}
   m_Layer: 0
   m_Name: Mop Rack
   m_TagString: Untagged
@@ -324,11 +324,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 27388407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faa90026156a2d84aba46af912b513c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a1455ded3b3c45468cfe428f7f6de77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnMessage: Mop returned!
-  completeDelay: 2
 --- !u!1001 &35382842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2276,6 +2274,7 @@ MonoBehaviour:
   cleanedPuddlesCount: 0
   totalBiasItemsCount: 3
   sortedBiasItemsCount: 0
+  mopReturned: 1
   sortingDone: 0
   setInOrderDone: 0
   shineDone: 0
@@ -2841,9 +2840,10 @@ GameObject:
   - component: {fileID: 417702184}
   - component: {fileID: 417702183}
   - component: {fileID: 417702182}
+  - component: {fileID: 417702187}
   m_Layer: 0
   m_Name: Mop Handle
-  m_TagString: Untagged
+  m_TagString: Mop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3002,6 +3002,19 @@ Transform:
   - {fileID: 377079698}
   m_Father: {fileID: 530291107}
   m_LocalEulerAnglesHint: {x: 0.146, y: -0.09, z: -8.896}
+--- !u!114 &417702187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417702181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSnapPoint: {fileID: 1213911644}
 --- !u!1 &420856975
 GameObject:
   m_ObjectHideFlags: 0
@@ -11440,7 +11453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapRadius: 1
+  snapRadius: 0.2
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
