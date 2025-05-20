@@ -47,13 +47,13 @@ public class ResultSceneUILevel2Map2 : MonoBehaviour
         int seconds = int.Parse(parts[1]);
         float totalMinutes = minutes + (seconds / 60f);
 
-        if (totalMinutes <= 1.5f && percentage >= 90f)
+        if (totalMinutes <= 3f && percentage >= 90f)
             return "A";
-        else if (totalMinutes <= 2f && percentage >= 80f)
+        else if (totalMinutes <= 4f && percentage >= 80f)
             return "B";
-        else if (totalMinutes <= 5f && percentage >= 70f)
+        else if (totalMinutes <= 6f && percentage >= 70f)
             return "C";
-        else if (totalMinutes <= 7f && percentage >= 60f)
+        else if (totalMinutes <= 8f && percentage >= 60f)
             return "D";
         else if (totalMinutes <= 10f && percentage >= 50f)
             return "E";

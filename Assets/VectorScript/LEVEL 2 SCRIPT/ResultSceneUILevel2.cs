@@ -46,16 +46,22 @@ public class ResultSceneUILevel2 : MonoBehaviour
     // Calculate grade based on time and percentage
     string CalculateGrade(string timeString, float percentage)
     {
-        // Parse MM:SS string into minutes
         string[] parts = timeString.Split(':');
         int minutes = int.Parse(parts[0]);
         int seconds = int.Parse(parts[1]);
         float totalMinutes = minutes + (seconds / 60f);
 
-        // Grading logic (adjusted for 1.5 minutes)
-        if (totalMinutes <= 1.5f && percentage >= 90f)
+        //  Check for A+ first
+        if (totalMinutes <= 2f &&
+            percentage >= 90f &&
+            ProgressManagerLevel2.Instance.sortedBiasItemsCount == ProgressManagerLevel2.Instance.totalBiasItemsCount)
+        {
+            return "A+";
+        }
+        // Normal grading
+        else if (totalMinutes <= 2f && percentage >= 90f)
             return "A";
-        else if (totalMinutes <= 2f && percentage >= 80f)
+        else if (totalMinutes <= 3f && percentage >= 80f)
             return "B";
         else if (totalMinutes <= 5f && percentage >= 70f)
             return "C";
@@ -71,6 +77,7 @@ public class ResultSceneUILevel2 : MonoBehaviour
     {
         switch (grade)
         {
+            case "A+": return "Sempurna";
             case "A": return "Sangat Baik";
             case "B": return "Baik Sekali";
             case "C": return "Cukup";

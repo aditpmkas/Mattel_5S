@@ -37,6 +37,8 @@ TagManager:
   - Kunci Inggris Medium
   - Kunci Besar Kecil
   - Tools
+  - Drawer
+  - SortBias
   layers:
   - Default
   - TransparentFX
