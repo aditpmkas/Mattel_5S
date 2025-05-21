@@ -4,6 +4,7 @@ using BNG;
 public class ShineTutorial : MonoBehaviour
 {
     public static ShineTutorial Instance;
+    private bool crackIsFixed = false;
 
     [Header("Return Zone Settings")]
     [Tooltip("Pre-placed ReturnMopZone GameObject (disabled at start)")]
@@ -23,9 +24,8 @@ public class ShineTutorial : MonoBehaviour
 
     private void Start()
     {
-        // Count all puddles at start
+        // Hitung total tapi nanti hanya di-enable setelah crack fixed
         totalDirt = GameObject.FindGameObjectsWithTag("DirtyFloor").Length;
-        Debug.Log($"[ShineTutorial] Total dirt: {totalDirt}");
 
         if (returnZoneTrigger == null)
             Debug.LogError("ReturnZoneTrigger belum di-assign!");
@@ -37,12 +37,24 @@ public class ShineTutorial : MonoBehaviour
         var rz = returnZoneTrigger.GetComponent<ReturnMopZone>();
         if (rz) rz.enabled = false;
     }
+    public void CrackFixed()
+    {
+        crackIsFixed = true;
+        Debug.Log("[ShineTutorial] Crack has been fixed.");
+        // (Opsional) jalankan animasi atau sound feedback di sini
+    }
 
     /// <summary>
     /// Call this each time a puddle is cleaned.
     /// </summary>
     public void DirtCleaned()
     {
+        if (!crackIsFixed)
+        {
+            Debug.LogWarning("Cannot clean dirt before fixing crack!");
+            return;
+        }
+
         cleanedDirt++;
         Debug.Log($"[ShineTutorial] Dirt cleaned: {cleanedDirt}/{totalDirt}");
 

@@ -9,7 +9,7 @@
         public GameObject confirmSkipPanel;
 
         public GameObject GameMenuPanel;
-        public GameObject ConfirmSkip;
+        public GameObject ConfirmSkip; 
 
         Grabbable[] allGrabbables;
 

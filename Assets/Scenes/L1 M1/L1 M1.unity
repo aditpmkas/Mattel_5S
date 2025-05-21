@@ -14467,6 +14467,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030995787, guid: abc00000000004274399439466988800, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030995787, guid: abc00000000004274399439466988800, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -30713,6 +30717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_BurgerBox_Cracked (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 461692670688170993, guid: d3887f0097534cc4baf4263f1b8093ff,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sort
+      objectReference: {fileID: 0}
     - target: {fileID: 5586354526533002755, guid: d3887f0097534cc4baf4263f1b8093ff,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -46062,8 +46071,12 @@ PrefabInstance:
       value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 6448184, guid: 7352290823b82b846867cd4849078339, type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Convex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448184, guid: 7352290823b82b846867cd4849078339, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6469302, guid: 7352290823b82b846867cd4849078339, type: 3}
       propertyPath: m_Enabled
@@ -51532,6 +51545,14 @@ PrefabInstance:
     - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030994513, guid: abc00000000007114469918882086558, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030994513, guid: abc00000000007114469918882086558, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76118,6 +76139,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030996073, guid: abc00000000007524625663018317296, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030996073, guid: abc00000000007524625663018317296, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -99281,7 +99306,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -102036,6 +102061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Can8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1030999281, guid: abc00000000011404005329375165611, type: 3}
+      propertyPath: m_TagString
+      value: Sort
+      objectReference: {fileID: 0}
     - target: {fileID: 1030999282, guid: abc00000000011404005329375165611, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -102079,6 +102108,18 @@ PrefabInstance:
     - target: {fileID: 1030999283, guid: abc00000000011404005329375165611, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030999284, guid: abc00000000011404005329375165611, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030999284, guid: abc00000000011404005329375165611, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030999285, guid: abc00000000011404005329375165611, type: 3}
+      propertyPath: m_TagString
+      value: Sort
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -114790,7 +114831,7 @@ PrefabInstance:
     - target: {fileID: 5479083872447138187, guid: d4fad41ea2bdea643a0fe5b58797a4c6,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7915220236843302712, guid: d4fad41ea2bdea643a0fe5b58797a4c6,
         type: 3}
