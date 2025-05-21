@@ -18,14 +18,16 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public int totalBiasItemsCount = 3;
     public int sortedBiasItemsCount = 0;
 
-    public bool crackFixed = false;
+    public int totalCracksCount = 3;
+    public int fixedCracksCount = 0;
+
     public bool mopReturned = true;
     public bool sortingDone = false;
     public bool setInOrderDone = false;
     public bool shineDone = false;
 
     public int totalScore = 0;
-    public int maxPossibleScore = 1500;
+    public int maxPossibleScore = 1800;
     public string finalTime = "";
 
     private void Awake()
@@ -50,13 +52,26 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public void SubtractScore(int score)
     {
         totalScore -= score;
+        if (totalScore < 0) totalScore = 0;
         Debug.Log("Total Score: " + totalScore);
     }
 
-    public void SetCrackFixedTrue()
+    // Called by crack buttons
+    public void AddCrackFix()
     {
-        crackFixed = true;
-        Debug.Log("Crack has been fixed!");
+        fixedCracksCount++;
+        Debug.Log("Fixed cracks: " + fixedCracksCount + " / " + totalCracksCount);
+
+        CheckShineTaskComplete();
     }
 
+    // Shine task now requires all puddles cleaned + all cracks fixed
+    public void CheckShineTaskComplete()
+    {
+        if (cleanedPuddlesCount >= totalPuddlesCount && fixedCracksCount >= totalCracksCount)
+        {
+            shineDone = true;
+            Debug.Log("Shine task complete!");
+        }
+    }
 }
