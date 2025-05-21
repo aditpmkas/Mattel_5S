@@ -12,6 +12,9 @@ public class ShineProgressTracker : MonoBehaviour
     private int totalDirt = 0;
     private int cleanedCount = 0;
 
+    private int totalCracks = 0;
+    private int fixedCracks = 0;
+
     private void Awake()
     {
         if (Instance == null)
@@ -25,9 +28,13 @@ public class ShineProgressTracker : MonoBehaviour
         if (allCleanedPanel != null)
             allCleanedPanel.SetActive(false);
 
-        // Hitung semua objek dengan tag DirtyFloor
+        // Hitung total noda
         totalDirt = GameObject.FindGameObjectsWithTag("DirtyFloor").Length;
         Debug.Log($"[ShineProgressTracker] Total kotoran: {totalDirt}");
+
+        // Hitung total retakan (Root Cause)
+        totalCracks = GameObject.FindGameObjectsWithTag("Crack").Length;
+        Debug.Log($"[ShineProgressTracker] Total retakan: {totalCracks}");
 
         UpdateProgressUI();
     }
@@ -36,23 +43,33 @@ public class ShineProgressTracker : MonoBehaviour
     {
         cleanedCount++;
         Debug.Log($"[ShineProgressTracker] Noda dibersihkan: {cleanedCount}/{totalDirt}");
-
         UpdateProgressUI();
+        CheckIfAllClear();
+    }
 
-        if (cleanedCount >= totalDirt)
+    public void RegisterCrackFixed()
+    {
+        fixedCracks++;
+        Debug.Log($"[ShineProgressTracker] Retakan diperbaiki: {fixedCracks}/{totalCracks}");
+        UpdateProgressUI();
+        CheckIfAllClear();
+    }
+
+    private void CheckIfAllClear()
+    {
+        if (cleanedCount >= totalDirt && fixedCracks >= totalCracks)
         {
-            Debug.Log("[ShineProgressTracker] Semua noda bersih!");
+            Debug.Log("[ShineProgressTracker] Semua kotoran & retakan selesai!");
             if (allCleanedPanel != null)
                 allCleanedPanel.SetActive(true);
-
-            // Kamu bisa tambahkan logic pindah fase otomatis di sini jika mau
-            // GamePhaseManager.Instance.SetPhase(GamePhaseManager.Phase.Sorting); 
         }
     }
 
     private void UpdateProgressUI()
     {
         if (progressText != null)
-            progressText.text = $"Shine: {cleanedCount}/{totalDirt}";
+        {
+            progressText.text = $"Shine: {cleanedCount}/{totalDirt}\nRoot Cause Fix: {fixedCracks}/{totalCracks}";
+        }
     }
 }

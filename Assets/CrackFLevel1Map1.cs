@@ -29,18 +29,12 @@ public class CrackFLevel1Map1 : MonoBehaviour
             if (col != null) col.enabled = false;
         }
     }
+
     void Update()
     {
         if (hammer != null && raycaster != null)
         {
-            if (hammer.BeingHeld)
-            {
-                raycaster.enabled = true;
-            }
-            else
-            {
-                raycaster.enabled = false;
-            }
+            raycaster.enabled = hammer.BeingHeld;
         }
     }
 
@@ -62,11 +56,11 @@ public class CrackFLevel1Map1 : MonoBehaviour
             if (col != null) col.enabled = true;
         }
 
-        // 4) Notifikasi ke ShineTutorial
-        if (ShineTutorial.Instance != null)
-            ShineTutorial.Instance.CrackFixed();
+        // 4) Notifikasi ke ShineProgressTracker
+        if (ShineProgressTracker.Instance != null)
+            ShineProgressTracker.Instance.RegisterCrackFixed();
         else
-            Debug.LogWarning("ShineTutorial.Instance null!");
+            Debug.LogWarning("ShineProgressTracker.Instance null!");
 
         Debug.Log("Crack fixed! Puddles now unlocked.");
 
