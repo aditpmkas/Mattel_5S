@@ -44,6 +44,7 @@ TagManager:
   - SortBiasC
   - Mop
   - Crack
+  - Hammer
   layers:
   - Default
   - TransparentFX

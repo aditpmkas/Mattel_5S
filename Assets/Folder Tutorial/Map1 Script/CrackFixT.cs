@@ -1,15 +1,27 @@
+﻿using BNG;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CrackFixT : MonoBehaviour
 {
     [Header("Drip Particle")]
-    [Tooltip("ParticleSystem untuk tetesan air")]
     public ParticleSystem dripPS;
 
+    public Grabbable hammer;                     
+    public Canvas targetCanvas;
+    private GraphicRaycaster raycaster;
+
+    private Collider _buttonCollider;
     private bool isFixed = false;
 
     private void Start()
     {
+        if (targetCanvas != null)
+        {
+            raycaster = targetCanvas.GetComponent<GraphicRaycaster>();
+            raycaster.enabled = false; // Disable at start
+        }
+
         // Disable collider semua puddle sampai retakan diperbaiki
         foreach (var p in GameObject.FindGameObjectsWithTag("DirtyFloor"))
         {
@@ -17,8 +29,21 @@ public class CrackFixT : MonoBehaviour
             if (col != null) col.enabled = false;
         }
     }
+    void Update()
+    {
+        if (hammer != null && raycaster != null)
+        {
+            if (hammer.BeingHeld)
+            {
+                raycaster.enabled = true;
+            }
+            else
+            {
+                raycaster.enabled = false;
+            }
+        }
+    }
 
-    // Method dipanggil langsung oleh Button OnClick()
     public void FixCrack()
     {
         if (isFixed) return;
@@ -44,5 +69,7 @@ public class CrackFixT : MonoBehaviour
             Debug.LogWarning("ShineTutorial.Instance null!");
 
         Debug.Log("Crack fixed! Puddles now unlocked.");
+
+        Destroy(gameObject);
     }
 }
