@@ -18,7 +18,7 @@ public class GameManagerL1M2 : MonoBehaviour
     public TMP_Text phaseText;
 
     [Header("Sorting UI")]
-    public int totalSortTargets = 3;
+    public int totalSortTargets = 4;
     private int sortDestroyedCount = 0;
     public TMP_Text sortingText;
 
