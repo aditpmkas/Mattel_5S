@@ -10,8 +10,12 @@ public class ShineTutorial : MonoBehaviour
     [Tooltip("Pre-placed ReturnMopZone GameObject (disabled at start)")]
     public GameObject returnZone;
 
+    private int totalCracks;
+    private int cracksFixed = 0;
+
     private int totalDirt;
-    private int cleanedDirt;
+    private int cleanedDirt = 0;
+
     private bool returnZoneEnabled = false;
 
     public GameObject returnZoneTrigger;
@@ -24,24 +28,46 @@ public class ShineTutorial : MonoBehaviour
 
     private void Start()
     {
-        // Hitung total tapi nanti hanya di-enable setelah crack fixed
+        totalCracks = GameObject.FindGameObjectsWithTag("Crack").Length;
         totalDirt = GameObject.FindGameObjectsWithTag("DirtyFloor").Length;
 
+        foreach (var puddle in GameObject.FindGameObjectsWithTag("DirtyFloor"))
+        {
+            var col = puddle.GetComponent<Collider>();
+            if (col != null) col.enabled = false;
+        }
+
+        // Disable return zone trigger
         if (returnZoneTrigger == null)
-            Debug.LogError("ReturnZoneTrigger belum di-assign!");
+        {
+            Debug.LogError("[ShineTutorial] returnZoneTrigger belum di-assign!");
+        }
+        else
+        {
+            var col = returnZoneTrigger.GetComponent<Collider>();
+            if (col) col.enabled = false;
+            var rz = returnZoneTrigger.GetComponent<ReturnMopZone>();
+            if (rz) rz.enabled = false;
+        }
 
-        // Matiin hanya trigger-nya
-        var col = returnZoneTrigger.GetComponent<Collider>();
-        if (col) col.enabled = false;
-
-        var rz = returnZoneTrigger.GetComponent<ReturnMopZone>();
-        if (rz) rz.enabled = false;
+        Debug.Log($"[ShineTutorial] TotalCracks={totalCracks}, TotalDirt={totalDirt}");
     }
+
     public void CrackFixed()
     {
-        crackIsFixed = true;
-        Debug.Log("[ShineTutorial] Crack has been fixed.");
-        // (Opsional) jalankan animasi atau sound feedback di sini
+        cracksFixed++;
+        Debug.Log($"[ShineTutorial] Crack fixed: {cracksFixed}/{totalCracks}");
+
+        // Ketika semua crack ter-fix, unlock puddles
+        if (cracksFixed >= totalCracks)
+        {
+            Debug.Log("[ShineTutorial] Semua crack telah diperbaiki → puddles unlocked.");
+            foreach (var puddle in GameObject.FindGameObjectsWithTag("DirtyFloor"))
+            {
+                var col = puddle.GetComponent<Collider>();
+                if (col != null) col.enabled = true;
+            }
+        }
     }
 
     /// <summary>
