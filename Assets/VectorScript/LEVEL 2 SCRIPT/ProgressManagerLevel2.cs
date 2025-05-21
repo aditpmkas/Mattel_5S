@@ -18,6 +18,7 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public int totalBiasItemsCount = 3;
     public int sortedBiasItemsCount = 0;
 
+    public bool crackFixed = false;
     public bool mopReturned = true;
     public bool sortingDone = false;
     public bool setInOrderDone = false;
@@ -50,6 +51,12 @@ public class ProgressManagerLevel2 : MonoBehaviour
     {
         totalScore -= score;
         Debug.Log("Total Score: " + totalScore);
+    }
+
+    public void SetCrackFixedTrue()
+    {
+        crackFixed = true;
+        Debug.Log("Crack has been fixed!");
     }
 
 }

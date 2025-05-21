@@ -18,6 +18,7 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
     public int totalPuddlesCount = 7;
     public int cleanedPuddlesCount = 0;
 
+    public bool mopReturned = true;
     // Task completion flags
     public bool sortingDone = false;
     public bool setInOrderDone = false;

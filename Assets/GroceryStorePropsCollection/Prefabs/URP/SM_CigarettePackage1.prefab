@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8443488819405856615}
   - component: {fileID: 8255362065946481552}
   - component: {fileID: 8622525609922274542}
-  - component: {fileID: 6612878192636384342}
   m_Layer: 0
   m_Name: SM_CigarettePackage1
   m_TagString: Sort
@@ -215,25 +214,6 @@ MonoBehaviour:
   RingOnValidPickup: 1
   RingOnValidRemotePickup: 1
   RingHelperScale: 0.2
---- !u!114 &6612878192636384342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030994510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b90ed01ac5d94e9468b242b4c38496a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HapticsOnValidPickup: 1
-  HapticsOnValidRemotePickup: 1
-  HapticsOnCollision: 1
-  HapticsOnGrab: 1
-  VibrateFrequency: 0.3
-  VibrateAmplitude: 0.1
-  VibrateDuration: 0.1
 --- !u!1 &1030994514
 GameObject:
   m_ObjectHideFlags: 0
