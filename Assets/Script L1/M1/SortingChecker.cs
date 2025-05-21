@@ -5,30 +5,27 @@ using TMPro;
 public class SortingChecker : MonoBehaviour
 {
     [Header("Sorting Settings")]
-    public GameObject table; // tempat object Sort & Unsort
+    public GameObject table;
     public int requiredCorrectSorts = 4;
     private int currentCorrectSorts = 0;
 
     [Header("Bias Zone")]
-    public GameObject drawer; // zona besar untuk pengecekan SortBias
+    public GameObject drawer;
     private int totalBias = 3;
     private int currentBiasCount = 0;
 
     [Header("UI")]
-    public TextMeshProUGUI objectiveText;
-    public TextMeshProUGUI biasText; // UI teks untuk SortBias
+    public TextMeshProUGUI statusText; // UI gabungan
 
     private void Start()
     {
-        UpdateObjectiveText();
-        UpdateBiasText(currentBiasCount);
+        UpdateStatusText();
     }
 
     private void Update()
     {
-        // Update terus-menerus jumlah bias yang ada di dalam drawer
         currentBiasCount = CountBiasInDrawer();
-        UpdateBiasText(currentBiasCount);
+        UpdateStatusText();
 
         bool noSortsLeft = !table.GetComponentsInChildren<Transform>()
                                  .Any(child => child.CompareTag("Sort"));
@@ -37,29 +34,22 @@ public class SortingChecker : MonoBehaviour
         {
             Debug.Log("[SortingChecker] Semua tugas Sorting selesai!");
             GamePhaseManager.Instance.SetPhase(GamePhaseManager.Phase.SetInOrder);
-            Destroy(this); // stop pengecekan
+            Destroy(this);
         }
     }
 
     public void IncrementCorrectSort()
     {
         currentCorrectSorts++;
-        UpdateObjectiveText();
+        UpdateStatusText();
     }
 
-    private void UpdateObjectiveText()
+    private void UpdateStatusText()
     {
-        if (objectiveText != null)
+        if (statusText != null)
         {
-            objectiveText.text = $"Sorting: {currentCorrectSorts}/{requiredCorrectSorts}";
-        }
-    }
-
-    private void UpdateBiasText(int count)
-    {
-        if (biasText != null)
-        {
-            biasText.text = $"Sorting Bias: {count}/{totalBias}";
+            statusText.text = $"Sorting : {currentCorrectSorts}/{requiredCorrectSorts}\n" +
+                              $"Sorting Bias : {currentBiasCount}/{totalBias}";
         }
     }
 

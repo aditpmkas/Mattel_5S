@@ -20,7 +20,13 @@ public class GameManagerL1M2 : MonoBehaviour
     [Header("Sorting UI")]
     public int totalSortTargets = 4;
     private int sortDestroyedCount = 0;
-    public TMP_Text sortingText;
+
+    [Header("Sorting Bias UI")]
+    public int totalBiasSortTargets = 3;
+    private int biasSortCount = 0;
+
+    public TMP_Text sortingCombinedText;
+    public Collider biasSortAreaCollider;
 
     [Header("Set In Order UI")]
     public int totalSnapPointsToCheck = 6;
@@ -38,7 +44,15 @@ public class GameManagerL1M2 : MonoBehaviour
     private void Start()
     {
         UpdateAllUI();
-        UpdateGrabbableScripts(); // Aktifkan sesuai fase awal
+        UpdateGrabbableScripts();
+    }
+
+    private void Update()
+    {
+        if (currentPhase == GamePhase.Sorting)
+        {
+            CheckBiasSortArea();
+        }
     }
 
     // ======================= Sorting =======================
@@ -48,19 +62,55 @@ public class GameManagerL1M2 : MonoBehaviour
         if (currentPhase != GamePhase.Sorting) return;
 
         sortDestroyedCount++;
-        UpdateSortingUI();
+        UpdateSortingCombinedUI();
+        TryAdvanceSortingPhase();
+    }
 
-        if (sortDestroyedCount >= totalSortTargets)
+    private void UpdateSortingCombinedUI()
+    {
+        if (sortingCombinedText != null)
         {
-            Debug.Log("[GameManager] Sorting selesai!");
+            sortingCombinedText.text =
+                $"Sorting : {sortDestroyedCount}/{totalSortTargets}\n" +
+                $"Sorting Bias : {biasSortCount}/{totalBiasSortTargets}";
+        }
+    }
+
+    private void TryAdvanceSortingPhase()
+    {
+        if (sortDestroyedCount >= totalSortTargets && biasSortCount >= totalBiasSortTargets)
+        {
+            Debug.Log("[GameManager] Semua Sorting selesai!");
             AdvancePhase();
         }
     }
 
-    private void UpdateSortingUI()
+    private void CheckBiasSortArea()
     {
-        if (sortingText != null)
-            sortingText.text = $"Sorting : {sortDestroyedCount}/{totalSortTargets}";
+        if (biasSortAreaCollider == null)
+            return;
+
+        Collider[] hits = Physics.OverlapBox(
+            biasSortAreaCollider.bounds.center,
+            biasSortAreaCollider.bounds.extents,
+            biasSortAreaCollider.transform.rotation
+        );
+
+        int count = 0;
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("SortBiasA") || hit.CompareTag("SortBiasB") || hit.CompareTag("SortBiasC"))
+            {
+                count++;
+            }
+        }
+
+        if (biasSortCount != count)
+        {
+            biasSortCount = count;
+            UpdateSortingCombinedUI();
+            TryAdvanceSortingPhase();
+        }
     }
 
     // =================== Set In Order ======================
@@ -127,7 +177,7 @@ public class GameManagerL1M2 : MonoBehaviour
 
     private void UpdateAllUI()
     {
-        UpdateSortingUI();
+        UpdateSortingCombinedUI();
         UpdateSnapUI();
         UpdatePhaseText();
     }
@@ -155,11 +205,9 @@ public class GameManagerL1M2 : MonoBehaviour
     {
         var allGrabbables = FindObjectsOfType<Grabbable>();
 
-        // Matikan semua
         foreach (var g in allGrabbables)
             g.enabled = false;
 
-        // Nyalakan yang sesuai tag fase
         switch (currentPhase)
         {
             case GamePhase.Sorting:
