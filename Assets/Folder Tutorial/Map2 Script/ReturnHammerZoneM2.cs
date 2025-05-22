@@ -1,40 +1,45 @@
-using UnityEngine;
+﻿using UnityEngine;
 using BNG;
 using System.Collections;
 
-/// <summary>
-/// When the hammer is held in the return zone for a short delay,
-/// this completes the HammerReturned event in ShineTutorial.
-/// </summary>
 public class ReturnHammerZoneM2 : MonoBehaviour
 {
-
     public string returnMessage = "Hammer returned!";
     public float returnDelay = 2f;
+    private bool hasReturned = false;
 
-    // Make sure this GameObject has a Collider set to "Is Trigger"
     private void OnTriggerEnter(Collider other)
     {
-        // Look for your SnappableObject on the mop
-        var snappable = other.GetComponent<SnappableObject>();
-        if (snappable != null)
+        // **Only** the HammerTool should trigger this zone
+        if (!hasReturned
+           && other.CompareTag("Hammer")
+           && other.GetComponent<SnappableObject>() != null)
         {
-            Debug.Log($"[ReturnMopZone] {returnMessage}");
-
-            StartCoroutine(DelayedReturn());
+            StartCoroutine(HandleReturn(other));
         }
     }
 
-    private IEnumerator DelayedReturn()
+    private IEnumerator HandleReturn(Collider other)
     {
         yield return new WaitForSeconds(returnDelay);
 
-        Debug.Log($"[ReturnHammerZone] {returnMessage}");
+        // Double-check it’s still the hammer
+        if (other.CompareTag("Hammer"))
+        {
+            ShineTutorialM2.Instance.HammerReturned();
+            hasReturned = true;
+            Debug.Log(returnMessage);
+        }
+    }
 
-        // Notify ShineTutorial
-        ShineTutorialM2.Instance.HammerReturned();
-
-        // Destroy this trigger so it only fires once
-        Destroy(gameObject);
+    private void OnTriggerExit(Collider other)
+    {
+        // Only reset when the hammer actually leaves
+        if (hasReturned && other.CompareTag("Hammer"))
+        {
+            ShineTutorialM2.Instance.ResetHammerReturned();
+            hasReturned = false;
+            Debug.Log("Hammer left zone → reset return flag.");
+        }
     }
 }

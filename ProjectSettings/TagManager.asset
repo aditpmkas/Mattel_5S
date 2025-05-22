@@ -46,6 +46,7 @@ TagManager:
   - Crack
   - Hammer
   - RootCauseLevel2
+  - TrashItem
   layers:
   - Default
   - TransparentFX

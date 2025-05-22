@@ -10,6 +10,8 @@ public class SnapPointTutorial : MonoBehaviour
     public Transform correctObject;   // Objek yang seharusnya masuk ke snap point ini
     public Transform snappedObject;
 
+    public event System.Action<Transform> onSnapCallback;
+    public event System.Action<Transform> onReleaseCallback;
     public bool isOccupied => snappedObject != null;
 
     private void OnDrawGizmos()
@@ -51,6 +53,8 @@ public class SnapPointTutorial : MonoBehaviour
 
         if (!isCorrect)
             Debug.LogWarning("Wrong object snapped.");
+
+        onSnapCallback.Invoke(objectToSnap);
     }
 
 
@@ -64,5 +68,6 @@ public class SnapPointTutorial : MonoBehaviour
             // setelah dilepas, cek ulang semua snap point
             SetInOrderM2.Instance.CheckAllSnapPointsTutorial();
         }
+        onReleaseCallback?.Invoke(snappedObject);
     }
 }
