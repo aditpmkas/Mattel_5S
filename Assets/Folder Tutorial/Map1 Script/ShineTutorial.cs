@@ -4,11 +4,14 @@ using BNG;
 public class ShineTutorial : MonoBehaviour
 {
     public static ShineTutorial Instance;
+
     private bool crackIsFixed = false;
+    private bool hammerReturned = false;
 
     [Header("Return Zone Settings")]
-    [Tooltip("Pre-placed ReturnMopZone GameObject (disabled at start)")]
     public GameObject returnZone;
+    public GameObject returnZoneTrigger;
+    public GameObject hammerReturnTrigger;
 
     private int totalCracks;
     private int cracksFixed = 0;
@@ -17,8 +20,6 @@ public class ShineTutorial : MonoBehaviour
     private int cleanedDirt = 0;
 
     private bool returnZoneEnabled = false;
-
-    public GameObject returnZoneTrigger;
 
     private void Awake()
     {
@@ -37,6 +38,14 @@ public class ShineTutorial : MonoBehaviour
             if (col != null) col.enabled = false;
         }
 
+        if (hammerReturnTrigger != null)
+        {
+            var col = hammerReturnTrigger.GetComponent<Collider>();
+            if (col) col.enabled = false;
+            var rz = hammerReturnTrigger.GetComponent<ReturnHammerZone>();
+            if (rz) rz.enabled = false;
+        }
+
         // Disable return zone trigger
         if (returnZoneTrigger == null)
         {
@@ -53,6 +62,23 @@ public class ShineTutorial : MonoBehaviour
         Debug.Log($"[ShineTutorial] TotalCracks={totalCracks}, TotalDirt={totalDirt}");
     }
 
+    public void HammerReturned()
+    {
+        hammerReturned = true;
+        Debug.Log("[ShineTutorial] Hammer has been returned.");
+        TryUnlockPuddles();
+    }
+
+    private void TryUnlockPuddles()
+    {
+        if (crackIsFixed && hammerReturned)
+        {
+            Debug.Log("[ShineTutorial] Conditions met → puddles unlocked.");
+            foreach (var puddle in GameObject.FindGameObjectsWithTag("DirtyFloor"))
+                puddle.GetComponent<Collider>().enabled = true;
+        }
+    }
+
     public void CrackFixed()
     {
         cracksFixed++;
@@ -60,12 +86,20 @@ public class ShineTutorial : MonoBehaviour
 
         if (cracksFixed >= totalCracks)
         {
-            crackIsFixed = true;                // ← enable dirt cleaning!
-            Debug.Log("[ShineTutorial] Semua crack telah diperbaiki → puddles unlocked.");
-            foreach (var puddle in GameObject.FindGameObjectsWithTag("DirtyFloor"))
-                puddle.GetComponent<Collider>().enabled = true;
+            crackIsFixed = true;
+            Debug.Log("[ShineTutorial] All cracks fixed. Now waiting for hammer return.");
+
+            if (hammerReturnTrigger != null)
+            {
+                var col = hammerReturnTrigger.GetComponent<Collider>();
+                if (col) col.enabled = true;
+                var rz = hammerReturnTrigger.GetComponent<ReturnHammerZone>();
+                if (rz) rz.enabled = true;
+            }
+
+            TryUnlockPuddles();
         }
-    }
+    }   
 
     /// <summary>
     /// Call this each time a puddle is cleaned.

@@ -8,12 +8,12 @@ public class SortingTutorial : MonoBehaviour
     public GameObject trash;  // tempat trigger Trash (DestroyTutorial)
 
     [Header("Sorting Requirements")]
-    public int requiredCorrectSorts = 4;
-    private int currentCorrectSorts = 0;
+    public int requiredCorrectSorts;
+    private int currentCorrectSorts;
 
     [Header("Bias Requirements")]
-    public int requiredBiasCount = 3;
-    private int currentBiasCount = 0;
+    public int requiredBiasCount;
+    private int currentBiasCount;
 
     [Header("Completion Delay")]
     [Tooltip("Waktu jeda sebelum menandai task selesai (detik)")]

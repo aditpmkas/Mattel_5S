@@ -21,13 +21,7 @@ public class ReturnMopZone : MonoBehaviour
         {
             Debug.Log($"[ReturnMopZone] {returnMessage}");
 
-            // Complete the Shine task
-            TaskManager.Instance.CompleteTask(TaskType.Shine);
-
             StartCoroutine(DelayedComplete());
-
-            // Destroy this trigger so it only fires once
-            Destroy(gameObject);
         }
     }
 
