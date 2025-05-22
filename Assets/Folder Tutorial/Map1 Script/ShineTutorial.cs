@@ -41,7 +41,7 @@ public class ShineTutorial : MonoBehaviour
         if (returnZoneTrigger == null)
         {
             Debug.LogError("[ShineTutorial] returnZoneTrigger belum di-assign!");
-        }
+        }   
         else
         {
             var col = returnZoneTrigger.GetComponent<Collider>();
@@ -58,15 +58,12 @@ public class ShineTutorial : MonoBehaviour
         cracksFixed++;
         Debug.Log($"[ShineTutorial] Crack fixed: {cracksFixed}/{totalCracks}");
 
-        // Ketika semua crack ter-fix, unlock puddles
         if (cracksFixed >= totalCracks)
         {
+            crackIsFixed = true;                // ← enable dirt cleaning!
             Debug.Log("[ShineTutorial] Semua crack telah diperbaiki → puddles unlocked.");
             foreach (var puddle in GameObject.FindGameObjectsWithTag("DirtyFloor"))
-            {
-                var col = puddle.GetComponent<Collider>();
-                if (col != null) col.enabled = true;
-            }
+                puddle.GetComponent<Collider>().enabled = true;
         }
     }
 
