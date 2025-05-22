@@ -82,4 +82,40 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
         }
     }
 
+    public void ResetProgress()
+    {
+        // Sorting task
+        totalTrashCount = 3;
+        sortedTrashCount = 0;
+
+        // Set In Order task (Tools)
+        totalToolsCount = 12;
+        sortedToolsCount = 0;
+
+        // Shine task
+        totalPuddlesCount = 4;
+        cleanedPuddlesCount = 0;
+
+        totalBiasItemsCount = 3;
+        sortedBiasItemsCount = 0;
+
+        totalCracksCount = 1;
+        fixedCracksCount = 0;
+
+        totalRootCauseCount = 3;
+        cleanedRootCauseCount = 0;
+
+        hammerReturned = true;
+        mopReturned = true;
+        // Task completion flags
+        sortingDone = false;
+        setInOrderDone = false;
+        shineDone = false;
+
+        // Scoring
+        totalScore = 0;
+        maxPossibleScore = 2300;
+        finalTime = "";
+    }
+
 }

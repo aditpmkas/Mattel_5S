@@ -3,10 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    public void GoToLevel2Map1()
-    {
-        SceneManager.LoadScene("L2 M1");
-    }
     public void GoToLevel1Map1()
     {
         SceneManager.LoadScene("L1 M1");
@@ -19,10 +15,6 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("T M1");
     }
-    public void GoToLevel2Map2()
-    {
-        SceneManager.LoadScene("L2 M2");
-    }
     public void GoToLevel1Map2()
     {
         SceneManager.LoadScene("L1 M2");
@@ -33,6 +25,6 @@ public class SceneTransition : MonoBehaviour
     }
     public void ExitGame()
     {
-        Application.Quit(); 
+        Application.Quit();
     }
 }

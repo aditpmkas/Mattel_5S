@@ -75,4 +75,32 @@ public class ProgressManagerLevel2 : MonoBehaviour
             Debug.Log("Shine task complete!");
         }
     }
+
+    public void ResetProgress()
+    {
+        totalTrashCount = 4;
+        sortedTrashCount = 0;
+
+        totalBooksCount = 8;
+        sortedBooksCount = 0;
+
+        totalPuddlesCount = 3;
+        cleanedPuddlesCount = 0;
+
+        totalBiasItemsCount = 3;
+        sortedBiasItemsCount = 0;
+
+        totalCracksCount = 3;
+        fixedCracksCount = 0;
+
+        hammerReturned = true;
+        mopReturned = true;
+        sortingDone = false;
+        setInOrderDone = false;
+        shineDone = false;
+
+        totalScore = 0;
+        maxPossibleScore = 1800;
+        finalTime = "";
+    }
 }
