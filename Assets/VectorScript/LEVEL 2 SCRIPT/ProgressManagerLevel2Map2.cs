@@ -7,7 +7,7 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
     public static ProgressManagerLevel2Map2 Instance;
 
     // Sorting task
-    public int totalTrashCount = 4;
+    public int totalTrashCount = 3;
     public int sortedTrashCount = 0;
 
     // Set In Order task (Tools)
@@ -18,6 +18,9 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
     public int totalPuddlesCount = 7;
     public int cleanedPuddlesCount = 0;
 
+    public int totalBiasItemsCount = 3;
+    public int sortedBiasItemsCount = 0;
+
     public bool mopReturned = true;
     // Task completion flags
     public bool sortingDone = false;
@@ -26,7 +29,7 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
 
     // Scoring
     public int totalScore = 0;
-    public int maxPossibleScore = 2300;
+    public int maxPossibleScore = 2200;
     public string finalTime = "";
 
     private void Awake()

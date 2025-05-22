@@ -21,6 +21,7 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public int totalCracksCount = 3;
     public int fixedCracksCount = 0;
 
+    public bool hammerReturned = true;
     public bool mopReturned = true;
     public bool sortingDone = false;
     public bool setInOrderDone = false;

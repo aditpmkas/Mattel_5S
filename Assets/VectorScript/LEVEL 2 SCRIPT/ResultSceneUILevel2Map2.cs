@@ -47,6 +47,14 @@ public class ResultSceneUILevel2Map2 : MonoBehaviour
         int seconds = int.Parse(parts[1]);
         float totalMinutes = minutes + (seconds / 60f);
 
+        if (totalMinutes <= 3f &&
+            percentage >= 90f &&
+            ProgressManagerLevel2Map2.Instance.sortedBiasItemsCount == ProgressManagerLevel2Map2.Instance.totalBiasItemsCount &&
+            ProgressManagerLevel2Map2.Instance.mopReturned == true)
+        {
+            return "A+";
+        }
+
         if (totalMinutes <= 3f && percentage >= 90f)
             return "A";
         else if (totalMinutes <= 4f && percentage >= 80f)
@@ -65,6 +73,7 @@ public class ResultSceneUILevel2Map2 : MonoBehaviour
     {
         switch (grade)
         {
+            case "A+": return "Sempurna";
             case "A": return "Sangat Baik";
             case "B": return "Baik Sekali";
             case "C": return "Cukup";

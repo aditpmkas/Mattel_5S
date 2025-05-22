@@ -55,7 +55,8 @@ public class ResultSceneUILevel2 : MonoBehaviour
         if (totalMinutes <= 2f &&
             percentage >= 90f &&
             ProgressManagerLevel2.Instance.sortedBiasItemsCount == ProgressManagerLevel2.Instance.totalBiasItemsCount &&
-            ProgressManagerLevel2.Instance.mopReturned == true)
+            ProgressManagerLevel2.Instance.mopReturned == true &&
+            ProgressManagerLevel2.Instance.hammerReturned == true)
         {
             return "A+";
         }
