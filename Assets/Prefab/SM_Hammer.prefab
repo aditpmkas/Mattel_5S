@@ -178,9 +178,12 @@ GameObject:
   - component: {fileID: 4248765000345697231}
   - component: {fileID: 5842727692960236272}
   - component: {fileID: 9036751221808908538}
+<<<<<<< Updated upstream
   - component: {fileID: 3724469846984563166}
   - component: {fileID: 5712264666871821622}
   - component: {fileID: 6289229176247730754}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: SM_Hammer
   m_TagString: Hammer
@@ -286,6 +289,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017594574, y: 0.26958457, z: 0.03}
   m_Center: {x: 0.013251408, y: 0.03364183, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &3724469846984563166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +391,8 @@ MonoBehaviour:
   RingOnValidPickup: 1
   RingOnValidRemotePickup: 1
   RingHelperScale: 0.2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &4175159981314897716
 GameObject:
   m_ObjectHideFlags: 0

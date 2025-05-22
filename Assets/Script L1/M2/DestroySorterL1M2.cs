@@ -7,33 +7,48 @@ public class DestroySorterL1M2 : MonoBehaviour
     public Transform sortBiasBTarget;
     public Transform sortBiasCTarget;
 
+    [Header("ShineChecker Reference")]
+    public ShineChecker shineChecker; // Drag di Inspector
+
     private void OnTriggerEnter(Collider other)
     {
-        if (GameManagerL1M2.Instance.currentPhase != GameManagerL1M2.GamePhase.Sorting)
-            return;
+        // Sorting Phase Logic
+        if (GameManagerL1M2.Instance.currentPhase == GameManagerL1M2.GamePhase.Sorting)
+        {
+            string tag = other.tag;
 
-        string tag = other.tag;
+            if (tag == "Sort")
+            {
+                GameManagerL1M2.Instance.IncrementSortDestroyed();
+                Destroy(other.gameObject);
+            }
+            else if (tag == "UnSort")
+            {
+                Destroy(other.gameObject);
+            }
+            else if (tag == "SortBiasA" && sortBiasATarget != null)
+            {
+                MoveToTarget(other.transform, sortBiasATarget);
+            }
+            else if (tag == "SortBiasB" && sortBiasBTarget != null)
+            {
+                MoveToTarget(other.transform, sortBiasBTarget);
+            }
+            else if (tag == "SortBiasC" && sortBiasCTarget != null)
+            {
+                MoveToTarget(other.transform, sortBiasCTarget);
+            }
+        }
 
-        if (tag == "Sort")
+        // Root Cause Logic (boleh aktif di semua fase, atau bisa dibatasi lagi)
+        if (other.CompareTag("RootCauseLevel1"))
         {
-            GameManagerL1M2.Instance.IncrementSortDestroyed();
+            if (shineChecker != null)
+            {
+                shineChecker.RegisterRootCauseHit();
+            }
+
             Destroy(other.gameObject);
-        }
-        else if (tag == "UnSort")
-        {
-            Destroy(other.gameObject);
-        }
-        else if (tag == "SortBiasA" && sortBiasATarget != null)
-        {
-            MoveToTarget(other.transform, sortBiasATarget);
-        }
-        else if (tag == "SortBiasB" && sortBiasBTarget != null)
-        {
-            MoveToTarget(other.transform, sortBiasBTarget);
-        }
-        else if (tag == "SortBiasC" && sortBiasCTarget != null)
-        {
-            MoveToTarget(other.transform, sortBiasCTarget);
         }
     }
 

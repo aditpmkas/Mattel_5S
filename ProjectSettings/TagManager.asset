@@ -46,7 +46,11 @@ TagManager:
   - Crack
   - Hammer
   - RootCauseLevel2
+<<<<<<< Updated upstream
   - TrashItem
+=======
+  - RootCauseLevel1
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

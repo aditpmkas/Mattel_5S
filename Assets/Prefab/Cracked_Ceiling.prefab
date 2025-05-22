@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2291742646467570872}
   - component: {fileID: 5208247958501226526}
-  - component: {fileID: 872919847621550894}
   m_Layer: 0
   m_Name: Cracked_Ceiling
   m_TagString: Crack
@@ -119,21 +118,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &872919847621550894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3454836361301958047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fd24c3d33d56d478c6810e6d39602b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dripPS: {fileID: 5728224515820258459}
-  hammer: {fileID: 0}
-  targetCanvas: {fileID: 1872101518662559232}
 --- !u!1 &4568081768968642305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5225,7 +5209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 872919847621550894}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CrackFixT, Assembly-CSharp
         m_MethodName: FixCrack
         m_Mode: 1

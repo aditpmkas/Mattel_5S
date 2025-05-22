@@ -1,28 +1,42 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class MopLevel1Map2 : MonoBehaviour
 {
-
     [Header("Objective Tracker")]
     public ShineChecker shineChecker;
 
     [Header("Audio")]
-    [Tooltip("Audio yang akan dimainkan saat mop menyentuh DirtyFloor.")]
     public AudioClip hitDirtyFloorSound;
-    [Tooltip("AudioSource yang digunakan untuk memainkan audio. Jika kosong, akan otomatis dibuat.")]
     public AudioSource audioSource;
+
+    // Simpan waktu terakhir swipe per puddle
+    private Dictionary<GameObject, float> lastSwipeTimePerPuddle = new Dictionary<GameObject, float>();
+    private float swipeCooldown = 0.2f; // cooldown 0.2 detik supaya gak double hit
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("DirtyFloor") || other.CompareTag("DirtyFloor"))
         {
+            GameObject puddleObj = other.gameObject;
+
+            float lastTime;
+            lastSwipeTimePerPuddle.TryGetValue(puddleObj, out lastTime);
+            if (Time.time - lastTime < swipeCooldown)
+            {
+                // masih cooldown, skip
+                return;
+            }
+
+            // update waktu terakhir swipe
+            lastSwipeTimePerPuddle[puddleObj] = Time.time;
+
             PuddleHealthVR puddleHealth = other.GetComponent<PuddleHealthVR>();
             if (puddleHealth != null)
             {
                 puddleHealth.RegisterSwipe(shineChecker);
             }
 
-            // Play sound
             if (hitDirtyFloorSound != null)
             {
                 if (audioSource == null)

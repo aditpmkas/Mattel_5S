@@ -23,6 +23,14 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("T M2");
     }
+    public void GoToLevel2Map2()
+    {
+        SceneManager.LoadScene("L2 M2");
+    }
+    public void GoToLevel2Map1()
+    {
+        SceneManager.LoadScene("L2 M1");
+    }
     public void ExitGame()
     {
         Application.Quit();
