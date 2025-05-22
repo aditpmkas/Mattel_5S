@@ -72,7 +72,7 @@ public class GameManagerL1M2 : MonoBehaviour
         {
             sortingCombinedText.text =
                 $"Sorting : {sortDestroyedCount}/{totalSortTargets}\n" +
-                $"Sorting Bias : {biasSortCount}/{totalBiasSortTargets}";
+                $"Barang Bias : {biasSortCount}/{totalBiasSortTargets}";
         }
     }
 

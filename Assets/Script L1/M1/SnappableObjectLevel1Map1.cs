@@ -1,24 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using BNG;
 
 public class SnappableObjectLevel1Map1 : MonoBehaviour
 {
+    public event Action OnSnapped;
+    public event Action OnReleased;
+
     private SnapPoint currentSnapPoint;
     private Grabbable grabbable;
     private bool isSnapped = false;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private Transform originalParent;
-    private float snapThreshold = 0.001f; // Threshold untuk menghentikan pergerakan
+    private float snapThreshold = 0.001f;
     private Rigidbody rb;
     private bool wasKinematic;
     private CollisionDetectionMode originalCollisionMode;
-    private bool isInSnapRange = false;
     private bool wasBeingHeld = false;
     public SnapPoint initialSnapPoint;
-
 
     void Start()
     {
@@ -32,7 +32,6 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
             return;
         }
 
-        // Store original transform data
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         originalParent = transform.parent;
@@ -45,33 +44,28 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
 
         if (initialSnapPoint != null && !initialSnapPoint.isOccupied)
         {
-            // tandai state internal
             currentSnapPoint = initialSnapPoint;
             isSnapped = true;
-
-            // reservasi di snap point
             initialSnapPoint.SnapObject(transform);
 
-            // langsung set transform & parent
             transform.position = initialSnapPoint.transform.position;
             transform.rotation = initialSnapPoint.transform.rotation;
             transform.SetParent(initialSnapPoint.transform);
 
-            // jika punya rigidbody, kinematic agar tidak jatuh
             if (rb != null)
             {
                 rb.isKinematic = true;
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             }
+
+            OnSnapped?.Invoke();
         }
     }
 
     void Update()
     {
-        // Check if object was just released
         if (wasBeingHeld && !grabbable.BeingHeld && isSnapped)
         {
-            // Object was just released while snapped
             if (rb != null)
             {
                 rb.isKinematic = true;
@@ -83,23 +77,19 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
 
         if (grabbable.BeingHeld)
         {
-            // Check for nearby snap points when the object is being held
             CheckForSnapPoints();
         }
         else if (isSnapped && currentSnapPoint != null)
         {
-            // Cek jarak ke snap point
             float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
 
             if (distanceToSnapPoint > snapThreshold)
             {
-                // Smoothly move to snap point position
                 transform.position = Vector3.Lerp(transform.position, currentSnapPoint.transform.position, Time.deltaTime * currentSnapPoint.snapSpeed);
                 transform.rotation = Quaternion.Lerp(transform.rotation, currentSnapPoint.transform.rotation, Time.deltaTime * currentSnapPoint.snapSpeed);
             }
             else
             {
-                // Langsung set ke posisi dan rotasi yang tepat
                 transform.position = currentSnapPoint.transform.position;
                 transform.rotation = currentSnapPoint.transform.rotation;
             }
@@ -108,7 +98,6 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
 
     void CheckForSnapPoints()
     {
-        // Find all snap points in the scene
         SnapPoint[] snapPoints = FindObjectsOfType<SnapPoint>();
         SnapPoint closestSnapPoint = null;
         float closestDistance = float.MaxValue;
@@ -126,18 +115,17 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
             }
         }
 
-        // If we found a valid snap point and we're not already snapped
         if (closestSnapPoint != null && !isSnapped)
         {
             currentSnapPoint = closestSnapPoint;
             isSnapped = true;
             currentSnapPoint.SnapObject(transform);
-            isInSnapRange = true;
+            OnSnapped?.Invoke();
         }
         else if (closestSnapPoint == null && isSnapped)
         {
-            // If we're no longer near any snap point, release
             ReleaseFromSnap();
+            OnReleased?.Invoke();
         }
     }
 
@@ -145,18 +133,15 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
     {
         if (currentSnapPoint != null)
         {
-            // Before releasing, inform the bookshelf
             NotifyShelfExit();
 
             currentSnapPoint.ReleaseObject();
             transform.SetParent(originalParent);
             currentSnapPoint = null;
             isSnapped = false;
-            isInSnapRange = false;
 
             if (!grabbable.BeingHeld)
             {
-                // Restore physics only if not held
                 if (rb != null)
                 {
                     rb.isKinematic = wasKinematic;

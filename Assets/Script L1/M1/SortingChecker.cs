@@ -49,7 +49,7 @@ public class SortingChecker : MonoBehaviour
         if (statusText != null)
         {
             statusText.text = $"Sorting : {currentCorrectSorts}/{requiredCorrectSorts}\n" +
-                              $"Sorting Bias : {currentBiasCount}/{totalBias}";
+                              $"Barang Bias : {currentBiasCount}/{totalBias}";
         }
     }
 
