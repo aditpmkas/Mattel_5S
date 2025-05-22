@@ -25,7 +25,12 @@ public class ReturnMopZone2 : MonoBehaviour
 
         if (other.CompareTag("Mop"))
         {
+            // Beri tahu TaskManager (jika masih perlu)
             TaskManagerM2.Instance.CompleteTask(TaskType2.Shine);
+
+            // ***Tambah baris ini supaya ShineTutorial tahu mop sudah dipakai***
+            ShineTutorialM2.Instance.DirtCleaned();
+
             hasCompleted = true;
             Debug.Log(returnMessage);
         }
