@@ -45,6 +45,7 @@ TagManager:
   - Mop
   - Crack
   - Hammer
+  - RootCauseLevel2
   layers:
   - Default
   - TransparentFX

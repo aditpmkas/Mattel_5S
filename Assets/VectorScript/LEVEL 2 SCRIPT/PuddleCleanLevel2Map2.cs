@@ -11,20 +11,17 @@ public class PuddleCleanLevel2Map2 : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("DirtyFloor") || other.CompareTag("DirtyFloor"))
         {
-            // Get puddle health
             PuddleHealthLevel2 puddleHealth = other.GetComponent<PuddleHealthLevel2>();
 
             if (puddleHealth != null)
             {
                 puddleHealth.AddSwipe();
 
-                //Play mop swipe sfx here
                 if (wipingSFX != null)
                 {
                     wipingSFX.Play();
                 }
 
-                // Only score when puddle destroyed
                 if (puddleHealth.IsDestroyed())
                 {
                     bool sortingDone = ProgressManagerLevel2Map2.Instance.sortingDone;
@@ -36,11 +33,10 @@ public class PuddleCleanLevel2Map2 : MonoBehaviour
                     ProgressManagerLevel2Map2.Instance.AddScore(scoreToAdd);
 
                     ProgressManagerLevel2Map2.Instance.cleanedPuddlesCount++;
-                    if (ProgressManagerLevel2Map2.Instance.cleanedPuddlesCount >= ProgressManagerLevel2Map2.Instance.totalPuddlesCount)
-                    {
-                        ProgressManagerLevel2Map2.Instance.shineDone = true;
-                        Debug.Log("Shine task complete!");
-                    }
+                    Debug.Log("Puddles cleaned: " + ProgressManagerLevel2Map2.Instance.cleanedPuddlesCount + " / " + ProgressManagerLevel2Map2.Instance.totalPuddlesCount);
+
+                    // Central shine task check here
+                    ProgressManagerLevel2Map2.Instance.CheckShineTaskComplete();
                 }
             }
         }

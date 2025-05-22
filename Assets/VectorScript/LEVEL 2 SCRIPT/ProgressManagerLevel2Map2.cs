@@ -15,12 +15,19 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
     public int sortedToolsCount = 0;
 
     // Shine task
-    public int totalPuddlesCount = 7;
+    public int totalPuddlesCount = 4;
     public int cleanedPuddlesCount = 0;
 
     public int totalBiasItemsCount = 3;
     public int sortedBiasItemsCount = 0;
 
+    public int totalCracksCount = 1;
+    public int fixedCracksCount = 0;
+
+    public int totalRootCauseCount = 3;
+    public int cleanedRootCauseCount = 0;
+
+    public bool hammerReturned = true;
     public bool mopReturned = true;
     // Task completion flags
     public bool sortingDone = false;
@@ -29,7 +36,7 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
 
     // Scoring
     public int totalScore = 0;
-    public int maxPossibleScore = 2200;
+    public int maxPossibleScore = 2300;
     public string finalTime = "";
 
     private void Awake()
@@ -56,4 +63,23 @@ public class ProgressManagerLevel2Map2 : MonoBehaviour
         totalScore -= score;
         Debug.Log("Total Score (Map 2): " + totalScore);
     }
+
+    public void AddCrackFix()
+    {
+        fixedCracksCount++;
+        Debug.Log("Fixed cracks: " + fixedCracksCount + " / " + totalCracksCount);
+        CheckShineTaskComplete();
+    }
+
+    public void CheckShineTaskComplete()
+    {
+        if (cleanedPuddlesCount >= totalPuddlesCount
+            && fixedCracksCount >= totalCracksCount
+            && cleanedRootCauseCount >= totalRootCauseCount)
+        {
+            shineDone = true;
+            Debug.Log("Shine task complete!");
+        }
+    }
+
 }
