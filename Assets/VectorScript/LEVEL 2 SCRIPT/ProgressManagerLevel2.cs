@@ -53,7 +53,6 @@ public class ProgressManagerLevel2 : MonoBehaviour
     public void SubtractScore(int score)
     {
         totalScore -= score;
-        if (totalScore < 0) totalScore = 0;
         Debug.Log("Total Score: " + totalScore);
     }
 

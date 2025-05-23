@@ -25,5 +25,8 @@ public class CrackFixButtonHandlerLevel2Map2 : MonoBehaviour
         {
             canvasObject.SetActive(false);
         }
+
+        // Disable this button GameObject itself
+        gameObject.SetActive(false);
     }
 }

@@ -30,5 +30,12 @@ public class TrashSortingLevel2Map2 : MonoBehaviour
             Debug.Log("GameObject " + other.gameObject.name + " destroyed.");
             Debug.Log("Your score is: " + sortScore);
         }
+
+        if (other.gameObject.tag == "SortBias")
+        {
+            ProgressManagerLevel2Map2.Instance.SubtractScore(25);
+            Destroy(other.gameObject);
+            Debug.Log("GameObject " + other.gameObject.name + " destroyed.");
+        }
     }
 }
