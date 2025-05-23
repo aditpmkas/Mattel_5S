@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class snapPointLevel1Map2 : MonoBehaviour
+public class SnapPointLevel1Map2 : MonoBehaviour
 {
     public float snapRadius = 0.5f; // Radius within which objects will snap
     public float snapSpeed = 10f; // How fast objects snap to this point

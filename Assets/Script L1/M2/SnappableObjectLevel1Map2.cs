@@ -7,7 +7,7 @@ public class SnappableObjectl1m2 : MonoBehaviour
     public event Action OnSnapped;
     public event Action OnReleased;
 
-    private SnapPoint currentSnapPoint;
+    private SnapPointLevel1Map2 currentSnapPoint;
     private Grabbable grabbable;
     private bool isSnapped = false;
     private Vector3 originalPosition;
@@ -18,7 +18,7 @@ public class SnappableObjectl1m2 : MonoBehaviour
     private bool wasKinematic;
     private CollisionDetectionMode originalCollisionMode;
     private bool wasBeingHeld = false;
-    public SnapPoint initialSnapPoint;
+    public SnapPointLevel1Map2 initialSnapPoint;
 
     void Start()
     {
@@ -98,11 +98,11 @@ public class SnappableObjectl1m2 : MonoBehaviour
 
     void CheckForSnapPoints()
     {
-        SnapPoint[] snapPoints = FindObjectsOfType<SnapPoint>();
-        SnapPoint closestSnapPoint = null;
+        SnapPointLevel1Map2[] snapPoints = FindObjectsOfType<SnapPointLevel1Map2>();
+        SnapPointLevel1Map2 closestSnapPoint = null;
         float closestDistance = float.MaxValue;
 
-        foreach (SnapPoint snapPoint in snapPoints)
+        foreach (SnapPointLevel1Map2 snapPoint in snapPoints)
         {
             if (!snapPoint.isOccupied)
             {
