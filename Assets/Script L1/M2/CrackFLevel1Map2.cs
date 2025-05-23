@@ -1,0 +1,76 @@
+using BNG;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CrackFLevel1Map2 : MonoBehaviour
+{
+    [Header("Drip Particle")]
+    public ParticleSystem dripPS;
+
+    public Grabbable hammer;
+    public Canvas targetCanvas;
+    private GraphicRaycaster raycaster;
+
+    private Collider _buttonCollider;
+    private bool isFixed = false;
+
+    private void Start()
+    {
+        if (targetCanvas != null)
+        {
+            raycaster = targetCanvas.GetComponent<GraphicRaycaster>();
+            raycaster.enabled = false; // Disable at start
+        }
+
+        // Disable collider semua puddle sampai retakan diperbaiki
+        foreach (var p in GameObject.FindGameObjectsWithTag("DirtyFloor"))
+        {
+            var col = p.GetComponent<Collider>();
+            if (col != null) col.enabled = false;
+        }
+    }
+
+    void Update()
+    {
+        if (hammer != null && raycaster != null)
+        {
+            raycaster.enabled = hammer.BeingHeld;
+        }
+    }
+
+    public void FixCrack()
+    {
+        if (isFixed) return;
+        isFixed = true;
+
+        // 1) Stop particle tetesan
+        if (dripPS != null) dripPS.Stop();
+
+        // 2) (Opsional) hilangkan mesh/visual crack
+        // gameObject.SetActive(false);
+
+        // 3) Enable collider semua puddle
+        foreach (var p in GameObject.FindGameObjectsWithTag("DirtyFloor"))
+        {
+            var col = p.GetComponent<Collider>();
+            if (col != null) col.enabled = true;
+        }
+
+        // 4) Notifikasi ke ShineProgressTracker
+        if (ShineProgressTracker.Instance != null)
+            ShineProgressTracker.Instance.RegisterCrackFixed();
+        else
+            Debug.LogWarning("ShineProgressTracker.Instance null!");
+
+        //  5) Tambahkan ke ShineChecker untuk skor akar masalah
+        if (ShineChecker.Instance != null)
+            ShineChecker.Instance.RegisterRootCauseHit();
+        else
+            Debug.LogWarning("ShineChecker.Instance null!");
+
+        Debug.Log("Crack fixed! Puddles now unlocked.");
+
+        Destroy(gameObject);
+    }
+
+}
