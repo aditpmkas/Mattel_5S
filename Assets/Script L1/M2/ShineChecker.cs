@@ -81,6 +81,10 @@ public class ShineChecker : MonoBehaviour
             Debug.Log("[ShineChecker] Success Panel ditampilkan karena hammer dan mop sudah dikembalikan.");
         }
     }
+    public bool IsRootCauseComplete()
+    {
+        return cleanedRootCause >= totalRootCause;
+    }
 
     private void UpdateUIText()
     {
