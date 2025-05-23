@@ -6,8 +6,6 @@
     {
         [Header("Panels")]
         public GameObject welcomePanel;
-        public GameObject confirmSkipPanel;
-
         public GameObject GameMenuPanel;
         public GameObject ConfirmSkip;
 
@@ -22,7 +20,6 @@
         {
             DisableGrabbable();
             welcomePanel.SetActive(true);
-            confirmSkipPanel.SetActive(false);
             GameMenuPanel.SetActive(false);
             ConfirmSkip.SetActive(false);
         }
@@ -85,31 +82,12 @@
         public void OnClosePressed()
         {
             welcomePanel.SetActive(false);
-            confirmSkipPanel.SetActive(false);
             GameMenuPanel.SetActive(true);
             EnableGrabbable();
         }
 
-        public void OnSkipPressed()
+        public void OnOpenPressed()
         {
-            welcomePanel.SetActive(false);
-            confirmSkipPanel.SetActive(true);
-        }
-
-        public void OnConfirmSkipYes()
-        {
-            TaskManager.Instance.CompleteAllTasks();
-            confirmSkipPanel.SetActive(false);     
-        }
-        public void OnConfirmSkipYesMap2()
-        {
-            TaskManagerM2.Instance.CompleteAllTasks();
-            confirmSkipPanel.SetActive(false);
-        }
-
-        public void OnConfirmSkipNo()
-        {
-            confirmSkipPanel.SetActive(false);
             welcomePanel.SetActive(true);
         }
     }
