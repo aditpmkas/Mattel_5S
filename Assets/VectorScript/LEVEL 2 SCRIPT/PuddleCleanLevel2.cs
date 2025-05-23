@@ -18,7 +18,7 @@ public class PuddleCleanLevel2 : MonoBehaviour
             {
                 puddleHealth.AddSwipe();
 
-                //Play mop swipe sfx here
+                // Play mop swipe sfx here
                 if (wipingSFX != null)
                 {
                     wipingSFX.Play();
@@ -31,6 +31,13 @@ public class PuddleCleanLevel2 : MonoBehaviour
                     bool setInOrderDone = ProgressManagerLevel2.Instance.setInOrderDone;
 
                     int scoreToAdd = (sortingDone && setInOrderDone) ? 100 : 100 - 25;
+
+                    // Apply -10 penalty if not all cracks fixed yet
+                    if (ProgressManagerLevel2.Instance.fixedCracksCount < ProgressManagerLevel2.Instance.totalCracksCount)
+                    {
+                        scoreToAdd -= 10;
+                        Debug.Log("Penalty applied: Crack not fixed before mopping (-10)");
+                    }
 
                     shineScore += scoreToAdd;
                     ProgressManagerLevel2.Instance.AddScore(scoreToAdd);

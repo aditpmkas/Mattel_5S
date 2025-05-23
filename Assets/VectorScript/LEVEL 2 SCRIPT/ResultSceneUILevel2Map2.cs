@@ -15,13 +15,13 @@ public class ResultSceneUILevel2Map2 : MonoBehaviour
     {
         if (ProgressManagerLevel2Map2.Instance != null)
         {
-            finalTimeText.text = "Waktu: " + ProgressManagerLevel2Map2.Instance.finalTime;
+            finalTimeText.text = ProgressManagerLevel2Map2.Instance.finalTime;
 
             // Calculate percentage
             float percentage = ((float)ProgressManagerLevel2Map2.Instance.totalScore / ProgressManagerLevel2Map2.Instance.maxPossibleScore) * 100f;
             percentage = Mathf.Clamp(percentage, 0, 100);
 
-            finalPercentageText.text = "Skor: " + percentage.ToString("F0") + "%";
+            finalPercentageText.text = percentage.ToString("F0") + "%";
 
             // Calculate grade
             string grade = CalculateGrade(ProgressManagerLevel2Map2.Instance.finalTime, percentage);
@@ -32,10 +32,10 @@ public class ResultSceneUILevel2Map2 : MonoBehaviour
         }
         else
         {
-            finalTimeText.text = "Waktu: 00:00";
-            finalPercentageText.text = "Skor: 0%";
+            finalTimeText.text = "00:00";
+            finalPercentageText.text = "0%";
             finalGradeText.text = "F";
-            gradeDescriptionText.text = "Tidak Lulus";
+            gradeDescriptionText.text = "TIDAK LULUS";
             Debug.LogWarning("ProgressManagerLevel2Map2 not found!");
         }
     }
@@ -74,13 +74,13 @@ public class ResultSceneUILevel2Map2 : MonoBehaviour
     {
         switch (grade)
         {
-            case "A+": return "Sempurna";
-            case "A": return "Sangat Baik";
-            case "B": return "Baik Sekali";
-            case "C": return "Cukup";
-            case "D": return "Kurang";
-            case "E": return "Sangat Kurang";
-            case "F": return "Tidak Lulus";
+            case "A+": return "SEMPURNA";
+            case "A": return "SANGAT BAIK";
+            case "B": return "BAIK SEKALI";
+            case "C": return "CUKUP";
+            case "D": return "KURANG";
+            case "E": return "SANGAT KURANG";
+            case "F": return "TIDAK LULUS";
             default: return "-";
         }
     }

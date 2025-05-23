@@ -5,9 +5,15 @@ using UnityEngine;
 public class TrashSortingLevel2 : MonoBehaviour
 {
     public int sortScore = 0;
+    public AudioSource sortingSFX; // Add this reference in Inspector
 
     private void OnTriggerEnter(Collider other)
     {
+        if (sortingSFX != null)
+        {
+            sortingSFX.Play();
+        }
+
         if (other.gameObject.tag == "Sort")
         {
             sortScore += 100;
