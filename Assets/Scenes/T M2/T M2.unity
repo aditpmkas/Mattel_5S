@@ -138,7 +138,7 @@ MonoBehaviour:
   m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 307
+    m_Bits: 51
 --- !u!114 &127973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20279,6 +20279,7 @@ GameObject:
   - component: {fileID: 1187738149}
   - component: {fileID: 1187738151}
   - component: {fileID: 1187738150}
+  - component: {fileID: 1187738152}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -24138,7 +24139,7 @@ ParticleSystem:
     maxCollisionShapes: 10
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -25098,6 +25099,20 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1187738152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187738148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade0a9997bed8be4b84a3af40cd559b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dripSound: {fileID: 8300000, guid: 949acac9c5d09b04f852ae06403a1715, type: 3}
+  volume: 10
 --- !u!1 &1192100336
 GameObject:
   m_ObjectHideFlags: 0
@@ -40892,15 +40907,15 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1216341346}
+  - {fileID: 1117302632}
+  - {fileID: 1165169031}
   - {fileID: 1439432848}
   - {fileID: 2111446891}
   - {fileID: 1215450517}
   - {fileID: 934229797}
   - {fileID: 1322557768}
   - {fileID: 1918663371}
-  - {fileID: 1165169031}
-  - {fileID: 1117302632}
-  - {fileID: 1216341346}
   - {fileID: 903541710}
   - {fileID: 66286448}
   - {fileID: 24354007}

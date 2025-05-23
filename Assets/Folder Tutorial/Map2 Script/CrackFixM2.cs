@@ -1,5 +1,6 @@
 using BNG;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class CrackFixM2 : MonoBehaviour
