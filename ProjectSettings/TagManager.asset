@@ -3,7 +3,51 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BigTool
+  - SmallTool
+  - BigScrew
+  - SmallScrew
+  - Nut
+  - BreakDisc
+  - BreakDiscTarget
+  - BreakDiscBolt
+  - Screwdriver
+  - ScrewdriverScrew
+  - Glass
+  - Sort
+  - Unsort
+  - TrashCan
+  - DirtyFloor
+  - BookA
+  - BookB
+  - BookC
+  - BookD
+  - WallStain
+  - Tang
+  - Linggis Medium
+  - Linggis Kecil
+  - Kunci Ring
+  - Kunci Tools Medium
+  - Kunci Tools Kecil
+  - Obeng Besar
+  - Obeng Medium
+  - Obeng Kecil
+  - Kunci Inggris Besar
+  - Kunci Inggris Medium
+  - Kunci Besar Kecil
+  - Tools
+  - Drawer
+  - SortBias
+  - SortBiasA
+  - SortBiasB
+  - SortBiasC
+  - Mop
+  - Crack
+  - Hammer
+  - RootCauseLevel2
+  - TrashItem
+  - RootCauseLevel1
   layers:
   - Default
   - TransparentFX
