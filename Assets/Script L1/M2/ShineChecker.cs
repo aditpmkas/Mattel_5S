@@ -19,7 +19,7 @@ public class ShineChecker : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        else if (Instance != this)
+        else
             Destroy(gameObject);
     }
 
@@ -31,41 +31,19 @@ public class ShineChecker : MonoBehaviour
         totalDirt = GameObject.FindGameObjectsWithTag("DirtyFloor").Length;
         totalRootCause = GameObject.FindGameObjectsWithTag("RootCauseLevel1").Length;
 
-        Debug.Log($"[ShineChecker] Total Noda: {totalDirt} | Total Akar Masalah: {totalRootCause}");
-
         UpdateUIText();
     }
 
     public void RegisterShineHit()
     {
-        if (GameManagerL1M2.Instance.currentPhase != GameManagerL1M2.GamePhase.Shine)
-            return;
-
         cleanedDirt++;
-        Debug.Log($"[ShineChecker] Noda Dibersihkan: {cleanedDirt}/{totalDirt}");
-
-        GameManagerL1M2.Instance.RegisterShineHit();
         UpdateUIText();
-        CheckSuccess();
     }
 
     public void RegisterRootCauseHit()
     {
         cleanedRootCause++;
-        Debug.Log($"[ShineChecker] Akar Masalah Dibersihkan: {cleanedRootCause}/{totalRootCause}");
-
         UpdateUIText();
-        CheckSuccess();
-    }
-
-    private void CheckSuccess()
-    {
-        if (IsAllTasksComplete())
-        {
-            Debug.Log("[ShineChecker] Semua tugas selesai! Menunggu hammer dan mop untuk dikembalikan.");
-            // Jangan tampilkan success panel di sini.
-            // Tunggu SnapZoneChecker untuk konfirmasi alat sudah dikembalikan.
-        }
     }
 
     public bool IsAllTasksComplete()
@@ -73,17 +51,15 @@ public class ShineChecker : MonoBehaviour
         return cleanedDirt >= totalDirt && cleanedRootCause >= totalRootCause;
     }
 
-    public void ShowSuccessPanel()
-    {
-        if (successPanel != null)
-        {
-            successPanel.SetActive(true);
-            Debug.Log("[ShineChecker] Success Panel ditampilkan karena hammer dan mop sudah dikembalikan.");
-        }
-    }
     public bool IsRootCauseComplete()
     {
         return cleanedRootCause >= totalRootCause;
+    }
+
+    public void ShowSuccessPanel()
+    {
+        if (successPanel != null)
+            successPanel.SetActive(true);
     }
 
     private void UpdateUIText()
@@ -91,10 +67,6 @@ public class ShineChecker : MonoBehaviour
         if (shineCountText != null)
         {
             shineCountText.text = $"Shine : {cleanedDirt}/{totalDirt}\nAkar Masalah : {cleanedRootCause}/{totalRootCause}";
-        }
-        else
-        {
-            Debug.LogWarning("[ShineChecker] shineCountText belum di-assign di Inspector.");
         }
     }
 }

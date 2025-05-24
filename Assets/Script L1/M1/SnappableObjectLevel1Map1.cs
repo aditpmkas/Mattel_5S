@@ -7,18 +7,17 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
     public event Action OnSnapped;
     public event Action OnReleased;
 
-    private SnapPoint currentSnapPoint;
+    private SnapPointLevel1Map1 currentSnapPoint; // Ganti SnapPoint jadi SnapPointLevel1Map1
     private Grabbable grabbable;
     private bool isSnapped = false;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private Transform originalParent;
-    private float snapThreshold = 0.001f;
     private Rigidbody rb;
     private bool wasKinematic;
     private CollisionDetectionMode originalCollisionMode;
     private bool wasBeingHeld = false;
-    public SnapPoint initialSnapPoint;
+    public SnapPointLevel1Map1 initialSnapPoint; // Ganti ke SnapPointLevel1Map1
 
     void Start()
     {
@@ -81,9 +80,11 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
         }
         else if (isSnapped && currentSnapPoint != null)
         {
+            // Gunakan snapRadius sebagai threshold
             float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
+            float threshold = currentSnapPoint.snapRadius * 1.1f; // dikasih buffer sedikit
 
-            if (distanceToSnapPoint > snapThreshold)
+            if (distanceToSnapPoint > threshold)
             {
                 transform.position = Vector3.Lerp(transform.position, currentSnapPoint.transform.position, Time.deltaTime * currentSnapPoint.snapSpeed);
                 transform.rotation = Quaternion.Lerp(transform.rotation, currentSnapPoint.transform.rotation, Time.deltaTime * currentSnapPoint.snapSpeed);
@@ -98,11 +99,11 @@ public class SnappableObjectLevel1Map1 : MonoBehaviour
 
     void CheckForSnapPoints()
     {
-        SnapPoint[] snapPoints = FindObjectsOfType<SnapPoint>();
-        SnapPoint closestSnapPoint = null;
+        SnapPointLevel1Map1[] snapPoints = FindObjectsOfType<SnapPointLevel1Map1>();
+        SnapPointLevel1Map1 closestSnapPoint = null;
         float closestDistance = float.MaxValue;
 
-        foreach (SnapPoint snapPoint in snapPoints)
+        foreach (SnapPointLevel1Map1 snapPoint in snapPoints)
         {
             if (!snapPoint.isOccupied)
             {

@@ -29,15 +29,18 @@ public class ToolPlacementNotifier : MonoBehaviour
             if (isHammer)
                 ShineProgressTracker.Instance.OnHammerSnapped();
             else
-                ShineProgressTracker.Instance.OnMopReturned();
+                ShineProgressTracker.Instance.OnMopReturned();  // Untuk mop saat dipasang kembali
         }
     }
 
     private void HandleReleased()
     {
-        if (ShineProgressTracker.Instance != null && isHammer)
+        if (ShineProgressTracker.Instance != null)
         {
-            ShineProgressTracker.Instance.OnHammerReleased();
+            if (isHammer)
+                ShineProgressTracker.Instance.OnHammerReleased();
+            else
+                ShineProgressTracker.Instance.OnMopReleased();   // Tambahan untuk mop saat dilepas
         }
     }
 

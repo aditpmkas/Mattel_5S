@@ -16,7 +16,7 @@ public class ShineProgressTracker : MonoBehaviour
     private int fixedCracks = 0;
 
     private bool hammerPlaced = false;
-    private bool mopReturned = false; //  Tambahan baru
+    private bool mopReturned = false;
 
     private void Awake()
     {
@@ -78,6 +78,14 @@ public class ShineProgressTracker : MonoBehaviour
         CheckIfAllClear();
     }
 
+    public void OnMopReleased()
+    {
+        mopReturned = false;
+        Debug.Log("[ShineProgressTracker] Mop dilepas.");
+        if (allCleanedPanel != null)
+            allCleanedPanel.SetActive(false);
+    }
+
     private void CheckIfAllClear()
     {
         if (cleanedCount >= totalDirt && fixedCracks >= totalCracks && hammerPlaced && mopReturned)
@@ -93,11 +101,16 @@ public class ShineProgressTracker : MonoBehaviour
         }
     }
 
+    public bool IsRootCauseComplete()
+    {
+        return fixedCracks >= totalCracks;
+    }
+
     private void UpdateProgressUI()
     {
         if (progressText != null)
         {
-            progressText.text = $"Shine: {cleanedCount}/{totalDirt}\nRoot Cause Fix: {fixedCracks}/{totalCracks}";
+            progressText.text = $"Sumber Masalah: {fixedCracks}/{totalCracks}\nShine: {cleanedCount}/{totalDirt}";
         }
     }
 }

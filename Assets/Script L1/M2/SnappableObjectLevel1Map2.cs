@@ -1,175 +1,98 @@
-using System;
 using UnityEngine;
 using BNG;
 
 public class SnappableObjectl1m2 : MonoBehaviour
 {
-    public event Action OnSnapped;
-    public event Action OnReleased;
-
-    private SnapPointLevel1Map2 currentSnapPoint;
+    public SnapPointLevel1Map2 currentSnapPoint;
     private Grabbable grabbable;
-    private bool isSnapped = false;
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
-    private Transform originalParent;
-    private float snapThreshold = 0.001f;
     private Rigidbody rb;
-    private bool wasKinematic;
-    private CollisionDetectionMode originalCollisionMode;
-    private bool wasBeingHeld = false;
-    public SnapPointLevel1Map2 initialSnapPoint;
+
+    private bool isSnapping = false;
+    private bool isSnapped = false;
+
+    public float snapSpeed = 10f;
 
     void Start()
     {
         grabbable = GetComponent<Grabbable>();
         rb = GetComponent<Rigidbody>();
-
-        if (grabbable == null)
-        {
-            Debug.LogError("SnappableObject requires a Grabbable component!");
-            enabled = false;
-            return;
-        }
-
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
-        originalParent = transform.parent;
-
-        if (rb != null)
-        {
-            wasKinematic = rb.isKinematic;
-            originalCollisionMode = rb.collisionDetectionMode;
-        }
-
-        if (initialSnapPoint != null && !initialSnapPoint.isOccupied)
-        {
-            currentSnapPoint = initialSnapPoint;
-            isSnapped = true;
-            initialSnapPoint.SnapObject(transform);
-
-            transform.position = initialSnapPoint.transform.position;
-            transform.rotation = initialSnapPoint.transform.rotation;
-            transform.SetParent(initialSnapPoint.transform);
-
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-            }
-
-            OnSnapped?.Invoke();
-        }
     }
 
     void Update()
     {
-        if (wasBeingHeld && !grabbable.BeingHeld && isSnapped)
-        {
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-                transform.SetParent(currentSnapPoint.transform);
-            }
-        }
-        wasBeingHeld = grabbable.BeingHeld;
-
         if (grabbable.BeingHeld)
         {
-            CheckForSnapPoints();
-        }
-        else if (isSnapped && currentSnapPoint != null)
-        {
-            float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
-
-            if (distanceToSnapPoint > snapThreshold)
+            isSnapping = false; // Jika dipegang, cancel proses snapping
+            if (isSnapped)
             {
-                transform.position = Vector3.Lerp(transform.position, currentSnapPoint.transform.position, Time.deltaTime * currentSnapPoint.snapSpeed);
-                transform.rotation = Quaternion.Lerp(transform.rotation, currentSnapPoint.transform.rotation, Time.deltaTime * currentSnapPoint.snapSpeed);
+                // Jika sebelumnya sudah snap, release snap point
+                currentSnapPoint.ReleaseObject();
+                isSnapped = false;
+                currentSnapPoint = null;
+                rb.isKinematic = false;
+                transform.SetParent(null);
             }
-            else
+        }
+        else
+        {
+            if (!isSnapped)
             {
-                transform.position = currentSnapPoint.transform.position;
-                transform.rotation = currentSnapPoint.transform.rotation;
+                // Cari snap point terdekat
+                SnapPointLevel1Map2 nearestSnap = FindNearestSnapPoint();
+                if (nearestSnap != null && nearestSnap.IsWithinSnapRadius(transform.position) && !nearestSnap.isOccupied)
+                {
+                    currentSnapPoint = nearestSnap;
+                    isSnapping = true;
+                    rb.isKinematic = true;
+                }
+                else
+                {
+                    isSnapping = false;
+                    rb.isKinematic = false;
+                }
+            }
+
+            if (isSnapping && currentSnapPoint != null)
+            {
+                // Gerakkan objek ke snap point dengan smooth
+                transform.position = Vector3.MoveTowards(transform.position, currentSnapPoint.transform.position, snapSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, currentSnapPoint.transform.rotation, snapSpeed * 100f * Time.deltaTime);
+
+                // Jika sudah sampai posisi snap
+                if (Vector3.Distance(transform.position, currentSnapPoint.transform.position) < 0.01f &&
+                    Quaternion.Angle(transform.rotation, currentSnapPoint.transform.rotation) < 1f)
+                {
+                    isSnapped = true;
+                    isSnapping = false;
+                    transform.position = currentSnapPoint.transform.position;
+                    transform.rotation = currentSnapPoint.transform.rotation;
+                    transform.SetParent(currentSnapPoint.transform);
+                    currentSnapPoint.SnapObject(transform);
+                }
             }
         }
     }
 
-    void CheckForSnapPoints()
+    SnapPointLevel1Map2 FindNearestSnapPoint()
     {
         SnapPointLevel1Map2[] snapPoints = FindObjectsOfType<SnapPointLevel1Map2>();
-        SnapPointLevel1Map2 closestSnapPoint = null;
-        float closestDistance = float.MaxValue;
+        SnapPointLevel1Map2 nearest = null;
+        float minDist = Mathf.Infinity;
 
-        foreach (SnapPointLevel1Map2 snapPoint in snapPoints)
+        foreach (var sp in snapPoints)
         {
-            if (!snapPoint.isOccupied)
+            float dist = Vector3.Distance(transform.position, sp.transform.position);
+            if (dist < minDist)
             {
-                float distance = Vector3.Distance(transform.position, snapPoint.transform.position);
-                if (distance < closestDistance && snapPoint.IsWithinSnapRadius(transform.position))
-                {
-                    closestDistance = distance;
-                    closestSnapPoint = snapPoint;
-                }
+                minDist = dist;
+                nearest = sp;
             }
         }
-
-        if (closestSnapPoint != null && !isSnapped)
-        {
-            currentSnapPoint = closestSnapPoint;
-            isSnapped = true;
-            currentSnapPoint.SnapObject(transform);
-            OnSnapped?.Invoke();
-        }
-        else if (closestSnapPoint == null && isSnapped)
-        {
-            ReleaseFromSnap();
-            OnReleased?.Invoke();
-        }
+        return nearest;
     }
 
-    void ReleaseFromSnap()
+    public bool IsFullySnapped()
     {
-        if (currentSnapPoint != null)
-        {
-            NotifyShelfExit();
-
-            currentSnapPoint.ReleaseObject();
-            transform.SetParent(originalParent);
-            currentSnapPoint = null;
-            isSnapped = false;
-
-            if (!grabbable.BeingHeld)
-            {
-                if (rb != null)
-                {
-                    rb.isKinematic = wasKinematic;
-                    rb.collisionDetectionMode = originalCollisionMode;
-                }
-            }
-        }
-    }
-
-    private void NotifyShelfExit()
-    {
-        Collider[] overlapping = Physics.OverlapSphere(transform.position, 0.1f);
-        foreach (var collider in overlapping)
-        {
-            var shelf = collider.GetComponent<BookShelf>();
-            if (shelf != null)
-            {
-                shelf.SendMessage("OnTriggerExit", GetComponent<Collider>(), SendMessageOptions.DontRequireReceiver);
-                break;
-            }
-        }
-    }
-
-    public void ResetPosition()
-    {
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
-        transform.SetParent(originalParent);
-        ReleaseFromSnap();
+        return isSnapped;
     }
 }
