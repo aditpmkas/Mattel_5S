@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrackFixButtonHandlerLevel2 : MonoBehaviour
 {
     public GameObject canvasObject;
+    public AudioSource clickSFX; // Add this new field in Inspector
 
     public void FixCrackAndDisableCanvasObject()
     {
@@ -32,6 +33,12 @@ public class CrackFixButtonHandlerLevel2 : MonoBehaviour
 
         // Disable this button GameObject itself
         gameObject.SetActive(false);
+
+        // Play button click SFX
+        if (clickSFX != null)
+        {
+            clickSFX.Play();
+        }
     }
 
 }

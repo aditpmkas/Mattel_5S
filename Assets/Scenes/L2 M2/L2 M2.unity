@@ -672,9 +672,10 @@ GameObject:
   - component: {fileID: 36985661}
   - component: {fileID: 36985660}
   - component: {fileID: 36985662}
+  - component: {fileID: 36985663}
   m_Layer: 0
   m_Name: Water Drop
-  m_TagString: Untagged
+  m_TagString: WaterDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -773,6 +774,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &36985663
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36985659}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 0.2}
+  m_Center: {x: 0, y: 0, z: -0.00024414062}
 --- !u!1 &43402801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1828,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &87959068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,6 +2143,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &90069891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,7 +2340,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -3880,6 +3904,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &241167409
 GameObject:
   m_ObjectHideFlags: 0
@@ -4184,6 +4209,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!4 &260447046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7540167661563886588, guid: ad496783c3bbc344c8a193df565f3c18,
@@ -4799,11 +4825,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 298938667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ab66bf9405e644ca2beb66d03db2de, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c1cf61fe73ba5241881c9c2556f474e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waterDropPrefab: {fileID: 36985659}
-  spawnInterval: 1
+  spawnInterval: 2
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!224 &299627748 stripped
 RectTransform:
@@ -5516,6 +5542,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &363767878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 01a59448a7498a440947b2d488908a36,
@@ -5925,6 +5952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObject: {fileID: 821783218}
+  clickSFX: {fileID: 651682224}
 --- !u!114 &392841279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5994,7 +6022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.40392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6346,7 +6374,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -8314,6 +8342,134 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 754445211}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &593007740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593007742}
+  - component: {fileID: 593007741}
+  m_Layer: 0
+  m_Name: Audio Water Drop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &593007741
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593007740}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 949acac9c5d09b04f852ae06403a1715, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &593007742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593007740}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.945758, y: 0.44991595, z: 36.103165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593135460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9099,6 +9255,134 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 1663219513}
   sceneToLoad: Result Map 2
+--- !u!1 &651682223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651682225}
+  - component: {fileID: 651682224}
+  m_Layer: 0
+  m_Name: Audio Crack Fixed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &651682224
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651682223}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &651682225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651682223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.362379, y: 0.9940481, z: 34.503006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689386268
 GameObject:
   m_ObjectHideFlags: 0
@@ -9617,6 +9901,73 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1438626177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &718593580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718593583}
+  - component: {fileID: 718593582}
+  - component: {fileID: 718593584}
+  m_Layer: 0
+  m_Name: Water Drop SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &718593582
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718593580}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4570818, y: 0.2, z: 0.39089966}
+  m_Center: {x: -0.13872194, y: 0, z: -0.041999817}
+--- !u!4 &718593583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718593580}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.816324, y: -0.7832298, z: -11.4431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1505642662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718593584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718593580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623e1fc53411164bb872ed22b0c8071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterDropSFX: {fileID: 593007741}
 --- !u!1 &722185491
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,10 +10292,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.4148085, y: -0.39679283, z: -0.571594, w: -0.5863188}
   m_LocalPosition: {x: 6.095194, y: 0.40623462, z: -11.948784}
-  m_LocalScale: {x: 0.45736614, y: 0.45736602, z: 0.4573664}
+  m_LocalScale: {x: 0.4573661, y: 0.45736602, z: 0.45736638}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &729753865
 MeshRenderer:
@@ -11007,6 +11358,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &760582067
 GameObject:
   m_ObjectHideFlags: 0
@@ -11203,7 +11555,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -11978,6 +12330,7 @@ Transform:
   m_Children:
   - {fileID: 913529839}
   - {fileID: 298938668}
+  - {fileID: 1205000049}
   m_Father: {fileID: 1505642662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822444074 stripped
@@ -13120,6 +13473,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1001 &894914530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13627,7 +13981,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -13712,10 +14066,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.5106557, y: -0.48911196, z: -0.48911226, w: -0.51065594}
   m_LocalPosition: {x: 6.1059055, y: 0.14247262, z: -12.238213}
-  m_LocalScale: {x: 0.4680835, y: 0.46808314, z: 0.46808365}
+  m_LocalScale: {x: 0.46808353, y: 0.46808314, z: 0.4680837}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &909633659
 MeshRenderer:
@@ -14045,7 +14399,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -14444,6 +14798,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &945127378
 GameObject:
   m_ObjectHideFlags: 0
@@ -15180,7 +15535,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -17509,6 +17864,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &1166474936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: 01a59448a7498a440947b2d488908a36,
@@ -17654,10 +18010,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.06627563, y: -0.08580145, z: 0.73802793, w: 0.6660034}
   m_LocalPosition: {x: 6.091654, y: 0.38440204, z: -12.232609}
-  m_LocalScale: {x: 0.5577961, y: 0.46199235, z: 0.4619924}
+  m_LocalScale: {x: 0.5577962, y: 0.46199232, z: 0.46199244}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1173112851
 MeshRenderer:
@@ -17920,6 +18276,127 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1205000048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205000049}
+  - component: {fileID: 1205000051}
+  - component: {fileID: 1205000050}
+  m_Layer: 0
+  m_Name: Ring Helper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205000049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205000048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.9, z: -0.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 821783219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205000050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205000048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5b1b54556836a49948cf0f09394c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RingOnValidPickup: 1
+  RingOnValidRemotePickup: 1
+  RingHelperScale: 5
+--- !u!114 &1205000051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205000048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeingHeld: 0
+  GrabButton: 2
+  Grabtype: 2
+  GrabPhysics: 4
+  GrabMechanic: 1
+  GrabSpeed: 15
+  RemoteGrabbable: 0
+  RemoteGrabMechanic: 0
+  RemoteGrabDistance: 2
+  CanDropMidGrab: 0
+  ThrowForceMultiplier: 2
+  ThrowForceMultiplierAngular: 1.5
+  BreakDistance: 0
+  HideHandGraphics: 0
+  ParentToHands: 0
+  ParentHandModel: 1
+  SnapHandModel: 1
+  CanBeDropped: 1
+  CanBeSnappedToSnapZone: 1
+  ForceDisableKinematicOnDrop: 0
+  InstantMovement: 0
+  MakeChildCollidersGrabbable: 0
+  handPoseType: 1
+  SelectedHandPose: {fileID: 0}
+  CustomHandPose: 0
+  SecondaryGrabBehavior: 0
+  TwoHandedPosition: 0
+  TwoHandedPostionLerpAmount: 0.5
+  TwoHandedRotation: 1
+  TwoHandedRotationLerpAmount: 0.5
+  TwoHandedDropBehavior: 0
+  TwoHandedLookVector: 0
+  SecondHandLookSpeed: 40
+  SecondaryGrabbable: {fileID: 0}
+  OtherGrabbableMustBeGrabbed: {fileID: 0}
+  CollisionSpring: 3000
+  CollisionSlerp: 500
+  CollisionLinearMotionX: 2
+  CollisionLinearMotionY: 2
+  CollisionLinearMotionZ: 2
+  CollisionAngularMotionX: 2
+  CollisionAngularMotionY: 2
+  CollisionAngularMotionZ: 2
+  ApplyCorrectiveForce: 1
+  MoveVelocityForce: 3000
+  MoveAngularVelocityForce: 90
+  LastGrabTime: 0
+  LastRemoteGrabTime: 0
+  LastDropTime: 0
+  AddControllerVelocityOnDrop: 1
+  collisions: []
+  ActiveGrabPoint: {fileID: 0}
+  SecondaryLookOffset: {x: 0, y: 0, z: 0}
+  SecondaryLookAtTransform: {fileID: 0}
+  LocalOffsetTransform: {fileID: 0}
+  GrabPoints: []
+  UseCustomInspector: 1
+  GrabAudioClip: {fileID: 0}
+  GrabAudioSource: {fileID: 0}
+  lastFlickTime: 0
+  FlickForce: 1
 --- !u!1 &1212994381
 GameObject:
   m_ObjectHideFlags: 0
@@ -18325,7 +18802,7 @@ Transform:
   m_LocalScale: {x: 2.0011897, y: 2.0011902, z: 2.0011902}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1228653206
 MeshRenderer:
@@ -19494,7 +19971,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -19853,7 +20330,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -21269,6 +21746,134 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1381544657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1385532531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1385532533}
+  - component: {fileID: 1385532532}
+  m_Layer: 0
+  m_Name: Audio Snapping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1385532532
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385532531}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1385532533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385532531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.4196615, y: 1.6011477, z: 34.98473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399779073
 GameObject:
   m_ObjectHideFlags: 0
@@ -21703,7 +22308,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -21983,7 +22588,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -22200,10 +22805,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.48696232, y: -0.5201968, z: -0.5127063, w: 0.47895238}
   m_LocalPosition: {x: 6.097555, y: 0.30149698, z: -12.519974}
-  m_LocalScale: {x: 0.4397418, y: 0.4397414, z: 0.4397421}
+  m_LocalScale: {x: 0.43974182, y: 0.43974137, z: 0.43974206}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1428749869
 MeshRenderer:
@@ -22972,7 +23577,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -23391,13 +23996,7 @@ Transform:
   - {fileID: 1567139407}
   - {fileID: 373011150}
   - {fileID: 722185492}
-  - {fileID: 1428749868}
-  - {fileID: 1914936511}
-  - {fileID: 729753864}
-  - {fileID: 909633658}
-  - {fileID: 1173112850}
-  - {fileID: 1228653205}
-  - {fileID: 1921637848}
+  - {fileID: 718593583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1506546125
@@ -23986,6 +24585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObject: {fileID: 821783218}
+  clickSFX: {fileID: 651682224}
 --- !u!114 &1567139406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24952,7 +25552,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -26300,6 +26900,13 @@ Transform:
   - {fileID: 341399815}
   - {fileID: 89128781}
   - {fileID: 1148649596}
+  - {fileID: 1428749868}
+  - {fileID: 1914936511}
+  - {fileID: 729753864}
+  - {fileID: 909633658}
+  - {fileID: 1173112850}
+  - {fileID: 1228653205}
+  - {fileID: 1921637848}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1768916474 stripped
@@ -27155,6 +27762,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &1829762508
 GameObject:
   m_ObjectHideFlags: 0
@@ -29431,10 +30039,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.51164275, y: -0.4874262, z: 0.47828105, w: 0.5214257}
   m_LocalPosition: {x: 6.095195, y: 0.2578317, z: -12.767803}
-  m_LocalScale: {x: 0.37585366, y: 0.3758536, z: 0.3758538}
+  m_LocalScale: {x: 0.37585363, y: 0.37585357, z: 0.3758538}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1914936512
 MeshRenderer:
@@ -29744,7 +30352,7 @@ Transform:
   m_LocalScale: {x: 2.0011897, y: 2.0011897, z: 2.0011902}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1505642662}
+  m_Father: {fileID: 1764203809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1921637849
 MeshRenderer:
@@ -31554,6 +32162,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &2068062671
 GameObject:
   m_ObjectHideFlags: 0
@@ -32048,6 +32657,7 @@ MonoBehaviour:
   snapSpeed: 10
   isOccupied: 0
   snappedObject: {fileID: 0}
+  snapSFX: {fileID: 1385532532}
 --- !u!1 &2078298766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 06062ee80aec54441ac2249669897824,
@@ -33727,6 +34337,9 @@ SceneRoots:
   - {fileID: 1198415171}
   - {fileID: 241167411}
   - {fileID: 597570545}
+  - {fileID: 593007742}
+  - {fileID: 651682225}
+  - {fileID: 1385532533}
   - {fileID: 169147555}
   - {fileID: 1764203809}
   - {fileID: 1505642662}

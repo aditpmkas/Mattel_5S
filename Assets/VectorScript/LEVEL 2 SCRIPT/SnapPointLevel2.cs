@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnapPointLevel2Map2 : MonoBehaviour
+public class SnapPointLevel2 : MonoBehaviour
 {
     public float snapRadius = 0.5f;
     public float snapSpeed = 10f;
     public bool isOccupied = false;
     public Transform snappedObject;
 
-    public AudioSource snapSFX; // Add this for optional snap sound
+    public AudioSource snapSFX; //  Add this for snap sound
 
     private void OnDrawGizmos()
     {
@@ -29,33 +29,16 @@ public class SnapPointLevel2Map2 : MonoBehaviour
             snappedObject = objectToSnap;
             isOccupied = true;
 
-            // Play snap SFX if available
+            //  Play snap SFX if assigned
             if (snapSFX != null)
             {
                 snapSFX.Play();
-            }
-
-            // Notify scoring if this point has a ToolSortingToolLevel2Map2 script
-            var sortingScript = GetComponent<ToolSortingToolLevel2Map2>();
-            if (sortingScript != null)
-            {
-                sortingScript.OnSnap(objectToSnap.gameObject);
             }
         }
     }
 
     public void ReleaseObject()
     {
-        if (snappedObject != null)
-        {
-            // Notify scoring when tool is removed
-            var sortingScript = GetComponent<ToolSortingToolLevel2Map2>();
-            if (sortingScript != null)
-            {
-                sortingScript.OnRelease();
-            }
-        }
-
         snappedObject = null;
         isOccupied = false;
     }
