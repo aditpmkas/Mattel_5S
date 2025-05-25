@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 
-public class SnapPointTutorial : MonoBehaviour
+public class SnapPointT : MonoBehaviour
 {
     [Header("Snap Settings")]
     public float snapRadius = 0.5f;
     public float snapSpeed = 5f;
 
     [Header("Reference Objects")]
-    public Transform correctObject;   // Objek yang seharusnya masuk ke snap point ini
+    public Transform correctObject;
     public Transform snappedObject;
     public bool isOccupied => snappedObject != null;
 
+    [Header("Audio Settings")]
     public AudioSource audioSource;
     public AudioClip snapSound;
 
@@ -32,12 +33,11 @@ public class SnapPointTutorial : MonoBehaviour
             if (snappedObject == null) return false;
             string snappedClean = snappedObject.name.Replace("(Clone)", "").Trim();
             string correctClean = correctObject.name.Trim();
-            return string.Equals(snappedClean, correctClean,
-                                 System.StringComparison.OrdinalIgnoreCase);
+            return string.Equals(snappedClean, correctClean, System.StringComparison.OrdinalIgnoreCase);
         }
     }
 
-    public void SnapObject(Transform objectToSnap)
+    public void SnapObject(Transform objectToSnap, bool playSound = true)
     {
         bool isCorrect = objectToSnap.name == correctObject.name;
 
@@ -46,17 +46,17 @@ public class SnapPointTutorial : MonoBehaviour
         objectToSnap.rotation = transform.rotation;
         objectToSnap.SetParent(transform);
 
+
         Debug.Log($"Snapped: {objectToSnap.name} → {gameObject.name} (correct? {isCorrect})");
 
-        PlaySound(snapSound);
-
-        // panggil pengecekan semua snap point
-        SetInOrderM2.Instance.CheckAllSnapPointsTutorial();
+        if (playSound)
+        {
+            PlaySound(snapSound); // Mainkan suara saat snap (kecuali initial snap)
+        }
 
         if (!isCorrect)
             Debug.LogWarning("Wrong object snapped.");
     }
-
 
     public void ReleaseObject()
     {
@@ -64,11 +64,9 @@ public class SnapPointTutorial : MonoBehaviour
         {
             snappedObject.SetParent(null);
             snappedObject = null;
-
-            // setelah dilepas, cek ulang semua snap point
-            SetInOrderM2.Instance.CheckAllSnapPointsTutorial();
         }
     }
+
     private void PlaySound(AudioClip clip)
     {
         if (audioSource != null && clip != null)

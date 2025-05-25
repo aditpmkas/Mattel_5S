@@ -162,11 +162,10 @@ GameObject:
   - component: {fileID: 3705336}
   - component: {fileID: 3705345}
   - component: {fileID: 3705344}
-  - component: {fileID: 3705343}
+  - component: {fileID: 3705339}
+  - component: {fileID: 3705340}
   - component: {fileID: 3705342}
   - component: {fileID: 3705341}
-  - component: {fileID: 3705340}
-  - component: {fileID: 3705339}
   - component: {fileID: 3705346}
   m_Layer: 0
   m_Name: Kunci Inggris 1
@@ -183,13 +182,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3705335}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5397284, y: 0.3702546, z: -0.48587397, w: -0.5792507}
-  m_LocalPosition: {x: -0.954916, y: -0.24822974, z: 0.4626999}
+  m_LocalRotation: {x: -0.49326003, y: 0.4302206, z: -0.54963654, w: -0.5191383}
+  m_LocalPosition: {x: -0.952932, y: -0.25050026, z: 0.44576448}
   m_LocalScale: {x: 0.3893121, y: 0.3893123, z: 0.38931215}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960842578}
-  m_LocalEulerAnglesHint: {x: 80.087, y: 123.709, z: 108.548}
+  m_LocalEulerAnglesHint: {x: 80.087, y: 33.708, z: 121.837}
 --- !u!54 &3705339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -324,32 +323,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &3705343
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3705335}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &3705344
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1388,6 +1365,134 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1644747187}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &43053582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43053583}
+  - component: {fileID: 43053584}
+  m_Layer: 0
+  m_Name: TrashColliderSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &43053583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43053582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 903541710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &43053584
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43053582}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4aa666da52a5cba46a45d528cfb3cf1c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 2
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &43234274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,37 +1716,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 507404436}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &44478575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 44478576}
-  m_Layer: 0
-  m_Name: Target_SortBiasB
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &44478576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44478575}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.85405946, z: -0, w: 0.5201754}
-  m_LocalPosition: {x: -4.981, y: 25.682127, z: -26.706001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 83315179}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &44962273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,9 +2641,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 375073070}
-  - {fileID: 44478576}
-  - {fileID: 1491228683}
   - {fileID: 191797461}
   - {fileID: 1670350280}
   - {fileID: 397157189}
@@ -4406,7 +4477,7 @@ GameObject:
   - component: {fileID: 158760029}
   - component: {fileID: 158760030}
   m_Layer: 0
-  m_Name: pickup sound
+  m_Name: 'pickup sound '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5354,10 +5425,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 191797464}
-    - targetCorrespondingSourceObject: {fileID: 1030995806, guid: abc00000000010307631613050705058,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 191797463}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000010307631613050705058, type: 3}
 --- !u!4 &191797461 stripped
 Transform:
@@ -5371,20 +5438,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 191797460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &191797463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191797462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!65 &191797464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5517,8 +5570,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!1001 &194006994
@@ -6225,6 +6278,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215636374}
   m_CullTransparentMesh: 0
+--- !u!1 &222816711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222816712}
+  - component: {fileID: 222816713}
+  m_Layer: 0
+  m_Name: Pickup Tools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &222816712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222816711}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 903541710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &222816713
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222816711}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.7
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &222968264
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,173 +6618,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1644747187}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -181.172}
---- !u!1001 &231950882
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1038564058}
-    m_Modifications:
-    - target: {fileID: 1030994510, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_Name
-      value: SM_CigarettePackage1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994510, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994510, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.117
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 25.6993
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -26.867
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994511, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030994513, guid: abc00000000007114469918882086558, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1030994510, guid: abc00000000007114469918882086558,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 231950887}
-    - targetCorrespondingSourceObject: {fileID: 1030994510, guid: abc00000000007114469918882086558,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 231950886}
-    - targetCorrespondingSourceObject: {fileID: 1030994510, guid: abc00000000007114469918882086558,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 231950885}
-  m_SourcePrefab: {fileID: 100100000, guid: abc00000000007114469918882086558, type: 3}
---- !u!4 &231950883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1030994511, guid: abc00000000007114469918882086558,
-    type: 3}
-  m_PrefabInstance: {fileID: 231950882}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &231950884 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1030994510, guid: abc00000000007114469918882086558,
-    type: 3}
-  m_PrefabInstance: {fileID: 231950882}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &231950885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231950884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
---- !u!65 &231950886
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231950884}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.053082585, y: 0.11668682, z: 0.030524254}
-  m_Center: {x: 0.0015359521, y: 0.054456234, z: 0.0060925484}
---- !u!54 &231950887
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231950884}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &232039290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7717,6 +7731,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 274054855}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &278416407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9e2a9731146f63a469f16570ba332780,
@@ -9162,6 +9178,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 338810247}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &341336326
 GameObject:
   m_ObjectHideFlags: 0
@@ -9917,8 +9935,8 @@ GameObject:
   - component: {fileID: 370140874}
   - component: {fileID: 370140873}
   - component: {fileID: 370140872}
-  - component: {fileID: 370140871}
   - component: {fileID: 370140877}
+  - component: {fileID: 370140878}
   - component: {fileID: 370140876}
   - component: {fileID: 370140875}
   m_Layer: 0
@@ -9928,28 +9946,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
   m_IsActive: 1
---- !u!64 &370140871
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370140870}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1f3b8e87ea9fc1c408e23fb3f36fc28c, type: 3}
 --- !u!23 &370140872
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10130,6 +10126,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &370140878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370140870}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.369743, y: 0.58684266, z: 1.8979979}
+  m_Center: {x: -0.357395, y: 0.3948843, z: -0.6261283}
 --- !u!1 &373074119
 GameObject:
   m_ObjectHideFlags: 0
@@ -10339,37 +10356,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 374006825}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &375073069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 375073070}
-  m_Layer: 0
-  m_Name: Target_SortBiasA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &375073070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375073069}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.64912254, y: 0.6517841, z: -0.277883, w: 0.2767642}
-  m_LocalPosition: {x: -5.6047077, y: 25.70235, z: -26.631855}
-  m_LocalScale: {x: 0.5571235, y: 0.5571235, z: 0.5571235}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 83315179}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375967942
 GameObject:
   m_ObjectHideFlags: 0
@@ -10379,9 +10365,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375967943}
-  - component: {fileID: 375967949}
   - component: {fileID: 375967946}
   - component: {fileID: 375967945}
+  - component: {fileID: 375967947}
   m_Layer: 0
   m_Name: Snap Point
   m_TagString: Untagged
@@ -10494,7 +10480,7 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
---- !u!114 &375967949
+--- !u!114 &375967947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10503,13 +10489,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 375967942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapRadius: 0.5
-  snapSpeed: 10
-  isOccupied: 0
+  snapSpeed: 5
+  correctObject: {fileID: 375967943}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &386456416
 GameObject:
   m_ObjectHideFlags: 0
@@ -10879,10 +10867,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 397157192}
-    - targetCorrespondingSourceObject: {fileID: 8807880116925313254, guid: 325c7931408b77a4f803899194cf18c6,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 397157191}
   m_SourcePrefab: {fileID: 100100000, guid: 325c7931408b77a4f803899194cf18c6, type: 3}
 --- !u!4 &397157189 stripped
 Transform:
@@ -10896,20 +10880,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 397157188}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &397157191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397157190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!114 &397157192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11016,7 +10986,7 @@ MonoBehaviour:
   GrabPoints: []
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &397157195
@@ -11265,6 +11235,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 405103119}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &406572010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12342,7 +12314,6 @@ GameObject:
   - component: {fileID: 452574788}
   - component: {fileID: 452574797}
   - component: {fileID: 452574796}
-  - component: {fileID: 452574795}
   - component: {fileID: 452574794}
   - component: {fileID: 452574793}
   - component: {fileID: 452574792}
@@ -12454,8 +12425,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &452574793
@@ -12506,28 +12477,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &452574795
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452574787}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: ae9c34cf564fb0c44ab4d6248d713da6, type: 3}
 --- !u!23 &452574796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13258,7 +13207,6 @@ GameObject:
   - component: {fileID: 486905815}
   - component: {fileID: 486905824}
   - component: {fileID: 486905823}
-  - component: {fileID: 486905822}
   - component: {fileID: 486905821}
   - component: {fileID: 486905820}
   - component: {fileID: 486905819}
@@ -13370,8 +13318,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &486905820
@@ -13422,28 +13370,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &486905822
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486905814}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: ae9c34cf564fb0c44ab4d6248d713da6, type: 3}
 --- !u!23 &486905823
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13551,7 +13477,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -15686,6 +15612,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 587458549}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &591470072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16447,6 +16375,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 633031666}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &634059153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18318,6 +18248,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 719843964}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &720080388
 GameObject:
   m_ObjectHideFlags: 0
@@ -18355,8 +18287,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.44421387, y: 0.20000008, z: 1.1299763}
-  m_Center: {x: -2.2949486, y: 0.67048913, z: -0.6207609}
+  m_Size: {x: 0.444214, y: 0.23635879, z: 1.1299763}
+  m_Center: {x: -2.2949486, y: 0.68866813, z: -0.6207609}
 --- !u!4 &720080390
 Transform:
   m_ObjectHideFlags: 0
@@ -18384,6 +18316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c47f4e900de2d84d843547c3a5df94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioTrash: {fileID: 43053584}
+  clipTrash: {fileID: 8300000, guid: 73f646993d3d54a48beae48985021408, type: 3}
 --- !u!1 &725048776
 GameObject:
   m_ObjectHideFlags: 0
@@ -18501,11 +18435,10 @@ GameObject:
   - component: {fileID: 727267577}
   - component: {fileID: 727267586}
   - component: {fileID: 727267585}
-  - component: {fileID: 727267584}
+  - component: {fileID: 727267580}
+  - component: {fileID: 727267581}
   - component: {fileID: 727267583}
   - component: {fileID: 727267582}
-  - component: {fileID: 727267581}
-  - component: {fileID: 727267580}
   - component: {fileID: 727267587}
   m_Layer: 0
   m_Name: Obeng 3
@@ -18661,32 +18594,10 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &727267584
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727267576}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &727267585
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20525,6 +20436,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 820022277}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &839089587
 GameObject:
   m_ObjectHideFlags: 0
@@ -20954,7 +20867,6 @@ GameObject:
   - component: {fileID: 851179388}
   - component: {fileID: 851179397}
   - component: {fileID: 851179396}
-  - component: {fileID: 851179395}
   - component: {fileID: 851179394}
   - component: {fileID: 851179393}
   - component: {fileID: 851179392}
@@ -21066,8 +20978,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &851179393
@@ -21118,28 +21030,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &851179395
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851179387}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &851179396
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21337,11 +21227,10 @@ GameObject:
   - component: {fileID: 859305336}
   - component: {fileID: 859305345}
   - component: {fileID: 859305344}
-  - component: {fileID: 859305343}
+  - component: {fileID: 859305339}
+  - component: {fileID: 859305340}
   - component: {fileID: 859305342}
   - component: {fileID: 859305341}
-  - component: {fileID: 859305340}
-  - component: {fileID: 859305339}
   - component: {fileID: 859305346}
   m_Layer: 0
   m_Name: Kunci Inggris 2
@@ -21358,13 +21247,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859305335}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.56693345, y: -0.43824124, z: -0.42259532, w: 0.55492735}
-  m_LocalPosition: {x: -0.87539864, y: -0.25, z: 0.4505539}
+  m_LocalRotation: {x: 0.5015547, y: 0.5032771, z: 0.4800312, w: -0.5145145}
+  m_LocalPosition: {x: -0.8727242, y: -0.24953896, z: 0.45193857}
   m_LocalScale: {x: 0.32735625, y: 0.32735637, z: 0.32735628}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960842578}
-  m_LocalEulerAnglesHint: {x: 268.402, y: 104.999, z: -89.99899}
+  m_LocalEulerAnglesHint: {x: 267.84302, y: 75.079, z: -163.201}
 --- !u!54 &859305339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21499,32 +21388,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &859305343
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859305335}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &859305344
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21598,11 +21465,10 @@ GameObject:
   - component: {fileID: 866635592}
   - component: {fileID: 866635601}
   - component: {fileID: 866635600}
-  - component: {fileID: 866635599}
+  - component: {fileID: 866635595}
+  - component: {fileID: 866635596}
   - component: {fileID: 866635598}
   - component: {fileID: 866635597}
-  - component: {fileID: 866635596}
-  - component: {fileID: 866635595}
   - component: {fileID: 866635602}
   m_Layer: 0
   m_Name: Kunci Tools 1
@@ -21758,32 +21624,10 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &866635599
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866635591}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &866635600
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22910,6 +22754,10 @@ Transform:
   - {fileID: 491985386}
   - {fileID: 766176798}
   - {fileID: 627733477}
+  - {fileID: 1127264314}
+  - {fileID: 222816712}
+  - {fileID: 43053583}
+  - {fileID: 1928126106}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909532074
@@ -23006,7 +22854,6 @@ GameObject:
   - component: {fileID: 911268692}
   - component: {fileID: 911268691}
   - component: {fileID: 911268690}
-  - component: {fileID: 911268689}
   m_Layer: 0
   m_Name: Nails And Can
   m_TagString: Unsort
@@ -23030,20 +22877,6 @@ Transform:
   - {fileID: 2039322387}
   m_Father: {fileID: 148274295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &911268689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911268687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!114 &911268690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23150,7 +22983,7 @@ MonoBehaviour:
   GrabPoints: []
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &911268693
@@ -25492,7 +25325,6 @@ Transform:
   m_Children:
   - {fileID: 1326931157}
   - {fileID: 2126003004}
-  - {fileID: 231950883}
   - {fileID: 2124435264}
   m_Father: {fileID: 1215450517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25756,11 +25588,10 @@ GameObject:
   - component: {fileID: 1068964236}
   - component: {fileID: 1068964245}
   - component: {fileID: 1068964244}
-  - component: {fileID: 1068964243}
+  - component: {fileID: 1068964239}
+  - component: {fileID: 1068964240}
   - component: {fileID: 1068964242}
   - component: {fileID: 1068964241}
-  - component: {fileID: 1068964240}
-  - component: {fileID: 1068964239}
   - component: {fileID: 1068964246}
   m_Layer: 0
   m_Name: Kunci Tools 2
@@ -25916,32 +25747,10 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &1068964243
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068964235}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &1068964244
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26845,6 +26654,134 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: 6fdfd59f5575c3c42bb0f4d33be21de0, type: 3}
+--- !u!1 &1127264313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127264314}
+  - component: {fileID: 1127264315}
+  m_Layer: 0
+  m_Name: FixSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127264314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127264313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 903541710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1127264315
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127264313}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 0.8
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1131245582
 GameObject:
   m_ObjectHideFlags: 0
@@ -26983,6 +26920,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 1131245583}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &1142532993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27516,8 +27455,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.38694417, y: 0.20000012, z: 0.9237558}
-  m_Center: {x: -2.2649894, y: 0.67048913, z: -0.51765066}
+  m_Size: {x: 0.38694417, y: 0.32378012, z: 0.9237558}
+  m_Center: {x: -2.2649894, y: 0.56798005, z: -0.51765066}
 --- !u!114 &1185919954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27530,6 +27469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2cb6576fba9544aa4ce42119b35a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioTrash: {fileID: 43053584}
+  clipTrash: {fileID: 8300000, guid: 73f646993d3d54a48beae48985021408, type: 3}
 --- !u!1 &1187738148
 GameObject:
   m_ObjectHideFlags: 0
@@ -31236,7 +31177,7 @@ ParticleSystem:
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -31398,7 +31339,7 @@ ParticleSystem:
     collidesWith:
       serializedVersion: 2
       m_Bits: 4294967295
-    maxCollisionShapes: 10
+    maxCollisionShapes: 100
     quality: 0
     voxelSize: 0.5
     collisionMessages: 1
@@ -32374,7 +32315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dripSound: {fileID: 8300000, guid: 949acac9c5d09b04f852ae06403a1715, type: 3}
-  volume: 10
+  volume: 1000
 --- !u!1 &1189100636
 GameObject:
   m_ObjectHideFlags: 0
@@ -32708,6 +32649,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 1202690522}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &1215450516
 GameObject:
   m_ObjectHideFlags: 0
@@ -32718,7 +32661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215450517}
   m_Layer: 0
-  m_Name: Sorting Object (1)
+  m_Name: 'Sorting Object '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34550,7 +34493,6 @@ GameObject:
   - component: {fileID: 1310684027}
   - component: {fileID: 1310684026}
   - component: {fileID: 1310684025}
-  - component: {fileID: 1310684024}
   m_Layer: 0
   m_Name: Gloves
   m_TagString: Unsort
@@ -34575,20 +34517,6 @@ Transform:
   - {fileID: 72401633}
   m_Father: {fileID: 148274295}
   m_LocalEulerAnglesHint: {x: 4.235, y: 44.53, z: -0.098}
---- !u!114 &1310684024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310684022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!114 &1310684025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34695,7 +34623,7 @@ MonoBehaviour:
   GrabPoints: []
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1310684028
@@ -35046,6 +34974,8 @@ MonoBehaviour:
   dripPS: {fileID: 1187738151}
   hammer: {fileID: 1897499743}
   targetCanvas: {fileID: 7428048668700432167}
+  audioSource: {fileID: 1127264315}
+  fixSound: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
 --- !u!1001 &1319238354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35415,7 +35345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030998777, guid: abc00000000006087750097261913370, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.467
+      value: -5.506
       objectReference: {fileID: 0}
     - target: {fileID: 1030998777, guid: abc00000000006087750097261913370, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35423,7 +35353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030998777, guid: abc00000000006087750097261913370, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.771
+      value: -26.838
       objectReference: {fileID: 0}
     - target: {fileID: 1030998777, guid: abc00000000006087750097261913370, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35468,19 +35398,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030998776, guid: abc00000000006087750097261913370,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1326931162}
-    - targetCorrespondingSourceObject: {fileID: 1030998776, guid: abc00000000006087750097261913370,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1326931161}
     - targetCorrespondingSourceObject: {fileID: 1030998776, guid: abc00000000006087750097261913370,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1326931160}
+      addedObject: {fileID: 1326931162}
     - targetCorrespondingSourceObject: {fileID: 1030998776, guid: abc00000000006087750097261913370,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1326931159}
+      addedObject: {fileID: 1326931160}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000006087750097261913370, type: 3}
 --- !u!4 &1326931157 stripped
 Transform:
@@ -35494,20 +35420,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1326931156}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1326931159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326931158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!114 &1326931160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35614,7 +35526,7 @@ MonoBehaviour:
   GrabPoints: []
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1326931163
@@ -36119,11 +36031,10 @@ GameObject:
   - component: {fileID: 1372297551}
   - component: {fileID: 1372297560}
   - component: {fileID: 1372297559}
-  - component: {fileID: 1372297558}
+  - component: {fileID: 1372297554}
+  - component: {fileID: 1372297555}
   - component: {fileID: 1372297557}
   - component: {fileID: 1372297556}
-  - component: {fileID: 1372297555}
-  - component: {fileID: 1372297554}
   - component: {fileID: 1372297561}
   m_Layer: 0
   m_Name: Kunci Inggris 3
@@ -36140,13 +36051,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372297550}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.56693345, y: -0.43824124, z: -0.42259532, w: 0.55492735}
-  m_LocalPosition: {x: -0.784, y: -0.25, z: 0.426}
+  m_LocalRotation: {x: 0.5015547, y: 0.5032771, z: 0.4800312, w: -0.5145145}
+  m_LocalPosition: {x: -0.77819216, y: -0.24612814, z: 0.44875807}
   m_LocalScale: {x: 0.23617607, y: 0.23617616, z: 0.23617607}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960842578}
-  m_LocalEulerAnglesHint: {x: 268.402, y: 104.999, z: -89.99899}
+  m_LocalEulerAnglesHint: {x: 267.84302, y: 75.079, z: -163.201}
 --- !u!54 &1372297554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36281,32 +36192,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &1372297558
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372297550}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &1372297559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36507,6 +36396,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 1380896194}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &1381986947
 GameObject:
   m_ObjectHideFlags: 0
@@ -38213,8 +38104,8 @@ GameObject:
   - component: {fileID: 1439025143}
   - component: {fileID: 1439025142}
   - component: {fileID: 1439025141}
-  - component: {fileID: 1439025140}
   - component: {fileID: 1439025146}
+  - component: {fileID: 1439025147}
   - component: {fileID: 1439025145}
   - component: {fileID: 1439025144}
   m_Layer: 0
@@ -38224,28 +38115,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
   m_IsActive: 1
---- !u!64 &1439025140
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439025139}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1f3b8e87ea9fc1c408e23fb3f36fc28c, type: 3}
 --- !u!23 &1439025141
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38426,6 +38295,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1439025147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439025139}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3697435, y: 0.58684266, z: 1.8979986}
+  m_Center: {x: -0.35744086, y: 0.3948843, z: -0.6261133}
 --- !u!1 &1439432847
 GameObject:
   m_ObjectHideFlags: 0
@@ -38682,6 +38572,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 1442627606}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &1445991268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39352,37 +39244,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489858428}
   m_CullTransparentMesh: 0
---- !u!1 &1491228682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1491228683}
-  m_Layer: 0
-  m_Name: Target_SortBiasC
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1491228683
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491228682}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.780177, y: 25.682127, z: -26.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 83315179}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495430845
 GameObject:
   m_ObjectHideFlags: 0
@@ -41365,6 +41226,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2936669947735090156, guid: abc00000000002872158664194242861,
+        type: 3}
+      propertyPath: GrabAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+    - target: {fileID: 2936669947735090156, guid: abc00000000002872158664194242861,
+        type: 3}
+      propertyPath: GrabAudioSource
+      value: 
+      objectReference: {fileID: 158760030}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41377,10 +41248,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1670350283}
-    - targetCorrespondingSourceObject: {fileID: 1030996532, guid: abc00000000002872158664194242861,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670350282}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000002872158664194242861, type: 3}
 --- !u!4 &1670350280 stripped
 Transform:
@@ -41394,20 +41261,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1670350279}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1670350282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670350281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!65 &1670350283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42651,6 +42504,8 @@ MonoBehaviour:
   snapSpeed: 5
   correctObject: {fileID: 1727720887}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &1727910581 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b75cac3ee06b89a4d95c13b6af0217f5,
@@ -43180,9 +43035,9 @@ GameObject:
   - component: {fileID: 1795728278}
   - component: {fileID: 1795728276}
   - component: {fileID: 1795728275}
-  - component: {fileID: 1795728279}
   - component: {fileID: 1795728277}
   - component: {fileID: 1795728274}
+  - component: {fileID: 1795728279}
   m_Layer: 0
   m_Name: MopHandle
   m_TagString: Mop
@@ -43335,7 +43190,7 @@ Transform:
   m_GameObject: {fileID: 1795728272}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.07627034, w: 0.9970872}
-  m_LocalPosition: {x: 8.897097, y: 4.822973, z: -1.8122635}
+  m_LocalPosition: {x: 8.897097, y: 4.822973, z: -1.543}
   m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -43351,10 +43206,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795728272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSnapPoint: {fileID: 1880066353}
+  initialSnapPoint: {fileID: 1880066351}
 --- !u!1 &1806509547
 GameObject:
   m_ObjectHideFlags: 0
@@ -44221,11 +44076,10 @@ GameObject:
   - component: {fileID: 1842081605}
   - component: {fileID: 1842081614}
   - component: {fileID: 1842081613}
-  - component: {fileID: 1842081612}
+  - component: {fileID: 1842081608}
+  - component: {fileID: 1842081609}
   - component: {fileID: 1842081611}
   - component: {fileID: 1842081610}
-  - component: {fileID: 1842081609}
-  - component: {fileID: 1842081608}
   - component: {fileID: 1842081615}
   m_Layer: 0
   m_Name: Obeng 1
@@ -44381,32 +44235,10 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &1842081612
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842081604}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &1842081613
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45510,9 +45342,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880066347}
-  - component: {fileID: 1880066353}
   - component: {fileID: 1880066350}
   - component: {fileID: 1880066349}
+  - component: {fileID: 1880066351}
   m_Layer: 0
   m_Name: Mop snap rack
   m_TagString: Untagged
@@ -45624,7 +45456,7 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
---- !u!114 &1880066353
+--- !u!114 &1880066351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45633,13 +45465,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880066346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapRadius: 0.5
-  snapSpeed: 10
-  isOccupied: 0
+  snapSpeed: 5
+  correctObject: {fileID: 1880066347}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 1928126107}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &1888026737
 GameObject:
   m_ObjectHideFlags: 0
@@ -45731,9 +45565,9 @@ GameObject:
   - component: {fileID: 1897499747}
   - component: {fileID: 1897499746}
   - component: {fileID: 1897499745}
-  - component: {fileID: 1897499744}
   - component: {fileID: 1897499743}
   - component: {fileID: 1897499742}
+  - component: {fileID: 1897499748}
   m_Layer: 0
   m_Name: SM_HammerTutorialM2 (1)
   m_TagString: Hammer
@@ -45844,23 +45678,10 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 491985387}
   lastFlickTime: 0
   FlickForce: 1
---- !u!114 &1897499744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897499740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialSnapPoint: {fileID: 375967949}
 --- !u!65 &1897499745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45940,6 +45761,19 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1759912169}
   m_Enabled: 1
+--- !u!114 &1897499748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897499740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSnapPoint: {fileID: 375967947}
 --- !u!1 &1910314601
 GameObject:
   m_ObjectHideFlags: 0
@@ -46586,6 +46420,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925315337}
   m_CullTransparentMesh: 0
+--- !u!1 &1928126105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928126106}
+  - component: {fileID: 1928126107}
+  m_Layer: 0
+  m_Name: Snap Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928126106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928126105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 903541710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1928126107
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928126105}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.3
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1929282751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47075,7 +47037,7 @@ Transform:
   m_GameObject: {fileID: 1960631376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7075062, z: -0, w: 0.7067072}
-  m_LocalPosition: {x: -4.097, y: 25.677269, z: -26.622}
+  m_LocalPosition: {x: -4.097, y: 25.677269, z: -26.532}
   m_LocalScale: {x: 0.8659351, y: 0.45267454, z: 0.8659351}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47635,7 +47597,6 @@ GameObject:
   - component: {fileID: 1997840374}
   - component: {fileID: 1997840383}
   - component: {fileID: 1997840382}
-  - component: {fileID: 1997840381}
   - component: {fileID: 1997840380}
   - component: {fileID: 1997840379}
   - component: {fileID: 1997840378}
@@ -47747,8 +47708,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!65 &1997840379
@@ -47799,28 +47760,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1997840381
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997840373}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: ae9c34cf564fb0c44ab4d6248d713da6, type: 3}
 --- !u!23 &1997840382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48910,11 +48849,10 @@ GameObject:
   - component: {fileID: 2030651041}
   - component: {fileID: 2030651050}
   - component: {fileID: 2030651049}
-  - component: {fileID: 2030651048}
+  - component: {fileID: 2030651044}
+  - component: {fileID: 2030651045}
   - component: {fileID: 2030651047}
   - component: {fileID: 2030651046}
-  - component: {fileID: 2030651045}
-  - component: {fileID: 2030651044}
   - component: {fileID: 2030651051}
   m_Layer: 0
   m_Name: Obeng 2
@@ -49070,32 +49008,10 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
-  GrabAudioSource: {fileID: 2146817303}
+  GrabAudioClip: {fileID: 8300000, guid: fd5510160cee68c489288bcaeff13beb, type: 3}
+  GrabAudioSource: {fileID: 222816713}
   lastFlickTime: 0
   FlickForce: 1
---- !u!64 &2030651048
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030651040}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: c42c0c6e5c8d545418fcf9dc0479f92b, type: 3}
 --- !u!23 &2030651049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51275,7 +51191,7 @@ Transform:
   m_GameObject: {fileID: 2124435263}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.293, y: 25.924, z: -26.694}
+  m_LocalPosition: {x: -5.199, y: 25.924, z: -26.811}
   m_LocalScale: {x: 0.25547016, y: 0.25547016, z: 0.25547016}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51351,8 +51267,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &2124435266
@@ -51369,7 +51285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RingOnValidPickup: 1
   RingOnValidRemotePickup: 1
-  RingHelperScale: 0.2
+  RingHelperScale: 0.5
 --- !u!65 &2124435267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51515,10 +51431,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2126003007}
-    - targetCorrespondingSourceObject: {fileID: 1030998622, guid: abc00000000008026224754795334616,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2126003006}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000008026224754795334616, type: 3}
 --- !u!4 &2126003004 stripped
 Transform:
@@ -51532,20 +51444,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2126003003}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2126003006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126003005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d0836c289c2554f902b7c1626a7781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowedPhase: 0
-  isShineObject: 0
 --- !u!114 &2126003007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51652,7 +51550,7 @@ MonoBehaviour:
   GrabPoints: []
   UseCustomInspector: 1
   GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &2126003010
@@ -52364,7 +52262,7 @@ GameObject:
   - component: {fileID: 848579965176505212}
   - component: {fileID: 848579965176505213}
   m_Layer: 5
-  m_Name: Level 1 Button
+  m_Name: FixButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53140,8 +53038,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioSource: {fileID: 158760030}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!1 &6491975971721504915

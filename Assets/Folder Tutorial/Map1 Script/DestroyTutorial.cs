@@ -6,6 +6,9 @@ public class DestroyTurorial : MonoBehaviour
 {
     private SortingTutorial sorter;
 
+    [Header("Trash Sound")]
+    public AudioSource audioTrash;
+    public AudioClip clipTrash;
     private void Awake()
     {
         sorter = FindObjectOfType<SortingTutorial>();
@@ -19,12 +22,22 @@ public class DestroyTurorial : MonoBehaviour
         {
             // Hancurkan objek Sort dan hitung
             Destroy(other.gameObject);
-            sorter?.IncrementCorrectSort();
+            sorter.IncrementCorrectSort();
+            PlaySound();
         }
         else if (other.CompareTag("Unsort"))
         {
             // Hancurkan objek Unsort, tapi tidak menghitung
             Destroy(other.gameObject);
+            PlaySound();
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (audioTrash != null && clipTrash != null)
+        {
+            audioTrash.PlayOneShot(clipTrash);
         }
     }
 }

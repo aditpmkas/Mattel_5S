@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 20151243}
   - component: {fileID: 20151246}
   - component: {fileID: 20151245}
-  - component: {fileID: 20151244}
+  - component: {fileID: 20151247}
   m_Layer: 0
   m_Name: snap1 BookB   (1)
   m_TagString: Untagged
@@ -428,22 +428,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1502752110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &20151244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20151242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &20151245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +516,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &20151247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20151242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 20151243}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &27237980
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +545,7 @@ GameObject:
   - component: {fileID: 27237981}
   - component: {fileID: 27237984}
   - component: {fileID: 27237983}
-  - component: {fileID: 27237982}
+  - component: {fileID: 27237985}
   m_Layer: 0
   m_Name: snap1 BookB 2
   m_TagString: Untagged
@@ -566,22 +568,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1502752110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &27237982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27237980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &27237983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +656,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &27237985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27237980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 27237981}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &27990154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1015,7 +1019,7 @@ GameObject:
   - component: {fileID: 52818957}
   - component: {fileID: 52818960}
   - component: {fileID: 52818959}
-  - component: {fileID: 52818958}
+  - component: {fileID: 52818961}
   m_Layer: 0
   m_Name: snap1 BookA 2 (1)
   m_TagString: Untagged
@@ -1038,22 +1042,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2081905306}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &52818958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52818956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &52818959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1130,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &52818961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52818956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 52818957}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &59400664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1776,7 +1782,7 @@ GameObject:
   - component: {fileID: 124053773}
   - component: {fileID: 124053776}
   - component: {fileID: 124053775}
-  - component: {fileID: 124053774}
+  - component: {fileID: 124053777}
   m_Layer: 0
   m_Name: 'snap1 BookB  '
   m_TagString: Untagged
@@ -1799,22 +1805,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1502752110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &124053774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124053772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &124053775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1903,6 +1893,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &124053777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124053772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 124053773}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &131084372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3248,6 +3256,134 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 260234049}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &260473031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260473032}
+  - component: {fileID: 260473033}
+  m_Layer: 0
+  m_Name: SnapSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260473032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260473031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 933712988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &260473033
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260473031}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &263653340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3837,7 +3973,7 @@ GameObject:
   - component: {fileID: 288376242}
   - component: {fileID: 288376245}
   - component: {fileID: 288376244}
-  - component: {fileID: 288376243}
+  - component: {fileID: 288376246}
   m_Layer: 0
   m_Name: 'snap1 BookA '
   m_TagString: Untagged
@@ -3860,22 +3996,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2081905306}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &288376243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288376241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &288376244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,6 +4084,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &288376246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288376241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 288376242}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &291535125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,7 +5511,7 @@ GameObject:
   - component: {fileID: 360161172}
   - component: {fileID: 360161175}
   - component: {fileID: 360161174}
-  - component: {fileID: 360161173}
+  - component: {fileID: 360161176}
   m_Layer: 0
   m_Name: 'snap1 BookC '
   m_TagString: Untagged
@@ -5396,22 +5534,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 212883112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &360161173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360161171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &360161174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5500,6 +5622,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &360161176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360161171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 360161172}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &365789945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6191,7 +6331,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -6556,7 +6696,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993916, guid: abc00000000001989425975591201556,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 412155140}
+      addedObject: {fileID: 412155143}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000001989425975591201556, type: 3}
 --- !u!1 &412155133 stripped
 GameObject:
@@ -6708,7 +6848,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.23477411, y: 0.049085554, z: 0.16447186}
   m_Center: {x: 0.0010731518, y: 0.025026636, z: 0.00037160143}
---- !u!114 &412155140
+--- !u!114 &412155143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6717,7 +6857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 412155133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -7359,7 +7499,7 @@ GameObject:
   - component: {fileID: 474978515}
   - component: {fileID: 474978518}
   - component: {fileID: 474978517}
-  - component: {fileID: 474978516}
+  - component: {fileID: 474978519}
   m_Layer: 0
   m_Name: snap1 BookD 2
   m_TagString: Untagged
@@ -7382,22 +7522,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476516743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &474978516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474978514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &474978517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7486,6 +7610,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &474978519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474978514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 474978515}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &476516739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7668,7 +7810,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 91e15c1d103e70f44882252949355fd6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8713,6 +8855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedPhase: 0
+  isRootCause: 0
 --- !u!114 &593631092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9448,6 +9591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e622da542aeb47243afcf52e7e9766e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioTrash: {fileID: 948108047}
+  clipTrash: {fileID: 8300000, guid: 73f646993d3d54a48beae48985021408, type: 3}
 --- !u!1001 &650964837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11263,6 +11408,150 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743141609}
   m_CullTransparentMesh: 1
+--- !u!1001 &745013225
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4638888768710745491}
+    m_Modifications:
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213795611944346747, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+        type: 3}
+      propertyPath: m_Name
+      value: RingHelper
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e3b0bca4dce07c4cac56011bea1487d, type: 3}
+--- !u!224 &745013226 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4213795611944346746, guid: 9e3b0bca4dce07c4cac56011bea1487d,
+    type: 3}
+  m_PrefabInstance: {fileID: 745013225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &756918455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13501,7 +13790,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -14256,7 +14545,7 @@ GameObject:
   - component: {fileID: 927115006}
   - component: {fileID: 927115009}
   - component: {fileID: 927115008}
-  - component: {fileID: 927115007}
+  - component: {fileID: 927115010}
   m_Layer: 0
   m_Name: snap1 BookD (1)
   m_TagString: Untagged
@@ -14279,22 +14568,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476516743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &927115007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927115005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &927115008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14383,6 +14656,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &927115010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927115005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 927115006}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &932527909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14472,6 +14763,9 @@ Transform:
   - {fileID: 398875282}
   - {fileID: 380730718}
   - {fileID: 477247729}
+  - {fileID: 260473032}
+  - {fileID: 948108046}
+  - {fileID: 1679569141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936432836
@@ -14579,7 +14873,7 @@ GameObject:
   - component: {fileID: 937959783}
   - component: {fileID: 937959786}
   - component: {fileID: 937959785}
-  - component: {fileID: 937959784}
+  - component: {fileID: 937959787}
   m_Layer: 0
   m_Name: snap1 BookA 2
   m_TagString: Untagged
@@ -14602,22 +14896,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2081905306}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &937959784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937959782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &937959785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14706,6 +14984,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &937959787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937959782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 937959783}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &946422264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14761,6 +15057,134 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 946422264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &948108045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948108046}
+  - component: {fileID: 948108047}
+  m_Layer: 0
+  m_Name: Trash Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &948108046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948108045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 933712988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &948108047
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948108045}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 73f646993d3d54a48beae48985021408, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &949435494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16093,7 +16517,7 @@ GameObject:
   - component: {fileID: 1013447224}
   - component: {fileID: 1013447227}
   - component: {fileID: 1013447226}
-  - component: {fileID: 1013447225}
+  - component: {fileID: 1013447228}
   m_Layer: 0
   m_Name: snap1 BookD 2 (1)
   m_TagString: Untagged
@@ -16116,22 +16540,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476516743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1013447225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013447223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1013447226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16220,6 +16628,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &1013447228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013447223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 1013447224}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &1017554047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17280,7 +17706,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993960, guid: abc00000000017217476345388338218,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1076772573}
+      addedObject: {fileID: 1076772576}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000017217476345388338218, type: 3}
 --- !u!1 &1076772566 stripped
 GameObject:
@@ -17432,7 +17858,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17202854, y: 0.039669752, z: 0.11136263}
   m_Center: {x: 0.0017234087, y: 0.023998052, z: -0.0005459599}
---- !u!114 &1076772573
+--- !u!114 &1076772576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17441,7 +17867,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076772566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -19168,9 +19594,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235617494}
-  - component: {fileID: 1235617493}
-  - component: {fileID: 1235617492}
   - component: {fileID: 1235617495}
+  - component: {fileID: 1235617492}
+  - component: {fileID: 1235617493}
   - component: {fileID: 1235617496}
   - component: {fileID: 1235617497}
   m_Layer: 0
@@ -19341,10 +19767,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1235617490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSnapPoint: {fileID: 1510477213779616210}
+  initialSnapPoint: {fileID: 6988701843527170758}
 --- !u!1 &1240413187
 GameObject:
   m_ObjectHideFlags: 0
@@ -19857,7 +20283,7 @@ GameObject:
   - component: {fileID: 1264170718}
   - component: {fileID: 1264170721}
   - component: {fileID: 1264170720}
-  - component: {fileID: 1264170719}
+  - component: {fileID: 1264170722}
   m_Layer: 0
   m_Name: snap1 BookC 2 (1)
   m_TagString: Untagged
@@ -19880,22 +20306,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 212883112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1264170719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264170717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1264170720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19984,6 +20394,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &1264170722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264170717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 1264170718}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &1276047161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21247,7 +21675,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993938, guid: abc00000000004522171147589926589,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1332690569}
+      addedObject: {fileID: 1332690572}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000004522171147589926589, type: 3}
 --- !u!1 &1332690562 stripped
 GameObject:
@@ -21399,7 +21827,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2131691, y: 0.026905537, z: 0.13818765}
   m_Center: {x: -0.0007173717, y: 0.018344179, z: -0.0011516362}
---- !u!114 &1332690569
+--- !u!114 &1332690572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21408,7 +21836,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1332690562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -22912,7 +23340,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993982, guid: abc00000000011369855973561480627,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1407186184}
+      addedObject: {fileID: 1407186187}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000011369855973561480627, type: 3}
 --- !u!1 &1407186177 stripped
 GameObject:
@@ -23064,7 +23492,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18987843, y: 0.030395031, z: 0.12730503}
   m_Center: {x: -0.0013811886, y: 0.014253058, z: 0.0007048249}
---- !u!114 &1407186184
+--- !u!114 &1407186187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23073,7 +23501,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1407186177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -24183,7 +24611,7 @@ GameObject:
   - component: {fileID: 1455034041}
   - component: {fileID: 1455034044}
   - component: {fileID: 1455034043}
-  - component: {fileID: 1455034042}
+  - component: {fileID: 1455034045}
   m_Layer: 0
   m_Name: snap1 BookC 2
   m_TagString: Untagged
@@ -24206,22 +24634,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 212883112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1455034042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455034040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1455034043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24310,6 +24722,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &1455034045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455034040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 1455034041}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!4 &1462120367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2871499901593167896, guid: 2a0c9adeb1b50e344acb742002b9022a,
@@ -25904,7 +26334,7 @@ GameObject:
   - component: {fileID: 1583540758}
   - component: {fileID: 1583540761}
   - component: {fileID: 1583540760}
-  - component: {fileID: 1583540759}
+  - component: {fileID: 1583540762}
   m_Layer: 0
   m_Name: snap1 BookC  (1)
   m_TagString: Untagged
@@ -25927,22 +26357,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 212883112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1583540759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583540757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1583540760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26031,6 +26445,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &1583540762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583540757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 1583540758}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &1594510004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26205,7 +26637,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993982, guid: abc00000000011369855973561480627,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1607230570}
+      addedObject: {fileID: 1607230573}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000011369855973561480627, type: 3}
 --- !u!1 &1607230563 stripped
 GameObject:
@@ -26357,7 +26789,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18987843, y: 0.030395031, z: 0.12730503}
   m_Center: {x: -0.0013811886, y: 0.014253058, z: 0.0007048249}
---- !u!114 &1607230570
+--- !u!114 &1607230573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26366,7 +26798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607230563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -26453,7 +26885,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993960, guid: abc00000000017217476345388338218,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1608987393}
+      addedObject: {fileID: 1608987396}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000017217476345388338218, type: 3}
 --- !u!1 &1608987386 stripped
 GameObject:
@@ -26605,7 +27037,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17202854, y: 0.039669752, z: 0.11136263}
   m_Center: {x: 0.0017234087, y: 0.023998052, z: -0.0005459599}
---- !u!114 &1608987393
+--- !u!114 &1608987396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26614,7 +27046,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1608987386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -27481,7 +27913,7 @@ GameObject:
   - component: {fileID: 1669637471}
   - component: {fileID: 1669637474}
   - component: {fileID: 1669637473}
-  - component: {fileID: 1669637472}
+  - component: {fileID: 1669637475}
   m_Layer: 0
   m_Name: snap1 BookD
   m_TagString: Untagged
@@ -27504,22 +27936,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476516743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1669637472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669637470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1669637473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27608,6 +28024,152 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &1669637475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669637470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 1669637471}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
+--- !u!1 &1679569140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1679569141}
+  - component: {fileID: 1679569142}
+  m_Layer: 0
+  m_Name: Fix Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1679569141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679569140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 933712988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1679569142
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679569140}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 0.8
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1684560201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31246,11 +31808,11 @@ Transform:
   m_Children:
   - {fileID: 846624470}
   - {fileID: 1235617494}
+  - {fileID: 4638888768710745491}
   - {fileID: 2420785539960891044}
   - {fileID: 2291742645207729424}
   - {fileID: 2291742645194748434}
   - {fileID: 2291742645587163798}
-  - {fileID: 4638888768710745491}
   - {fileID: 2055877044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31426,7 +31988,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993938, guid: abc00000000004522171147589926589,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1933360120}
+      addedObject: {fileID: 1933360123}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000004522171147589926589, type: 3}
 --- !u!1 &1933360113 stripped
 GameObject:
@@ -31578,7 +32140,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2131691, y: 0.026905537, z: 0.13818765}
   m_Center: {x: -0.0007173717, y: 0.018344179, z: -0.0011516362}
---- !u!114 &1933360120
+--- !u!114 &1933360123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31587,7 +32149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1933360113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -32563,7 +33125,7 @@ GameObject:
   - component: {fileID: 1997676181}
   - component: {fileID: 1997676184}
   - component: {fileID: 1997676183}
-  - component: {fileID: 1997676182}
+  - component: {fileID: 1997676185}
   m_Layer: 0
   m_Name: snap1 BookA  (1)
   m_TagString: Untagged
@@ -32586,22 +33148,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2081905306}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1997676182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997676180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1997676183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32690,6 +33236,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &1997676185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997676180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 1997676181}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &2011822660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32873,7 +33437,7 @@ GameObject:
   - component: {fileID: 2015904041}
   - component: {fileID: 2015904044}
   - component: {fileID: 2015904043}
-  - component: {fileID: 2015904042}
+  - component: {fileID: 2015904045}
   m_Layer: 0
   m_Name: snap1 BookB 2 (1)
   m_TagString: Untagged
@@ -32896,22 +33460,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1502752110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &2015904042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015904040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.2
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &2015904043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33000,6 +33548,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &2015904045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015904040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.5
+  snapSpeed: 5
+  correctObject: {fileID: 2015904041}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1001 &2025855300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33401,9 +33967,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2055877044}
-  - component: {fileID: 2055877047}
   - component: {fileID: 2055877046}
   - component: {fileID: 2055877045}
+  - component: {fileID: 2055877047}
   m_Layer: 0
   m_Name: HammerSnapZone
   m_TagString: Untagged
@@ -33524,13 +34090,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2055877043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapRadius: 0.5
-  snapSpeed: 10
-  isOccupied: 0
+  snapSpeed: 5
+  correctObject: {fileID: 2055877044}
   snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!1 &2062447761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1971542396499548007, guid: a5d35ea19bc5db74fa553be9383332e4,
@@ -33973,6 +34541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedPhase: 0
+  isRootCause: 0
 --- !u!114 &2074490028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35352,7 +35921,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1030993916, guid: abc00000000001989425975591201556,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2122742071}
+      addedObject: {fileID: 2122742074}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000001989425975591201556, type: 3}
 --- !u!1 &2122742064 stripped
 GameObject:
@@ -35504,7 +36073,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.23477411, y: 0.049085554, z: 0.16447186}
   m_Center: {x: 0.0010731518, y: 0.025026636, z: 0.00037160143}
---- !u!114 &2122742071
+--- !u!114 &2122742074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35513,7 +36082,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2122742064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSnapPoint: {fileID: 0}
@@ -35645,7 +36214,7 @@ MonoBehaviour:
   m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 307
+    m_Bits: 51
 --- !u!114 &4756746783637342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35711,19 +36280,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &786510695490061438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5906298623762108872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialSnapPoint: {fileID: 2055877047}
 --- !u!114 &872919846125718150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35739,6 +36295,8 @@ MonoBehaviour:
   dripPS: {fileID: 5728224517248920883}
   hammer: {fileID: 5244960735628863058}
   targetCanvas: {fileID: 1872101519549091752}
+  audioSource: {fileID: 1679569142}
+  fixSound: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
 --- !u!114 &872919846214221188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35754,6 +36312,8 @@ MonoBehaviour:
   dripPS: {fileID: 5728224517361556017}
   hammer: {fileID: 5244960735628863058}
   targetCanvas: {fileID: 1872101519671408810}
+  audioSource: {fileID: 1679569142}
+  fixSound: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
 --- !u!114 &872919846891353344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35769,6 +36329,8 @@ MonoBehaviour:
   dripPS: {fileID: 5728224516683895477}
   hammer: {fileID: 5244960735628863058}
   targetCanvas: {fileID: 1872101518990110766}
+  audioSource: {fileID: 1679569142}
+  fixSound: {fileID: 8300000, guid: e94ae63b967238e48822dba5b11c9291, type: 3}
 --- !u!199 &981262260427683089
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -36174,22 +36736,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7193106181873405339}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1510477213779616210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6826857403480423339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba804b0e13a070040ba2b6507467d5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapRadius: 0.5
-  snapSpeed: 10
-  isOccupied: 0
-  snappedObject: {fileID: 0}
 --- !u!114 &1525633638606087484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36924,8 +37470,6 @@ GameObject:
   - component: {fileID: 2291742645207729424}
   - component: {fileID: 5208247957080953270}
   - component: {fileID: 872919846125718150}
-  - component: {fileID: 5208247957080953272}
-  - component: {fileID: 5208247957080953271}
   m_Layer: 0
   m_Name: Cracked_Ceiling
   m_TagString: Crack
@@ -37350,6 +37894,7 @@ Transform:
   m_Children:
   - {fileID: 3131958352265171397}
   - {fileID: 6288896248855634327}
+  - {fileID: 745013226}
   m_Father: {fileID: 1923028211}
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!114 &4785197034418404189
@@ -37666,94 +38211,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5208247957080953271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3454836362030167095}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5b1b54556836a49948cf0f09394c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RingOnValidPickup: 1
-  RingOnValidRemotePickup: 1
-  RingHelperScale: 5
---- !u!114 &5208247957080953272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3454836362030167095}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BeingHeld: 0
-  GrabButton: 2
-  Grabtype: 2
-  GrabPhysics: 4
-  GrabMechanic: 1
-  GrabSpeed: 15
-  RemoteGrabbable: 0
-  RemoteGrabMechanic: 0
-  RemoteGrabDistance: 2
-  CanDropMidGrab: 0
-  ThrowForceMultiplier: 2
-  ThrowForceMultiplierAngular: 1.5
-  BreakDistance: 0
-  HideHandGraphics: 0
-  ParentToHands: 0
-  ParentHandModel: 1
-  SnapHandModel: 1
-  CanBeDropped: 1
-  CanBeSnappedToSnapZone: 1
-  ForceDisableKinematicOnDrop: 0
-  InstantMovement: 0
-  MakeChildCollidersGrabbable: 0
-  handPoseType: 1
-  SelectedHandPose: {fileID: 0}
-  CustomHandPose: 0
-  SecondaryGrabBehavior: 0
-  TwoHandedPosition: 0
-  TwoHandedPostionLerpAmount: 0.5
-  TwoHandedRotation: 1
-  TwoHandedRotationLerpAmount: 0.5
-  TwoHandedDropBehavior: 0
-  TwoHandedLookVector: 0
-  SecondHandLookSpeed: 40
-  SecondaryGrabbable: {fileID: 0}
-  OtherGrabbableMustBeGrabbed: {fileID: 0}
-  CollisionSpring: 3000
-  CollisionSlerp: 500
-  CollisionLinearMotionX: 2
-  CollisionLinearMotionY: 2
-  CollisionLinearMotionZ: 2
-  CollisionAngularMotionX: 2
-  CollisionAngularMotionY: 2
-  CollisionAngularMotionZ: 2
-  ApplyCorrectiveForce: 1
-  MoveVelocityForce: 3000
-  MoveAngularVelocityForce: 90
-  LastGrabTime: 0
-  LastRemoteGrabTime: 0
-  LastDropTime: 0
-  AddControllerVelocityOnDrop: 1
-  collisions: []
-  ActiveGrabPoint: {fileID: 0}
-  SecondaryLookOffset: {x: 0, y: 0, z: 0}
-  SecondaryLookAtTransform: {fileID: 0}
-  LocalOffsetTransform: {fileID: 0}
-  GrabPoints: []
-  UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
-  lastFlickTime: 0
-  FlickForce: 1
 --- !u!212 &5208247957636804144
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37875,8 +38332,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 398875281}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!222 &5251831882276184259
@@ -38037,19 +38494,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 5
   m_PresetInfoIsWorld: 1
---- !u!114 &5711163139048218504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5906298623762108872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7efff8a82a547429bca861205aebb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialSnapPoint: {fileID: 0}
 --- !u!198 &5728224516683895477
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -52292,10 +52736,9 @@ GameObject:
   - component: {fileID: 1144717091285734732}
   - component: {fileID: 5071115561808478106}
   - component: {fileID: 6522928014085329561}
-  - component: {fileID: 5711163139048218504}
   - component: {fileID: 5244960735628863058}
   - component: {fileID: 6142741698721460607}
-  - component: {fileID: 786510695490061438}
+  - component: {fileID: 6522928014085329562}
   m_Layer: 0
   m_Name: SM_HammerTutorial
   m_TagString: Hammer
@@ -52603,6 +53046,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017594574, y: 0.26958457, z: 0.03}
   m_Center: {x: 0.013251408, y: 0.03364183, z: 0}
+--- !u!114 &6522928014085329562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906298623762108872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94ba9724567f764da7a516ce8194eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSnapPoint: {fileID: 2055877047}
 --- !u!1 &6549906992257493902
 GameObject:
   m_ObjectHideFlags: 0
@@ -52716,7 +53172,7 @@ GameObject:
   - component: {fileID: 6288896248855634327}
   - component: {fileID: 6988701843527170757}
   - component: {fileID: 4958557046522853910}
-  - component: {fileID: 1510477213779616210}
+  - component: {fileID: 6988701843527170758}
   m_Layer: 0
   m_Name: Mop snap rack
   m_TagString: Untagged
@@ -52839,6 +53295,24 @@ MonoBehaviour:
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
+--- !u!114 &6988701843527170758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826857403480423339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6738a47fc55aac4a9b12da099f27bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapRadius: 0.3
+  snapSpeed: 5
+  correctObject: {fileID: 6288896248855634327}
+  snappedObject: {fileID: 0}
+  audioSource: {fileID: 260473033}
+  snapSound: {fileID: 8300000, guid: 26dc80e9693e84047b21b6cc5b90a50b, type: 3}
 --- !u!4 &7193106181873405339
 Transform:
   m_ObjectHideFlags: 0

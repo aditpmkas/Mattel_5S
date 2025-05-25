@@ -1,4 +1,5 @@
-﻿using BNG;
+﻿using System.Collections;
+using BNG;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +8,14 @@ public class CrackFixT : MonoBehaviour
     [Header("Drip Particle")]
     public ParticleSystem dripPS;
 
+    [Header("Hammer Settings")]
     public Grabbable hammer;                     
     public Canvas targetCanvas;
     private GraphicRaycaster raycaster;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip fixSound;
 
     private bool isFixed = false;
 
@@ -27,6 +33,9 @@ public class CrackFixT : MonoBehaviour
             var col = p.GetComponent<Collider>();
             if (col != null) col.enabled = false;
         }
+
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -57,6 +66,23 @@ public class CrackFixT : MonoBehaviour
 
         Debug.Log("Crack fixed! Puddles now unlocked.");
 
+        if (audioSource != null && fixSound != null)
+        {
+            audioSource.PlayOneShot(fixSound);
+            StartCoroutine(DestroyAfterSound(fixSound.length));
+        }
+        else
+        {
+            // If no audio, just destroy immediately
+            Destroy(gameObject);
+        }
+
+        Destroy(gameObject);
+    }
+
+    private IEnumerator DestroyAfterSound(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         Destroy(gameObject);
     }
 }

@@ -42,7 +42,7 @@ public class ShineTutorialM2 : MonoBehaviour
             SetCollider(puddle, false);
 
         SetZone(hammerReturnTrigger, false);
-        SetZone(trashReturnTrigger, false);
+        SetZone(trashReturnTrigger, true);
         SetZone(returnZoneTrigger, false);
 
         Debug.Log($"[ShineTutorial] Cracks={totalCracks}, Dirt={totalDirt}, TrashItems={totalTrashItems}");
@@ -109,7 +109,6 @@ public class ShineTutorialM2 : MonoBehaviour
         {
             Debug.Log("[ShineTutorial] Cracks done → enabling return zones.");
             SetZone(hammerReturnTrigger, true);
-            SetZone(trashReturnTrigger, true);
             TryUnlockPuddles();
         }
     }
