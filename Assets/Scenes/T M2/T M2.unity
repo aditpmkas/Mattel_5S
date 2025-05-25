@@ -1410,7 +1410,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 4aa666da52a5cba46a45d528cfb3cf1c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -10095,8 +10095,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 491985387}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &370140877
@@ -12629,8 +12629,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 491985387}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &453295380
@@ -38264,8 +38264,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 491985387}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1439025146

@@ -16,7 +16,7 @@ public class ReturnHammerZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Look for your SnappableObject on the mop
-        var snappable = other.GetComponent<SnappableObject>();
+        var snappable = other.GetComponent<SnapTutorial>();
         if (snappable != null)
         {
             Debug.Log($"[ReturnMopZone] {returnMessage}");

@@ -13,7 +13,7 @@ public class ReturnMopZone2 : MonoBehaviour
         // **Only** the MopTool should complete Shine here
         if (!hasCompleted
            && other.CompareTag("Mop")
-           && other.GetComponent<SnappableObject>() != null)
+           && other.GetComponent<SnapTutorial>() != null)
         {
             StartCoroutine(HandleComplete(other));
         }

@@ -13,7 +13,7 @@ public class ReturnHammerZoneM2 : MonoBehaviour
         // **Only** the HammerTool should trigger this zone
         if (!hasReturned
            && other.CompareTag("Hammer")
-           && other.GetComponent<SnappableObject>() != null)
+           && other.GetComponent<SnapTutorial>() != null)
         {
             StartCoroutine(HandleReturn(other));
         }
