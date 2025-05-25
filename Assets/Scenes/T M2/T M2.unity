@@ -52383,7 +52383,7 @@ GameObject:
   - component: {fileID: 8846369610220933559}
   m_Layer: 0
   m_Name: SM_Hammer_LOD2
-  m_TagString: Hammer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
