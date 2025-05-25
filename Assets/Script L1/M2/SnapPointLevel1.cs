@@ -10,6 +10,10 @@ public class SnapPointLevel1 : MonoBehaviour
     public Transform correctObject;   // Objek yang harus tersnap di sini
     public Transform snappedObject;   // Objek yang sedang tersnap
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip snapSound;
+
     public bool isOccupied = false;
 
     private void OnDrawGizmos()
@@ -39,6 +43,12 @@ public class SnapPointLevel1 : MonoBehaviour
             {
                 Debug.Log("Object benar dan berhasil snap.");
                 GameManagerL1M2.Instance.CheckAllSnapPoints();
+
+                // Putar suara snap di sini
+                if (audioSource != null && snapSound != null)
+                {
+                    audioSource.PlayOneShot(snapSound);
+                }
             }
             else
             {
@@ -56,6 +66,7 @@ public class SnapPointLevel1 : MonoBehaviour
         snappedObject = null;
         isOccupied = false;
     }
+
     private void Update()
     {
         // Cek fase, hanya cek snap saat fase SetInOrder aktif
@@ -65,4 +76,3 @@ public class SnapPointLevel1 : MonoBehaviour
         }
     }
 }
-    

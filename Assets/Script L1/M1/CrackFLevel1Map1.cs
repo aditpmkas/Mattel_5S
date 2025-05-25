@@ -1,6 +1,6 @@
 using BNG;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
 public class CrackFLevel1Map1 : MonoBehaviour
 {
@@ -10,6 +10,10 @@ public class CrackFLevel1Map1 : MonoBehaviour
     public Grabbable hammer;
     public Canvas targetCanvas;
     private GraphicRaycaster raycaster;
+
+    // Audio untuk crack fixed
+    public AudioSource audioSource;
+    public AudioClip fixSound;
 
     private Collider _buttonCollider;
     private bool isFixed = false;
@@ -21,6 +25,9 @@ public class CrackFLevel1Map1 : MonoBehaviour
             raycaster = targetCanvas.GetComponent<GraphicRaycaster>();
             raycaster.enabled = false; // Disable at start
         }
+
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
 
         // Disable collider semua puddle sampai retakan diperbaiki
         foreach (var p in GameObject.FindGameObjectsWithTag("DirtyFloor"))
@@ -43,20 +50,17 @@ public class CrackFLevel1Map1 : MonoBehaviour
         if (isFixed) return;
         isFixed = true;
 
-        // 1) Stop particle tetesan
+        // Stop particle tetesan
         if (dripPS != null) dripPS.Stop();
 
-        // 2) (Opsional) hilangkan mesh/visual crack
-        // gameObject.SetActive(false);
-
-        // 3) Enable collider semua puddle
+        // Enable collider semua puddle
         foreach (var p in GameObject.FindGameObjectsWithTag("DirtyFloor"))
         {
             var col = p.GetComponent<Collider>();
             if (col != null) col.enabled = true;
         }
 
-        // 4) Notifikasi ke ShineProgressTracker
+        // Notifikasi ke ShineProgressTracker
         if (ShineProgressTracker.Instance != null)
             ShineProgressTracker.Instance.RegisterCrackFixed();
         else
@@ -64,6 +68,16 @@ public class CrackFLevel1Map1 : MonoBehaviour
 
         Debug.Log("Crack fixed! Puddles now unlocked.");
 
-        Destroy(gameObject);
+        // Putar suara fix crack, setelah itu destroy
+        if (audioSource != null && fixSound != null)
+        {
+            audioSource.PlayOneShot(fixSound);
+            // Delay destroy agar suara sempat diputar
+            Destroy(gameObject, fixSound.length);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

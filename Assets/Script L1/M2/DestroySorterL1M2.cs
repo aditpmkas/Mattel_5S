@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class DestroySorterL1M2 : MonoBehaviour
 {
@@ -10,21 +11,45 @@ public class DestroySorterL1M2 : MonoBehaviour
     [Header("ShineChecker Reference")]
     public ShineChecker shineChecker; // Drag di Inspector
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+
     private void OnTriggerEnter(Collider other)
     {
-        // Sorting Phase Logic
+        string tag = other.tag;
+
+        string[] tagsWithSound = { "SortBias", "Sort", "Unsort", "SortBiasA", "SortBiasB", "SortBiasC", "RootCauseLevel1" };
+        bool shouldPlaySound = false;
+        foreach (string t in tagsWithSound)
+        {
+            if (tag == t)
+            {
+                shouldPlaySound = true;
+                break;
+            }
+        }
+
+        if (shouldPlaySound)
+        {
+            Debug.Log($"Play sound for tag: {tag}");
+            if (audioSource != null && hitSound != null)
+            {
+                audioSource.PlayOneShot(hitSound);
+            }
+        }
+
         if (GameManagerL1M2.Instance.currentPhase == GameManagerL1M2.GamePhase.Sorting)
         {
-            string tag = other.tag;
-
             if (tag == "Sort")
             {
                 GameManagerL1M2.Instance.IncrementSortDestroyed();
                 Destroy(other.gameObject);
             }
-            else if (tag == "UnSort")
+            else if (tag == "Unsort")
             {
-                Destroy(other.gameObject);
+                // Delay destroy biar suara bisa keluar dulu
+                StartCoroutine(DestroyWithDelay(other.gameObject, 0.2f));
             }
             else if (tag == "SortBiasA" && sortBiasATarget != null)
             {
@@ -40,7 +65,6 @@ public class DestroySorterL1M2 : MonoBehaviour
             }
         }
 
-        // Root Cause Logic (boleh aktif di semua fase, atau bisa dibatasi lagi)
         if (other.CompareTag("RootCauseLevel1"))
         {
             if (shineChecker != null)
@@ -51,6 +75,15 @@ public class DestroySorterL1M2 : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    private IEnumerator DestroyWithDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(obj);
+    }
+
+
+
 
     private void MoveToTarget(Transform objectToMove, Transform target)
     {

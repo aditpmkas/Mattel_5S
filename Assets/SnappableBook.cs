@@ -7,8 +7,10 @@ public class SnappableBook : MonoBehaviour
     public event Action OnSnapped;
     public event Action OnReleased;
 
-    public SnapPoint initialSnapPoint;
-    private SnapPoint currentSnapPoint;
+    public SnapPointBook initialSnapPoint;
+    public AudioSource snapAudio; // <-- AudioSource untuk suara "buku ditaro"
+
+    private SnapPointBook currentSnapPoint;
     private Grabbable grabbable;
     private Rigidbody rb;
 
@@ -60,13 +62,14 @@ public class SnappableBook : MonoBehaviour
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             }
 
+            PlaySnapAudio(); // mainkan suara saat snap awal
+
             OnSnapped?.Invoke();
         }
     }
 
     void Update()
     {
-        // Aktifkan physics jika mulai dipegang
         if (grabbable.BeingHeld && rb != null && rb.isKinematic)
         {
             rb.isKinematic = false;
@@ -74,7 +77,6 @@ public class SnappableBook : MonoBehaviour
             transform.SetParent(null);
         }
 
-        // Kembalikan ke kinematic jika dilepas dalam kondisi snapped
         if (wasBeingHeld && !grabbable.BeingHeld && isSnapped)
         {
             if (rb != null)
@@ -110,11 +112,11 @@ public class SnappableBook : MonoBehaviour
 
     void CheckForSnapPoints()
     {
-        SnapPoint[] snapPoints = FindObjectsOfType<SnapPoint>();
-        SnapPoint closestSnapPoint = null;
+        SnapPointBook[] snapPoints = FindObjectsOfType<SnapPointBook>();
+        SnapPointBook closestSnapPoint = null;
         float closestDistance = float.MaxValue;
 
-        foreach (SnapPoint snapPoint in snapPoints)
+        foreach (SnapPointBook snapPoint in snapPoints)
         {
             if (!snapPoint.isOccupied)
             {
@@ -142,6 +144,8 @@ public class SnappableBook : MonoBehaviour
                 rb.isKinematic = true;
                 rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             }
+
+            PlaySnapAudio(); // mainkan suara saat snap
 
             OnSnapped?.Invoke();
         }
@@ -175,5 +179,13 @@ public class SnappableBook : MonoBehaviour
         transform.rotation = originalRotation;
         transform.SetParent(originalParent);
         ReleaseFromSnap();
+    }
+
+    private void PlaySnapAudio()
+    {
+        if (snapAudio != null)
+        {
+            snapAudio.Play();
+        }
     }
 }

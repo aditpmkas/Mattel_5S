@@ -6,11 +6,36 @@ public class DestroyObject : MonoBehaviour
 {
     int score = 0;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!GamePhaseManager.Instance.IsPhase(GamePhaseManager.Phase.Sorting)) return;
 
         string tag = other.gameObject.tag;
+
+        // List tag yang ingin kita play sound saat interact
+        string[] tagsWithSound = { "Sort", "Unsort", "SortBiasA", "SortBiasB", "SortBiasC" };
+
+        bool shouldPlaySound = false;
+        foreach (string t in tagsWithSound)
+        {
+            if (tag == t)
+            {
+                shouldPlaySound = true;
+                break;
+            }
+        }
+
+        if (shouldPlaySound)
+        {
+            if (audioSource != null && hitSound != null)
+            {
+                audioSource.PlayOneShot(hitSound);
+            }
+        }
 
         if (tag == "Sort")
         {

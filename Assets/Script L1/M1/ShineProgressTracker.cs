@@ -9,6 +9,9 @@ public class ShineProgressTracker : MonoBehaviour
     public TextMeshProUGUI progressText;
     public GameObject allCleanedPanel;
 
+    [Header("Audio")]
+    public AudioSource completeSound;
+
     private int totalDirt = 0;
     private int cleanedCount = 0;
 
@@ -91,8 +94,12 @@ public class ShineProgressTracker : MonoBehaviour
         if (cleanedCount >= totalDirt && fixedCracks >= totalCracks && hammerPlaced && mopReturned)
         {
             Debug.Log("[ShineProgressTracker] Semua selesai dan alat dikembalikan!");
+
             if (allCleanedPanel != null)
                 allCleanedPanel.SetActive(true);
+
+            if (completeSound != null && !completeSound.isPlaying)
+                completeSound.Play();
         }
         else
         {
