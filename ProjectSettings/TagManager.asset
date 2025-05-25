@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
   - BigTool
   - SmallTool
   - BigScrew
@@ -49,7 +48,6 @@ TagManager:
   - RootCauseLevel2
   - TrashItem
   - RootCauseLevel1
-=======
   - Tang
   - DirtyFloor
   - Obeng Besar
@@ -63,7 +61,6 @@ TagManager:
   - Sort
   - Hammer
   - WaterDrop
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
