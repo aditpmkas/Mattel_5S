@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class ShineTrashSortingLevel2Map2 : MonoBehaviour
 {
+    public AudioSource sortingSFX; // Add this reference in Inspector
+
     private void OnTriggerEnter(Collider other)
     {
+        if (sortingSFX != null)
+        {
+            sortingSFX.Play();
+        }
+
         if (other.CompareTag("RootCauseLevel2"))
         {
             int pointsToAdd = 100;
