@@ -11,7 +11,7 @@ public class SceneTransitionMainMenuLevel2 : MonoBehaviour
         {
             ProgressManagerLevel2.Instance.ResetProgress();
         }
-        SceneManager.LoadScene("L2 M1");
+        LoadingScreenManager.LoadScene("L2 M1");
     }
     public void GoToLevel2Map2()
     {
@@ -19,6 +19,6 @@ public class SceneTransitionMainMenuLevel2 : MonoBehaviour
         {
             ProgressManagerLevel2Map2.Instance.ResetProgress();
         }
-        SceneManager.LoadScene("L2 M2");
+        LoadingScreenManager.LoadScene("L2 M2");
     }
 }
