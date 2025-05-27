@@ -2590,7 +2590,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -6138,6 +6138,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2936669947735090156, guid: abc00000000002872158664194242861,
+        type: 3}
+      propertyPath: GrabAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11041,7 +11046,7 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -33522,8 +33527,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 597570544}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!114 &2119848729
@@ -33854,7 +33859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7216946442112681488, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
+  - {fileID: 8554655104631171556, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34332,7 +34337,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1677373258208167518, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
+  - {fileID: 8554655104631171556, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34407,7 +34412,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1427153628122580773, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
+  - {fileID: 8554655104631171556, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34530,7 +34535,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 479086328287211034, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
+  - {fileID: 8554655104631171556, guid: 0dd0d47d7e8abce44ad9c93aaa41cd74, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

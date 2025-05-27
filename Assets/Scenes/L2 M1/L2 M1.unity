@@ -7228,7 +7228,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -7372,7 +7372,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -8616,7 +8616,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -9101,7 +9101,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -10479,7 +10479,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -16846,7 +16846,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -22104,7 +22104,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
@@ -23760,8 +23760,8 @@ MonoBehaviour:
   LocalOffsetTransform: {fileID: 0}
   GrabPoints: []
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 0}
-  GrabAudioSource: {fileID: 0}
+  GrabAudioClip: {fileID: 8300000, guid: eefba5b512e7a7344bc4ac93fe1ad28c, type: 3}
+  GrabAudioSource: {fileID: 1779415140}
   lastFlickTime: 0
   FlickForce: 1
 --- !u!54 &1741216537
@@ -27757,7 +27757,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UseCustomInspector: 1
-  GrabAudioClip: {fileID: 8300000, guid: 03c9563e20762a3439cc8a201b382556, type: 3}
+  GrabAudioClip: {fileID: 8300000, guid: 4db761e1213facb41b420e8cf8860a19, type: 3}
   GrabAudioSource: {fileID: 0}
   lastFlickTime: 0
   FlickForce: 1
