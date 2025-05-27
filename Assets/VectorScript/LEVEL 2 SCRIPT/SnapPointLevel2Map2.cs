@@ -9,7 +9,7 @@ public class SnapPointLevel2Map2 : MonoBehaviour
     public bool isOccupied = false;
     public Transform snappedObject;
 
-    public AudioSource snapSFX; // Add this for optional snap sound
+    public AudioSource snapSFX; // Optional snap sound
 
     private void OnDrawGizmos()
     {
@@ -29,11 +29,7 @@ public class SnapPointLevel2Map2 : MonoBehaviour
             snappedObject = objectToSnap;
             isOccupied = true;
 
-            // Play snap SFX if available
-            if (snapSFX != null)
-            {
-                snapSFX.Play();
-            }
+            // No sound here anymore — wait for final snap moment
 
             // Notify scoring if this point has a ToolSortingToolLevel2Map2 script
             var sortingScript = GetComponent<ToolSortingToolLevel2Map2>();
@@ -48,7 +44,6 @@ public class SnapPointLevel2Map2 : MonoBehaviour
     {
         if (snappedObject != null)
         {
-            // Notify scoring when tool is removed
             var sortingScript = GetComponent<ToolSortingToolLevel2Map2>();
             if (sortingScript != null)
             {

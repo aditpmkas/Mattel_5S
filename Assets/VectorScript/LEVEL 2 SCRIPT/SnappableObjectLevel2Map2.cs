@@ -90,8 +90,20 @@ public class SnappableObjectLevel2Map2 : MonoBehaviour
             {
                 transform.position = currentSnapPoint.transform.position;
                 transform.rotation = currentSnapPoint.transform.rotation;
+
+                // Play snap sound once, then mark as no longer snapping
+                if (currentSnapPoint.snapSFX != null && !currentSnapPoint.snapSFX.isPlaying)
+                {
+                    currentSnapPoint.snapSFX.Play();
+                    Debug.Log("Snap sound played when tool fully snapped.");
+                }
+
+                // Important — stop further snapping attempts
+                isSnapped = false;
+                isInSnapRange = false;
             }
         }
+
     }
 
     void CheckForSnapPoints()
