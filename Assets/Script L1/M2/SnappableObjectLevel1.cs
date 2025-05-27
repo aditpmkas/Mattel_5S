@@ -1,5 +1,5 @@
-using UnityEngine;
 using BNG;
+using UnityEngine;
 
 public class SnappableObjectLevel1 : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class SnappableObjectLevel1 : MonoBehaviour
     private CollisionDetectionMode originalCollisionMode;
     private bool wasBeingHeld = false;
     public SnapPointLevel1 initialSnapPoint;
-    private float snapCooldown = 0.2f; // Cooldown to prevent rapid snap/release
+    private float snapCooldown = 0.2f;
     private float lastSnapTime = 0f;
 
     void Start()
@@ -42,54 +42,33 @@ public class SnappableObjectLevel1 : MonoBehaviour
 
         if (initialSnapPoint != null && !initialSnapPoint.isOccupied)
         {
-            currentSnapPoint = initialSnapPoint;
-            isSnapped = true;
-            initialSnapPoint.SnapObject(transform);
-            transform.position = initialSnapPoint.transform.position;
-            transform.rotation = initialSnapPoint.transform.rotation;
-            transform.SetParent(initialSnapPoint.transform);
-
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-            }
+            SnapToPoint(initialSnapPoint);
         }
     }
 
     void Update()
     {
-        if (wasBeingHeld && !grabbable.BeingHeld && isSnapped && currentSnapPoint != null)
+        // Kondisi saat dilepas
+        if (wasBeingHeld && !grabbable.BeingHeld)
         {
-            // When released, lock to snap point
-            rb.isKinematic = true;
-            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-            transform.SetParent(currentSnapPoint.transform);
-            transform.position = currentSnapPoint.transform.position;
-            transform.rotation = currentSnapPoint.transform.rotation;
+            CheckForSnapPoints();
+        }
+
+        // Cek apakah keluar dari snap point
+        if (grabbable.BeingHeld && isSnapped && currentSnapPoint != null)
+        {
+            float distance = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
+            if (distance > currentSnapPoint.snapRadius)
+            {
+                ReleaseFromSnap();
+            }
         }
 
         wasBeingHeld = grabbable.BeingHeld;
 
-        if (grabbable.BeingHeld)
+        // Smooth correction saat sudah tersnap
+        if (!grabbable.BeingHeld && isSnapped && currentSnapPoint != null)
         {
-            // Only check for new snap points if not snapped or moved far enough
-            if (isSnapped && currentSnapPoint != null)
-            {
-                float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
-                if (distanceToSnapPoint > currentSnapPoint.snapRadius)
-                {
-                    ReleaseFromSnap();
-                }
-            }
-            else
-            {
-                CheckForSnapPoints();
-            }
-        }
-        else if (isSnapped && currentSnapPoint != null)
-        {
-            // Smoothly move to snap point if slightly off
             float distanceToSnapPoint = Vector3.Distance(transform.position, currentSnapPoint.transform.position);
             if (distanceToSnapPoint > snapThreshold)
             {
@@ -106,9 +85,7 @@ public class SnappableObjectLevel1 : MonoBehaviour
 
     void CheckForSnapPoints()
     {
-        // Skip if on cooldown
-        if (Time.time < lastSnapTime + snapCooldown)
-            return;
+        if (Time.time < lastSnapTime + snapCooldown) return;
 
         SnapPointLevel1[] snapPoints = FindObjectsOfType<SnapPointLevel1>();
         SnapPointLevel1 closestSnapPoint = null;
@@ -127,18 +104,30 @@ public class SnappableObjectLevel1 : MonoBehaviour
             }
         }
 
-        if (closestSnapPoint != null && !isSnapped)
+        if (closestSnapPoint != null)
         {
-            currentSnapPoint = closestSnapPoint;
-            isSnapped = true;
-            currentSnapPoint.SnapObject(transform);
-            lastSnapTime = Time.time;
-
-            if (currentSnapPoint.correctObject != transform)
-            {
-                Debug.LogWarning($"Object {gameObject.name} snapped to the wrong point: {currentSnapPoint.gameObject.name}.");
-            }
+            SnapToPoint(closestSnapPoint);
         }
+    }
+
+    void SnapToPoint(SnapPointLevel1 snapPoint)
+    {
+        currentSnapPoint = snapPoint;
+        isSnapped = true;
+        lastSnapTime = Time.time;
+
+        transform.position = snapPoint.transform.position;
+        transform.rotation = snapPoint.transform.rotation;
+        transform.SetParent(snapPoint.transform);
+
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        }
+
+        // Call snap function in snap point
+        snapPoint.SnapObject(transform);
     }
 
     void ReleaseFromSnap()
@@ -150,7 +139,7 @@ public class SnappableObjectLevel1 : MonoBehaviour
             currentSnapPoint = null;
             isSnapped = false;
 
-            if (rb != null && !grabbable.BeingHeld)
+            if (rb != null)
             {
                 rb.isKinematic = wasKinematic;
                 rb.collisionDetectionMode = originalCollisionMode;

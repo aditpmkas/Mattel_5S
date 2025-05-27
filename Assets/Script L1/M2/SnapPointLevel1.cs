@@ -43,16 +43,16 @@ public class SnapPointLevel1 : MonoBehaviour
             {
                 Debug.Log("Object benar dan berhasil snap.");
                 GameManagerL1M2.Instance.CheckAllSnapPoints();
-
-                // Putar suara snap di sini
-                if (audioSource != null && snapSound != null)
-                {
-                    audioSource.PlayOneShot(snapSound);
-                }
             }
             else
             {
                 Debug.LogWarning("Object snapped to the wrong point.");
+            }
+
+            // Putar suara snap untuk semua kondisi (benar maupun salah)
+            if (audioSource != null && snapSound != null)
+            {
+                audioSource.PlayOneShot(snapSound);
             }
         }
     }
