@@ -25110,6 +25110,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3438738961279537630, guid: d47fe758c3bf7ed4a881d8750d09c561,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3444813279106507506, guid: d47fe758c3bf7ed4a881d8750d09c561,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -27969,10 +27974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ef8226b863bbf42bf587f644c943f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialCompleteUICanvas: {fileID: 1971780979}
-  skipMenuCanvas: {fileID: 1211754719}
-  confirmSkipCanvas: {fileID: 1428843667}
-  welcomeCanvas: {fileID: 1772666437}
   btnMainMenu: {fileID: 1040910211}
   btnLevel1Map1: {fileID: 1299476706}
   btnLevel2Map1: {fileID: 1855705103}

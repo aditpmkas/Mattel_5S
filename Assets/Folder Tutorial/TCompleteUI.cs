@@ -4,12 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class TutorialCompleteUI : MonoBehaviour
 {
-    [Header("Set False Canvas")]
-    public GameObject tutorialCompleteUICanvas;
-    public GameObject skipMenuCanvas;
-    public GameObject confirmSkipCanvas;
-    public GameObject welcomeCanvas;
-
     [Header("Button References")]
     public Button btnMainMenu;
     public Button btnLevel1Map1;
@@ -47,86 +41,26 @@ public class TutorialCompleteUI : MonoBehaviour
 
     public void GoToMainMenu()
     {  
-        if (welcomeCanvas != null)
-            welcomeCanvas.SetActive(false); 
-
-        if (skipMenuCanvas !=  null)
-            skipMenuCanvas.SetActive(false);
-
-        if (confirmSkipCanvas != null) 
-            confirmSkipCanvas.SetActive(false);
-
-        if (tutorialCompleteUICanvas != null)
-            tutorialCompleteUICanvas.SetActive(false);
-
         LoadingScreenManager.LoadScene("MainMenu");
     }
 
     public void GoToLevel1Map1()
     {
-        if (welcomeCanvas != null)
-            welcomeCanvas.SetActive(false);
-
-        if (skipMenuCanvas != null)
-            skipMenuCanvas.SetActive(false);
-
-        if (confirmSkipCanvas != null)
-            confirmSkipCanvas.SetActive(false);
-
-        if (tutorialCompleteUICanvas != null)
-            tutorialCompleteUICanvas.SetActive(false);
-
         LoadingScreenManager.LoadScene("L1 M1");
     }
 
     public void GoToLevel2Map1()
     {
-        if (welcomeCanvas != null)
-            welcomeCanvas.SetActive(false);
-
-        if (skipMenuCanvas != null)
-            skipMenuCanvas.SetActive(false);
-
-        if (confirmSkipCanvas != null)
-            confirmSkipCanvas.SetActive(false);
-
-        if (tutorialCompleteUICanvas != null)
-            tutorialCompleteUICanvas.SetActive(false);
-
         LoadingScreenManager.LoadScene("L2 M1");
     }
 
     public void GoToLevel1Map2()
     {
-        if (welcomeCanvas != null)
-            welcomeCanvas.SetActive(false);
-
-        if (skipMenuCanvas != null)
-            skipMenuCanvas.SetActive(false);
-
-        if (confirmSkipCanvas != null)
-            confirmSkipCanvas.SetActive(false);
-
-        if (tutorialCompleteUICanvas != null)
-            tutorialCompleteUICanvas.SetActive(false);
-
         LoadingScreenManager.LoadScene("L1 M2");
     }
 
     public void GoToLevel2Map2()
     {
-        if (welcomeCanvas != null)
-            welcomeCanvas.SetActive(false);
-
-        if (skipMenuCanvas != null)
-            skipMenuCanvas.SetActive(false);
-
-        if (confirmSkipCanvas != null)
-            confirmSkipCanvas.SetActive(false);
-
-        if (tutorialCompleteUICanvas != null)
-            tutorialCompleteUICanvas.SetActive(false);
-
         LoadingScreenManager.LoadScene("L2 M2");
     }
 }

@@ -2306,10 +2306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ef8226b863bbf42bf587f644c943f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialCompleteUICanvas: {fileID: 78132709}
-  skipMenuCanvas: {fileID: 1352433424}
-  confirmSkipCanvas: {fileID: 1432276714}
-  welcomeCanvas: {fileID: 391864096}
   btnMainMenu: {fileID: 2021537518}
   btnLevel1Map1: {fileID: 0}
   btnLevel2Map1: {fileID: 0}
@@ -51418,20 +51414,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 209571999}
     m_Modifications:
-    - target: {fileID: 2959899455799169220, guid: d47fe758c3bf7ed4a881d8750d09c561,
+    - target: {fileID: 3438738961279537630, guid: d47fe758c3bf7ed4a881d8750d09c561,
         type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3867305417551989639, guid: d47fe758c3bf7ed4a881d8750d09c561,
         type: 3}
       propertyPath: m_Name
       value: Canvas Loading
-      objectReference: {fileID: 0}
-    - target: {fileID: 4298252600302871545, guid: d47fe758c3bf7ed4a881d8750d09c561,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5065198769580220931, guid: d47fe758c3bf7ed4a881d8750d09c561,
         type: 3}
