@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class SceneChangeManagementLevel2Map2 : MonoBehaviour
 {
     public TimerLevel2Map2 gameTimer;         // Reference to your Timer script
-    public string sceneToLoad;      // Name of the scene to load on completion
+    //public string sceneToLoad;      // Name of the scene to load on completion
 
     public void OnCompleteButtonPressed()
     {
@@ -15,7 +15,7 @@ public class SceneChangeManagementLevel2Map2 : MonoBehaviour
             gameTimer.StopTimer();
         }
 
-        Debug.Log("Loading scene: " + sceneToLoad);
-        SceneManager.LoadScene(sceneToLoad);
+        //Debug.Log("Loading scene: " + sceneToLoad);
+        //SceneManager.LoadScene(sceneToLoad);
     }
 }

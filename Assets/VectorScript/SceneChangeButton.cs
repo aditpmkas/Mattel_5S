@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChangeButton : MonoBehaviour
 {
     public Timer gameTimer;         // Reference to your Timer script
-    public string sceneToLoad;      // Name of the scene to load on completion
+    //public string sceneToLoad;      // Name of the scene to load on completion
 
     public void OnCompleteButtonPressed()
     {
@@ -15,7 +15,7 @@ public class SceneChangeButton : MonoBehaviour
             gameTimer.StopTimer();
         }
 
-        Debug.Log("Loading scene: " + sceneToLoad);
-        SceneManager.LoadScene(sceneToLoad);
+        //Debug.Log("Loading scene: " + sceneToLoad);
+        //SceneManager.LoadScene(sceneToLoad);
     }
 }
