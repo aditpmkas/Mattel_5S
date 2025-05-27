@@ -18,12 +18,22 @@ public class TaskManager : MonoBehaviour
     private HashSet<TaskType> completedTasks = new HashSet<TaskType>();
     public UnityEvent onAllTasksCompleted;
 
+    [Header("Audio")]
+    public AudioClip completionSound;
+    public AudioSource audioSource;
+
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(gameObject);
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void Start()
@@ -32,9 +42,6 @@ public class TaskManager : MonoBehaviour
             completionNotificationCanvas.SetActive(false);
     }
 
-    /// <summary>
-    /// Mark a task as complete. When all tasks are done, show final notification.
-    /// </summary>
     public void CompleteTask(TaskType task)
     {
         if (completedTasks.Contains(task))
@@ -58,6 +65,9 @@ public class TaskManager : MonoBehaviour
         if (completionNotificationCanvas != null)
             completionNotificationCanvas.SetActive(true);
 
+        if (completionSound != null && audioSource != null)
+            audioSource.PlayOneShot(completionSound);
+
         Debug.Log("Tutorial completed! Showing completion notification.");
 
         Destroy(sortingCanvas);
@@ -67,17 +77,11 @@ public class TaskManager : MonoBehaviour
         Destroy(ConfirmSkip);
     }
 
-    /// <summary>
-    /// Check if a particular task has been done
-    /// </summary>
     public bool IsTaskDone(TaskType task)
     {
         return completedTasks.Contains(task);
     }
 
-    /// <summary>
-    /// Force‐mark all tasks as complete and fire the completion event.
-    /// </summary>
     public void CompleteAllTasks()
     {
         completedTasks = new HashSet<TaskType>(
