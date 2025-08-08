@@ -40,5 +40,6 @@ Mattel_5S/
 ## Note
 
 This is a prototype version for training and educational purposes only. It is not a direct replication of the actual Mattel factory environment.
-
+For more detailed information about the project, please visit:  
+[https://www.adityapamungkas.site/3squest])
 ---
