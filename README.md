@@ -1,7 +1,5 @@
 # 3S QUEST: Tidy Up the Workplace – PT Mattel Indonesia
 
-**Repository Name:** `Mattel_5S`
-
 A virtual reality training simulation prototype focused on the 3S principles (Seiri, Seiton, Seiso) as part of the 5S workplace organization method. This project is developed for PT Mattel Indonesia as an engaging and gamified learning tool.
 
 ## Project Description
